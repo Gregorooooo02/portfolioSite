@@ -2,7 +2,8 @@
 Strona robiona przy pomocy HTML oraz CSS, aby zaprezentować dotychczasowe zadania z przedmiotu Technologie XML na 3 semestrze Informatyki Stosowanej. 
 
 Menu zostało wykonane na bazie projektu FireBase z filmu poniżej:
-https://www.youtube.com/watch?v=biOMz4puGt8&list=PL38pOKiA3E1ZP9Bngj8qUS9xvK4uqTebl&index=1&t=107s
+
+[![Youtube](https://youtu.be/biOMz4puGt/default.jpg)](https://youtu.be/biOMz4puGt8)
 
 Na stronie zostały uwzględnione następujące zadania:
 - Zadanie 1 - podstawowy projekt XML
