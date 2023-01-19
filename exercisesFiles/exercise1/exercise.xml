@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<?xml-stylesheet href="style.css" ?>
 
 <!--Element główny = korzeń-->
-<exercise
-xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-xmlns="plytoteka"
-xsi:schemaLocation="plytoteka schema.xsd">
+<exercise>
   <!--Nagłówek strony i podstawowe informacje-->
   <heading>
     <projectName>Płytoteka CD z różnymi gatunkami muzyki</projectName>
@@ -14,7 +10,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
     <index>242359</index>
     <lastModified>2022-11-06</lastModified>
   </heading>
-    
+
   <library text="Moja biblioteka płyt CD">
     <disk diskId="D1" genreId="Progressive Metal" favorite="S3">
       <author>TOOL</author>
@@ -28,7 +24,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg"/>
     </disk>
-    
+
     <disk diskId="D2" genreId="Alternative Metal" favorite="S5">
       <author>A Perfect Circle</author>
       <title>Thirteenth Step</title>
@@ -41,7 +37,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg"/>
     </disk>
-    
+
     <disk diskId="D3" genreId="Nu Metal" favorite="S4">
       <author>Limp Bizkit</author>
       <title>STILL SUCKS</title>
@@ -54,7 +50,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg"/>
     </disk>
-    
+
     <disk diskId="D4" genreId="Grunge" favorite="S8">
       <author>Pearl Jam</author>
       <title>Ten</title>
@@ -67,7 +63,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg"/>
     </disk>
-    
+
     <disk diskId="D5" genreId="Alternative Metal" favorite="S4">
       <author>Karnivool</author>
       <title>Themata</title>
@@ -80,7 +76,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://m.media-amazon.com/images/I/8173EyIhkRL.jpg"/>
     </disk>
-    
+
     <disk diskId="D6" genreId="Hip-Hop" favorite="S3">
       <author>Matt Large</author>
       <title>As real as it gets</title>
@@ -90,10 +86,10 @@ xsi:schemaLocation="plytoteka schema.xsd">
         <length time="31:33"/>
         <price currency="PLN">22.99</price>
         <ratings>4.5</ratings>
-      </info>      
+      </info>
       <albumCover URL="https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg"/>
     </disk>
-    
+
     <disk diskId="D7" genreId="Indie Rock" favorite="S6">
       <author>Low Roar</author>
       <title>0</title>
@@ -106,7 +102,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg"/>
     </disk>
-    
+
     <disk diskId="D8" genreId="Grunge" favorite="S3">
       <author>Nirvana</author>
       <title>Nevermind</title>
@@ -119,7 +115,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg"/>
     </disk>
-    
+
     <disk diskId="D9" genreId="Techno" favorite="S9">
       <author>The Prodigy</author>
       <title>The Day Is My Enemy</title>
@@ -132,7 +128,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg"/>
     </disk>
-    
+
     <disk diskId="D10" genreId="Hip-Hop" favorite="S10">
       <author>Snoop Dogg</author>
       <title>Ego Trippin'</title>
@@ -145,7 +141,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg"/>
     </disk>
-    
+
     <disk diskId="D11" genreId="Electronica" favorite="S1">
       <author>Michał Anioł</author>
       <title>U</title>
@@ -158,7 +154,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://ecsmedia.pl/c/u-b-iext67667192.jpg"/>
     </disk>
-    
+
     <disk diskId="D12" genreId="Alternative Rap" favorite="S1">
       <author>CatchUp</author>
       <title>Jesieniarze - Single</title>
@@ -171,7 +167,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D13" genreId="Alternative Rap" favorite="S1">
       <author>Michał Anioł</author>
       <title>Bo to się zwykle tak zaczyna - EP</title>
@@ -184,7 +180,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D14" genreId="Electronica" favorite="S1">
       <author>Michał Anioł</author>
       <title>Blisko - Single</title>
@@ -197,7 +193,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D15" genreId="Alternative Rap" favorite="S7">
       <author>Kacperczyk</author>
       <title>Kryzys Wieku Wczesnego</title>
@@ -210,7 +206,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg"/>
     </disk>
-    
+
     <disk diskId="D16" genreId="Electronica" favorite="S7">
       <author>Frank Leen</author>
       <title>Za dobrze by zapomnieć</title>
@@ -223,7 +219,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D17" genreId="Hip-Hop" favorite="S5">
       <author>Eminem</author>
       <title>Kamikaze</title>
@@ -236,7 +232,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D18" genreId="Hip-Hop" favorite="S6">
       <author>Eminem</author>
       <title>Music To Be Murdered By</title>
@@ -249,7 +245,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D19" genreId="Alternative Metal" favorite="S2">
       <author>A Perfect Circle</author>
       <title>Eat the Elephant</title>
@@ -262,7 +258,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png"/>
     </disk>
-    
+
     <disk diskId="D20" genreId="Phonk" favorite="S2">
       <author>Sxmpra</author>
       <title>Cowbell Warrior! - Single</title>
@@ -275,7 +271,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D21" genreId="Hip-Hop" favorite="S10">
       <author>Vince Staples</author>
       <title>Summertime '06'</title>
@@ -288,7 +284,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D22" genreId="Hip-Hop" favorite="S10">
       <author>Szczyl</author>
       <title>Polska Floryda</title>
@@ -301,7 +297,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png"/>
     </disk>
-    
+
     <disk diskId="D23" genreId="Post-punk" favorite="S1">
       <author>Molchat Doma</author>
       <title>Etazhi</title>
@@ -314,7 +310,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D24" genreId="Post-punk" favorite="S4">
       <author>Nurnberg</author>
       <title>Skryvaj</title>
@@ -327,7 +323,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D25" genreId="Synthwave" favorite="S7">
       <author>ALEX</author>
       <title>Akuma</title>
@@ -340,7 +336,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg"/>
     </disk>
-    
+
     <disk diskId="D26" genreId="Synthwave" favorite="S8">
       <author>ALEX</author>
       <title>Akuma II</title>
@@ -353,7 +349,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6"/>
     </disk>
-    
+
     <disk diskId="D27" genreId="Techno" favorite="S9">
       <author>The Prodigy</author>
       <title>Music for the Jilted Generation</title>
@@ -366,7 +362,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png"/>
     </disk>
-    
+
     <disk diskId="D28" genreId="Nu Metal" favorite="S6">
       <author>KoRn</author>
       <title>Follow The Leader</title>
@@ -379,7 +375,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg"/>
     </disk>
-    
+
     <disk diskId="D29" genreId="Phonk" favorite="S3">
       <author>SAOTOMAMORE</author>
       <title>Fool - Single</title>
@@ -392,7 +388,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c"/>
     </disk>
-    
+
     <disk diskId="D30" genreId="Phonk" favorite="S9">
       <author>GREEN ORXNGE</author>
       <title>TYPICAL CHILL SONG - Single</title>
@@ -405,7 +401,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2"/>
     </disk>
-    
+
     <disk diskId="D31" genreId="Phonk" favorite="S1">
       <author>DVRST</author>
       <title>A Little Story - Single</title>
@@ -418,7 +414,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658"/>
     </disk>
-    
+
     <disk diskId="D32" genreId="Phonk" favorite="S4">
       <author>Kordhell</author>
       <title>Memphis Doom - Single</title>
@@ -431,7 +427,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e"/>
     </disk>
-    
+
     <disk diskId="D33" genreId="Hip-Hop" favorite="S8">
       <author>Swell</author>
       <title>theres still us - EP</title>
@@ -444,7 +440,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f"/>
     </disk>
-    
+
     <disk diskId="D34" genreId="Indie Rock" favorite="S1">
       <author>Low Roar</author>
       <title>maybe tomorrow...</title>
@@ -457,7 +453,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       </info>
       <albumCover URL="https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp"/>
     </disk>
-    
+
     <disk diskId="D35" genreId="Indie Rock" favorite="S1">
       <author>Low Roar</author>
       <title>Once in a Long. Long While...</title>
@@ -471,7 +467,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
       <albumCover URL="https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg"/>
     </disk>
   </library>
-  
+
   <students>
     <student studentId="S1">Grzegorz Bednarek</student>
     <student studentId="S2">Jan Nowak</student>
@@ -484,7 +480,7 @@ xsi:schemaLocation="plytoteka schema.xsd">
     <student studentId="S9">Matthew Tar</student>
     <student studentId="S10">Adam</student>
   </students>
-  
+
   <genres>
    <genre genreId="Progressive Metal">Progessive Metal</genre>
    <genre genreId="Alternative Metal">Alternative Metal</genre>
@@ -499,5 +495,5 @@ xsi:schemaLocation="plytoteka schema.xsd">
    <genre genreId="Post-punk">Post-punk</genre>
    <genre genreId="Synthwave">Synthwave</genre>
   </genres>
-  
+
 </exercise>
