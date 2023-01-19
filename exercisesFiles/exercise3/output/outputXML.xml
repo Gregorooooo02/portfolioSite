@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raport>
+   <library>
+	  <disk>
+		 <author>TOOL</author>
+		 <title>10.000 Days</title>
+		 <released>28/04/2006</released>
+		 <howManySongs>11</howManySongs>
+		 <length>75:45</length>
+		 <price>62.99 PLN</price>
+		 <ratings>4.9</ratings>
+		 <albumCover>https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg</albumCover>
+		 <genre>Progessive Metal</genre>
+		 <student>Peter Mountain</student>
+	  </disk>
+	  <disk>
+		 <author>Snoop Dogg</author>
+		 <title>Ego Trippin'</title>
+		 <released>11/03/2008</released>
+		 <howManySongs>24</howManySongs>
+		 <length>77:43</length>
+		 <price>72.89 PLN</price>
+		 <ratings>4.3</ratings>
+		 <albumCover>https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg</albumCover>
+		 <genre>Hip-Hop</genre>
+		 <student>Adam</student>
+	  </disk>
+	  <disk>
+		 <author>Michal Aniol</author>
+		 <title>U</title>
+		 <released>19/02/2021</released>
+		 <howManySongs>10</howManySongs>
+		 <length>34:27</length>
+		 <price>29.99 PLN</price>
+		 <ratings>4.1</ratings>
+		 <albumCover>https://ecsmedia.pl/c/u-b-iext67667192.jpg</albumCover>
+		 <genre>Electronica</genre>
+		 <student>Grzegorz Bednarek</student>
+	  </disk>
+	  <disk>
+		 <author>CatchUp</author>
+		 <title>Jesieniarze - Single</title>
+		 <released>12/10/2020</released>
+		 <howManySongs>1</howManySongs>
+		 <length>2:35</length>
+		 <price>12.99 PLN</price>
+		 <ratings>4.7</ratings>
+		 <albumCover>https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg</albumCover>
+		 <genre>Alternative Rap</genre>
+		 <student>Grzegorz Bednarek</student>
+	  </disk>
+	  <disk>
+		 <author>Michal Aniol</author>
+		 <title>Bo to sie zwykle tak zaczyna - EP</title>
+		 <released>08/04/2022</released>
+		 <howManySongs>4</howManySongs>
+		 <length>11:39</length>
+		 <price>21.37 PLN</price>
+		 <ratings>4.9</ratings>
+		 <albumCover>https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg</albumCover>
+		 <genre>Alternative Rap</genre>
+		 <student>Grzegorz Bednarek</student>
+	  </disk>
+	  <disk>
+		 <author>Michal Aniol</author>
+		 <title>Blisko - Single</title>
+		 <released>05/08/2020</released>
+		 <howManySongs>1</howManySongs>
+		 <length>3:03</length>
+		 <price>9.99 PLN</price>
+		 <ratings>5.0</ratings>
+		 <albumCover>https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg</albumCover>
+		 <genre>Electronica</genre>
+		 <student>Grzegorz Bednarek</student>
+	  </disk>
+	  <disk>
+		 <author>Kacperczyk</author>
+		 <title>Kryzys Wieku Wczesnego</title>
+		 <released>26/11/2021</released>
+		 <howManySongs>14</howManySongs>
+		 <length>35:56</length>
+		 <price>44.99 PLN</price>
+		 <ratings>4.6</ratings>
+		 <albumCover>https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg</albumCover>
+		 <genre>Alternative Rap</genre>
+		 <student>Matthias Long</student>
+	  </disk>
+	  <disk>
+		 <author>Frank Leen</author>
+		 <title>Za dobrze by zapomniec</title>
+		 <released>09/09/2022</released>
+		 <howManySongs>1</howManySongs>
+		 <length>2:32</length>
+		 <price>7.99 PLN</price>
+		 <ratings>5.0</ratings>
+		 <albumCover>https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg</albumCover>
+		 <genre>Electronica</genre>
+		 <student>Matthias Long</student>
+	  </disk>
+	  <disk>
+		 <author>Eminem</author>
+		 <title>Kamikaze</title>
+		 <released>31/08/2018</released>
+		 <howManySongs>13</howManySongs>
+		 <length>45:49</length>
+		 <price>55.55 PLN</price>
+		 <ratings>4.4</ratings>
+		 <albumCover>https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg</albumCover>
+		 <genre>Hip-Hop</genre>
+		 <student>Kanye West</student>
+	  </disk>
+	  <disk>
+		 <author>Eminem</author>
+		 <title>Music To Be Murdered By</title>
+		 <released>17/01/2020</released>
+		 <howManySongs>20</howManySongs>
+		 <length>64:23</length>
+		 <price>59.99 PLN</price>
+		 <ratings>4.4</ratings>
+		 <albumCover>https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg</albumCover>
+		 <genre>Hip-Hop</genre>
+		 <student>Blaise Peck</student>
+	  </disk>
+	  <disk>
+		 <author>A Perfect Circle</author>
+		 <title>Eat the Elephant</title>
+		 <released>20/04/2018</released>
+		 <howManySongs>12</howManySongs>
+		 <length>57:07</length>
+		 <price>62.99 PLN</price>
+		 <ratings>4.3</ratings>
+		 <albumCover>https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png</albumCover>
+		 <genre>Alternative Metal</genre>
+		 <student>Jan Nowak</student>
+	  </disk>
+	  <disk>
+		 <author>A Perfect Circle</author>
+		 <title>Thirteenth Step</title>
+		 <released>16/09/2003</released>
+		 <howManySongs>12</howManySongs>
+		 <length>50:36</length>
+		 <price>53.99 PLN</price>
+		 <ratings>4.2</ratings>
+		 <albumCover>https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg</albumCover>
+		 <genre>Alternative Metal</genre>
+		 <student>Kanye West</student>
+	  </disk>
+	  <disk>
+		 <author>Sxmpra</author>
+		 <title>Cowbell Warrior! - Single</title>
+		 <released>08/12/2021</released>
+		 <howManySongs>1</howManySongs>
+		 <length>2:29</length>
+		 <price>6.66 PLN</price>
+		 <ratings>5.0</ratings>
+		 <albumCover>https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg</albumCover>
+		 <genre>Phonk</genre>
+		 <student>Jan Nowak</student>
+	  </disk>
+	  <disk>
+		 <author>Vince Staples</author>
+		 <title>Summertime '06'</title>
+		 <released>30/06/2015</released>
+		 <howManySongs>20</howManySongs>
+		 <length>59:05</length>
+		 <price>42.99 PLN</price>
+		 <ratings>4.1</ratings>
+		 <albumCover>https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg</albumCover>
+		 <genre>Hip-Hop</genre>
+		 <student>Adam</student>
+	  </disk>
+	  <disk>
+		 <author>Szczyl</author>
+		 <title>Polska Floryda</title>
+		 <released>15/10/2021</released>
+		 <howManySongs>13</howManySongs>
+		 <length>38:57</length>
+		 <price>38.99 PLN</price>
+		 <ratings>4.2</ratings>
+		 <albumCover>https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png</albumCover>
+		 <genre>Hip-Hop</genre>
+		 <student>Adam</student>
+	  </disk>
+	  <disk>
+		 <author>Molchat Doma</author>
+		 <title>Etazhi</title>
+		 <released>07/09/2018</released>
+		 <howManySongs>9</howManySongs>
+		 <length>33:13</length>
+		 <price>40.99 PLN</price>
+		 <ratings>4.5</ratings>
+		 <albumCover>https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg</albumCover>
+		 <genre>Post-punk</genre>
+		 <student>Grzegorz Bednarek</student>
+	  </disk>
+	  <disk>
+		 <author>Nurnberg</author>
+		 <title>Skryvaj</title>
+		 <released>05/11/2018</released>
+		 <howManySongs>8</howManySongs>
+		 <length>25:01</length>
+		 <price>35.99 PLN</price>
+		 <ratings>4.5</ratings>
+		 <albumCover>https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg</albumCover>
+		 <genre>Post-punk</genre>
+		 <student>Juan Pablo</student>
+	  </disk>
+	  <disk>
+		 <author>ALEX</author>
+		 <title>Akuma</title>
+		 <released>23/06/2017</released>
+		 <howManySongs>12</howManySongs>
+		 <length>41:18</length>
+		 <price>30.99 PLN</price>
+		 <ratings>4.7</ratings>
+		 <albumCover>https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg</albumCover>
+		 <genre>Synthwave</genre>
+		 <student>Matthias Long</student>
+	  </disk>
+	  <disk>
+		 <author>ALEX</author>
+		 <title>Akuma II</title>
+		 <released>10/05/2019</released>
+		 <howManySongs>10</howManySongs>
+		 <length>38:56</length>
+		 <price>32.99 PLN</price>
+		 <ratings>4.8</ratings>
+		 <albumCover>https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6</albumCover>
+		 <genre>Synthwave</genre>
+		 <student>Jorge Mario Bergoglio</student>
+	  </disk>
+	  <disk>
+		 <author>The Prodigy</author>
+		 <title>Music for the Jilted Generation</title>
+		 <released>04/04/1994</released>
+		 <howManySongs>13</howManySongs>
+		 <length>78:07</length>
+		 <price>45.99 PLN</price>
+		 <ratings>4.0</ratings>
+		 <albumCover>https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png</albumCover>
+		 <genre>Techno</genre>
+		 <student>Matthew Tar</student>
+	  </disk>
+	  <disk>
+		 <author>KoRn</author>
+		 <title>Follow The Leader</title>
+		 <released>18/08/1998</released>
+		 <howManySongs>14</howManySongs>
+		 <length>70:08</length>
+		 <price>42.99 PLN</price>
+		 <ratings>4.2</ratings>
+		 <albumCover>https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg</albumCover>
+		 <genre>Nu Metal </genre>
+		 <student>Blaise Peck</student>
+	  </disk>
+	  <disk>
+		 <author>SAOTOMAMORE</author>
+		 <title>Fool - Single</title>
+		 <released>07/12/2021</released>
+		 <howManySongs>1</howManySongs>
+		 <length>2:06</length>
+		 <price>12.99 PLN</price>
+		 <ratings>5.0</ratings>
+		 <albumCover>https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c</albumCover>
+		 <genre>Phonk</genre>
+		 <student>Peter Mountain</student>
+	  </disk>
+	  <disk>
+		 <author>Limp Bizkit</author>
+		 <title>STILL SUCKS</title>
+		 <released>31/10/2021</released>
+		 <howManySongs>12</howManySongs>
+		 <length>31:55</length>
+		 <price>40.00 PLN</price>
+		 <ratings>4.8</ratings>
+		 <albumCover>https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg</albumCover>
+		 <genre>Nu Metal </genre>
+		 <student>Juan Pablo</student>
+	  </disk>
+	  <disk>
+		 <author>GREEN ORXNGE</author>
+		 <title>TYPICAL CHILL SONG - Single</title>
+		 <released>15/10/2021</released>
+		 <howManySongs>1</howManySongs>
+		 <length>1:52</length>
+		 <price>6.99 PLN</price>
+		 <ratings>4.9</ratings>
+		 <albumCover>https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2</albumCover>
+		 <genre>Phonk</genre>
+		 <student>Matthew Tar</student>
+	  </disk>
+	  <disk>
+		 <author>DVRST</author>
+		 <title>A Little Story - Single</title>
+		 <released>29/10/2021</released>
+		 <howManySongs>1</howManySongs>
+		 <length>2:03</length>
+		 <price>11.99 PLN</price>
+		 <ratings>5.0</ratings>
+		 <albumCover>https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658</albumCover>
+		 <genre>Phonk</genre>
+		 <student>Grzegorz Bednarek</student>
+	  </disk>
+	  <disk>
+		 <author>Kordhell</author>
+		 <title>Memphis Doom - Single</title>
+		 <released>08/10/2021</released>
+		 <howManySongs>1</howManySongs>
+		 <length>2:34</length>
+		 <price>11.99 PLN</price>
+		 <ratings>5.0</ratings>
+		 <albumCover>https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e</albumCover>
+		 <genre>Phonk</genre>
+		 <student>Juan Pablo</student>
+	  </disk>
+	  <disk>
+		 <author>Swell</author>
+		 <title>theres still us - EP</title>
+		 <released>19/01/2016</released>
+		 <howManySongs>5</howManySongs>
+		 <length>11:38</length>
+		 <price>12.99 PLN</price>
+		 <ratings>4.8</ratings>
+		 <albumCover>https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f</albumCover>
+		 <genre>Hip-Hop</genre>
+		 <student>Jorge Mario Bergoglio</student>
+	  </disk>
+	  <disk>
+		 <author>Low Roar</author>
+		 <title>maybe tomorrow...</title>
+		 <released>30/07/2021</released>
+		 <howManySongs>12</howManySongs>
+		 <length>63:19</length>
+		 <price>38.99 PLN</price>
+		 <ratings>4.9</ratings>
+		 <albumCover>https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp</albumCover>
+		 <genre>Indie Rock</genre>
+		 <student>Grzegorz Bednarek</student>
+	  </disk>
+	  <disk>
+		 <author>Low Roar</author>
+		 <title>Once in a Long. Long While...</title>
+		 <released>05/04/2017</released>
+		 <howManySongs>12</howManySongs>
+		 <length>49:00</length>
+		 <price>40.99 PLN</price>
+		 <ratings>5.0</ratings>
+		 <albumCover>https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg</albumCover>
+		 <genre>Indie Rock</genre>
+		 <student>Grzegorz Bednarek</student>
+	  </disk>
+	  <disk>
+		 <author>Pearl Jam</author>
+		 <title>Ten</title>
+		 <released>27/08/1991</released>
+		 <howManySongs>11</howManySongs>
+		 <length>53:20</length>
+		 <price>35.97 PLN</price>
+		 <ratings>4.5</ratings>
+		 <albumCover>https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg</albumCover>
+		 <genre>Grunge</genre>
+		 <student>Jorge Mario Bergoglio</student>
+	  </disk>
+	  <disk>
+		 <author>Karnivool</author>
+		 <title>Themata</title>
+		 <released>07/02/2005</released>
+		 <howManySongs>12</howManySongs>
+		 <length>48:52</length>
+		 <price>30.00 PLN</price>
+		 <ratings>4.0</ratings>
+		 <albumCover>https://m.media-amazon.com/images/I/8173EyIhkRL.jpg</albumCover>
+		 <genre>Alternative Metal</genre>
+		 <student>Juan Pablo</student>
+	  </disk>
+	  <disk>
+		 <author>Matt Large</author>
+		 <title>As real as it gets</title>
+		 <released>18/05/2018</released>
+		 <howManySongs>12</howManySongs>
+		 <length>31:33</length>
+		 <price>22.99 PLN</price>
+		 <ratings>4.5</ratings>
+		 <albumCover>https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg</albumCover>
+		 <genre>Hip-Hop</genre>
+		 <student>Peter Mountain</student>
+	  </disk>
+	  <disk>
+		 <author>Low Roar</author>
+		 <title>0</title>
+		 <released>05/08/2014</released>
+		 <howManySongs>13</howManySongs>
+		 <length>68:14</length>
+		 <price>32.99 PLN</price>
+		 <ratings>4.2</ratings>
+		 <albumCover>https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg</albumCover>
+		 <genre>Indie Rock</genre>
+		 <student>Blaise Peck</student>
+	  </disk>
+	  <disk>
+		 <author>Nirvana</author>
+		 <title>Nevermind</title>
+		 <released>24/09/1991</released>
+		 <howManySongs>12</howManySongs>
+		 <length>42:38</length>
+		 <price>32.00 PLN</price>
+		 <ratings>4.0</ratings>
+		 <albumCover>https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg</albumCover>
+		 <genre>Grunge</genre>
+		 <student>Peter Mountain</student>
+	  </disk>
+	  <disk>
+		 <author>The Prodigy</author>
+		 <title>The Day Is My Enemy</title>
+		 <released>30/03/2015</released>
+		 <howManySongs>15</howManySongs>
+		 <length>56:12</length>
+		 <price>45.87 PLN</price>
+		 <ratings>3.9</ratings>
+		 <albumCover>https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg</albumCover>
+		 <genre>Techno</genre>
+		 <student>Matthew Tar</student>
+	  </disk>
+   </library>
+   <statistics>
+	  <numberOfDisks>35</numberOfDisks>
+	  <numberOfGenres>12</numberOfGenres>
+	  <numberOfStudents>10</numberOfStudents>
+	  <averageRating>4.55</averageRating>
+	  <bestRating>
+		 <rating>5.0</rating>
+		 <title>Blisko - Single</title>
+		 <author>Michal Aniol</author>
+	  </bestRating>
+	  <worstRating>
+		 <rating>3.9</rating>
+		 <title>The Day Is My Enemy</title>
+		 <author>The Prodigy</author>
+	  </worstRating>
+	  <averagePrice>34.03</averagePrice>
+	  <sumOfPrices>1191.05</sumOfPrices>
+	  <generatedDate>05.12.2022</generatedDate>
+   </statistics>
+</raport>

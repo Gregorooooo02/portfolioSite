@@ -1,0 +1,605 @@
+@keyframes colorHover {
+	from {background-color: white; color:black;}
+	to {	background-color: #70f; color: white;}
+}
+
+exercise {
+	font-family: Helvetica;
+	background-color: rgb(255, 255, 255);
+}
+
+heading > projectName {
+	display: block;
+	text-align: center;
+	font-size: 40pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px;
+	background-color: rgb(211, 211, 211);
+}
+
+heading > subject {
+	display: block;
+	text-align: center;
+	font-size: 32pt;
+	font-weight: bold;
+	padding: 10px;
+	background-color: rgb(167, 255, 157);
+}
+
+heading > author, index, lastModified {
+	display: block;
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+	padding: 5px;
+	background-color: rgb(174, 185, 255);
+}
+
+library:before {
+	display: block;
+	content: attr(text);
+	text-align: center;
+	font-size: 30pt;
+	font-weight: bold;
+	color: white;
+	padding: 15px;
+	background-color: rgb(120, 0, 255);
+}
+
+disk:before {
+	display: block;
+	font-weight: bold;
+	font-size: 18pt;
+	content: "Gatunek: " attr(genreId);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 185px;
+}
+
+disk:after {
+	display: block;
+	font-weight: bold;
+	font-size: 18pt;
+	content: "Ulubiona płyta " attr(favorite);
+	margin-top: 10px;
+	margin-bottom: 50px;
+	margin-left: 185px;
+}
+
+disk > info {
+	display: table-row-group;
+}
+
+disk > author {
+	display: table-caption;
+	color: white;
+	background-color: rgb(120, 0, 255);
+	font-size: 22pt;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 3px;
+}
+
+disk > title {
+	display: table-caption;
+	color: white;
+	background-color: rgb(120, 0, 255);
+	font-size: 20pt;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+info > released:before {
+	display: table-row;
+	font-weight: bold; 
+	content: "Data wydania"
+}
+
+info > released {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #bbb;
+	width: 180pt;
+}
+
+info > released:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+info > howManySongs:before {
+	display: table-row;
+	font-weight: bold;
+	content: "Ilość piosenek";
+}
+
+info > howManySongs {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+	width: 180pt;
+}
+
+info > howManySongs:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+info > length:before {
+	display: table-row;
+	font-weight: bold;
+	content: "Czas trwania";
+}
+
+info > length {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+	width: 180pt;
+}
+
+info > length:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+info > length:after {
+	content: attr(time);
+}
+
+
+info > price:before {
+	display:table-row;
+	font-weight: bold;
+	content: "Cena";
+}
+
+info > price {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+	width: 180pt;
+}
+
+info > price:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+info > price:after {
+	display: inline;
+	content: " " attr(currency);
+}
+
+info > ratings:before {
+	display: table-row;
+	font-weight: bold;
+	padding-bottom: 10px;
+	content: "Ocena";
+}
+
+info > ratings {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+	width: 160pt;
+}
+
+info > ratings:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+students:before {
+	font-size: 30pt;
+	content: "Lista studentów:";
+	font-weight: bold;
+}
+
+students {
+	display: inline-table;
+	padding: 10px;
+	margin-left: 100pt;
+}
+
+students > student {
+	display: table-row;
+	counter-increment: student;
+	font-size: 22pt;
+}
+
+students > student:before {
+	content: counter(student) ". ";
+}
+
+students > student:after {
+	display: table-cell;
+	font-weight: bold;
+	content: attr(studentId);
+	padding-left: 10px;
+}
+
+genres:before {
+	font-size: 30pt;
+	content: "Lista gatunków:";
+	font-weight: bold;
+}
+
+genres {
+	display: inline-table;
+	float: inline-end;
+	margin-right: 100pt;
+}
+
+genres > genre:before {
+	content: counter(genre) ". ";
+}
+
+genres > genre {
+	display: table-row;
+	counter-increment: genre;
+	font-size: 22pt;
+}
+
+disk > albumCover[URL="https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg"] {
+	background-image: url("https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*10000 Days*/
+
+disk > albumCover[URL="https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg"] {
+	background-image: url("https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Thirteenth Step*/
+
+disk > albumCover[URL="https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg"] {
+	background-image: url("https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*STILL SUCKS*/
+
+disk > albumCover[URL="https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg"] {
+	background-image: url("https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Ten*/
+
+disk > albumCover[URL="https://m.media-amazon.com/images/I/8173EyIhkRL.jpg"] {
+	background-image: url("https://m.media-amazon.com/images/I/8173EyIhkRL.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Themata*/
+
+disk > albumCover[URL="https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg"] {
+	background-image: url("https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*As real as it gets*/
+
+disk > albumCover[URL="https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg"] {
+	background-image: url("https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*0*/
+
+disk > albumCover[URL="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg"] {
+	background-image: url("https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Nevermind*/
+
+disk > albumCover[URL="https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg"] {
+	background-image: url("https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*The Day Is My Enemy*/
+
+disk > albumCover[URL="https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg"] {
+	background-image: url("https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Ego Trippin'*/
+
+disk > albumCover[URL="https://ecsmedia.pl/c/u-b-iext67667192.jpg"] {
+	background-image: url("https://ecsmedia.pl/c/u-b-iext67667192.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*U*/
+
+disk > albumCover[URL="https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg"] {
+	background-image: url("https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Jesieniarze - Single*/
+
+disk > albumCover[URL="https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg"] {
+	background-image: url("https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Bo to się tak zwykle zaczyna - EP*/
+
+disk > albumCover[URL="https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg"] {
+	background-image: url("https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Blisko - Single*/
+
+disk > albumCover[URL="https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg"] {
+	background-image: url("https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Kryzys Wieku Wczesnego*/
+
+disk > albumCover[URL="https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg"] {
+	background-image: url("https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Za dobrze by zapomnieć*/
+
+disk > albumCover[URL="https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg"] {
+	background-image: url("https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Kamikaze*/
+
+disk > albumCover[URL="https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg"] {
+	background-image: url("https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Music To Be Murdered By*/
+
+disk > albumCover[URL="https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png"] {
+	background-image: url("https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Eat the Elephant*/
+
+disk > albumCover[URL="https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg"] {
+	background-image: url("https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Cowbell Warrior! - Single*/
+
+disk > albumCover[URL="https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg"] {
+	background-image: url("https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Summertime '06*/
+
+disk > albumCover[URL="https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png"] {
+	background-image: url("https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Polska Floryda*/
+
+disk > albumCover[URL="https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg"] {
+	background-image: url("https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Etazhi*/
+
+disk > albumCover[URL="https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg"] {
+	background-image: url("https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Skryvaj*/
+
+disk > albumCover[URL="https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg"] {
+	background-image: url("https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Akuma*/
+
+disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6"] {
+	background-image: url("https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Akuma II*/
+
+disk > albumCover[URL="https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png"] {
+	background-image: url("https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Music for the Jilted Generation*/
+
+disk > albumCover[URL="https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg"] {
+	background-image: url("https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Follow The Leader*/
+
+disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c"] {
+	background-image: url("https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Fool - Single*/
+
+disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2"] {
+	background-image: url("https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*TYPICAL CHILL SONG - Single*/
+
+disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658"] {
+	background-image: url("https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*A Little Story - Single*/
+
+disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e"] {
+	background-image: url("https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Memphis Doom - Single*/
+
+disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f"] {
+	background-image: url("https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Theres still us EP*/
+
+disk > albumCover[URL="https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp"] {
+	background-image: url("https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*maybe tomorrow...*/
+
+disk > albumCover[URL="https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg"] {
+	background-image: url("https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg");
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px; 
+	height: 164px;
+} /*Once in a Long, Long While...*/

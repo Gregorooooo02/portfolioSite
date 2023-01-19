@@ -1,0 +1,39 @@
++-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+
+| Autor             | Tytul                              | Data wydania | Liczba piosenek | Dlugosc | Cena      | Ocena | Gatunek           | Ulubiona              |
++-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+
+| TOOL              | 10.000 Days                        | 28/04/2006   | 11              | 75:45   | 62.99 PLN | 4.9   | Progessive Metal  | Peter Mountain        |
+| Snoop Dogg        | Ego Trippin'                       | 11/03/2008   | 24              | 77:43   | 72.89 PLN | 4.3   | Hip-Hop           | Adam                  |
+| Michal Aniol      | U                                  | 19/02/2021   | 10              | 34:27   | 29.99 PLN | 4.1   | Electronica       | Grzegorz Bednarek     |
+| CatchUp           | Jesieniarze - Single               | 12/10/2020   | 1               | 2:35    | 12.99 PLN | 4.7   | Alternative Rap   | Grzegorz Bednarek     |
+| Michal Aniol      | Bo to sie zwykle tak zaczyna - EP  | 08/04/2022   | 4               | 11:39   | 21.37 PLN | 4.9   | Alternative Rap   | Grzegorz Bednarek     |
+| Michal Aniol      | Blisko - Single                    | 05/08/2020   | 1               | 3:03    | 9.99 PLN  | 5.0   | Electronica       | Grzegorz Bednarek     |
+| Kacperczyk        | Kryzys Wieku Wczesnego             | 26/11/2021   | 14              | 35:56   | 44.99 PLN | 4.6   | Alternative Rap   | Matthias Long         |
+| Frank Leen        | Za dobrze by zapomniec             | 09/09/2022   | 1               | 2:32    | 7.99 PLN  | 5.0   | Electronica       | Matthias Long         |
+| Eminem            | Kamikaze                           | 31/08/2018   | 13              | 45:49   | 55.55 PLN | 4.4   | Hip-Hop           | Kanye West            |
+| Eminem            | Music To Be Murdered By            | 17/01/2020   | 20              | 64:23   | 59.99 PLN | 4.4   | Hip-Hop           | Blaise Peck           |
+| A Perfect Circle  | Eat the Elephant                   | 20/04/2018   | 12              | 57:07   | 62.99 PLN | 4.3   | Alternative Metal | Jan Nowak             |
+| A Perfect Circle  | Thirteenth Step                    | 16/09/2003   | 12              | 50:36   | 53.99 PLN | 4.2   | Alternative Metal | Kanye West            |
+| Sxmpra            | Cowbell Warrior! - Single          | 08/12/2021   | 1               | 2:29    | 6.66 PLN  | 5.0   | Phonk             | Jan Nowak             |
+| Vince Staples     | Summertime '06'                    | 30/06/2015   | 20              | 59:05   | 42.99 PLN | 4.1   | Hip-Hop           | Adam                  |
+| Szczyl            | Polska Floryda                     | 15/10/2021   | 13              | 38:57   | 38.99 PLN | 4.2   | Hip-Hop           | Adam                  |
+| Molchat Doma      | Etazhi                             | 07/09/2018   | 9               | 33:13   | 40.99 PLN | 4.5   | Post-punk         | Grzegorz Bednarek     |
+| Nurnberg          | Skryvaj                            | 05/11/2018   | 8               | 25:01   | 35.99 PLN | 4.5   | Post-punk         | Juan Pablo            |
+| ALEX              | Akuma                              | 23/06/2017   | 12              | 41:18   | 30.99 PLN | 4.7   | Synthwave         | Matthias Long         |
+| ALEX              | Akuma II                           | 10/05/2019   | 10              | 38:56   | 32.99 PLN | 4.8   | Synthwave         | Jorge Mario Bergoglio |
+| The Prodigy       | Music for the Jilted Generation    | 04/04/1994   | 13              | 78:07   | 45.99 PLN | 4.0   | Techno            | Matthew Tar           |
+| KoRn              | Follow The Leader                  | 18/08/1998   | 14              | 70:08   | 42.99 PLN | 4.2   | Nu Metal          | Blaise Peck           |
+| SAOTOMAMORE       | Fool - Single                      | 07/12/2021   | 1               | 2:06    | 12.99 PLN | 5.0   | Phonk             | Peter Mountain        |
+| Limp Bizkit       | STILL SUCKS                        | 31/10/2021   | 12              | 31:55   | 40.00 PLN | 4.8   | Nu Metal          | Juan Pablo            |
+| GREEN ORXNGE      | TYPICAL CHILL SONG - Single        | 15/10/2021   | 1               | 1:52    | 6.99 PLN  | 4.9   | Phonk             | Matthew Tar           |
+| DVRST             | A Little Story - Single            | 29/10/2021   | 1               | 2:03    | 11.99 PLN | 5.0   | Phonk             | Grzegorz Bednarek     |
+| Kordhell          | Memphis Doom - Single              | 08/10/2021   | 1               | 2:34    | 11.99 PLN | 5.0   | Phonk             | Juan Pablo            |
+| Swell             | theres still us - EP               | 19/01/2016   | 5               | 11:38   | 12.99 PLN | 4.8   | Hip-Hop           | Jorge Mario Bergoglio |
+| Low Roar          | maybe tomorrow...                  | 30/07/2021   | 12              | 63:19   | 38.99 PLN | 4.9   | Indie Rock        | Grzegorz Bednarek     |
+| Low Roar          | Once in a Long. Long While...      | 05/04/2017   | 12              | 49:00   | 40.99 PLN | 5.0   | Indie Rock        | Grzegorz Bednarek     |
+| Pearl Jam         | Ten                                | 27/08/1991   | 11              | 53:20   | 35.97 PLN | 4.5   | Grunge            | Jorge Mario Bergoglio |
+| Karnivool         | Themata                            | 07/02/2005   | 12              | 48:52   | 30.00 PLN | 4.0   | Alternative Metal | Juan Pablo            |
+| Matt Large        | As real as it gets                 | 18/05/2018   | 12              | 31:33   | 22.99 PLN | 4.5   | Hip-Hop           | Peter Mountain        |
+| Low Roar          | 0                                  | 05/08/2014   | 13              | 68:14   | 32.99 PLN | 4.2   | Indie Rock        | Blaise Peck           |
+| Nirvana           | Nevermind                          | 24/09/1991   | 12              | 42:38   | 32.00 PLN | 4.0   | Grunge            | Peter Mountain        |
+| The Prodigy       | The Day Is My Enemy                | 30/03/2015   | 15              | 56:12   | 45.87 PLN | 3.9   | Techno            | Matthew Tar           |
++-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+

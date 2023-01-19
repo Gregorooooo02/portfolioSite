@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pong with SVG</title>
+    <script type="text/javascript" src="pongScript.js"></script>
+</head>
+<body onload="svgPong()">
+  <svg id="field"
+       xmlns="http://www.w3.org/2000/svg"
+       viewBox="0 0 800 600"
+       preserveAspectRatio="xMidYMid">
+    <style>
+      .score {
+        text-anchor: middle;
+        font-family: "Pixel Operator Mono", monospace;
+        font-size: 36px;
+      }
+
+      #field {
+        left:0;
+        top:0;
+        width:100%;
+        height:100%;
+        position : absolute;
+        display: inline-block;
+      }
+
+    </style>
+
+    <rect id="background"
+          width="800"
+          height="600"
+          fill="#00000"/>
+
+    <line x1="400" y1="600"
+          x2="400" y2="0"
+          stroke-width="2" stroke-dasharray="5,5"
+          stroke="#FFF"/>
+
+    <text class="score" id="playerScore"
+          x="300" y="50"
+          fill="#FFF">
+      0
+    </text>
+    <text class="score" id="computerScore"
+          x="500" y="50"
+          fill="#FFF">
+      0
+    </text>
+
+    <rect id="paddleLeft"
+          width="20" height="100"
+          x="10" y="240" rx="5"
+          fill="#D633FF"
+          filter="url(#softGlowPlayer)"/>
+
+    <rect id="paddleRight"
+          width="20" height="100"
+          x="770" y="240" rx="5"
+          fill="#33EEFF"
+          filter="url(#softGlowComputer)"/>
+
+    <circle id="ball"
+            r="10"
+            cx="400" cy="300"
+            fill="#FFF"/>
+
+    <filter id="softGlowPlayer"
+            height="300%" width="300%"
+            x="-75%" y="-75%">
+      <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken"/>
+
+      <feGaussianBlur in="thicken" stdDeviation="7" result="blurred"/>
+
+      <feFlood flood-color="#D633FF" result="glowColor"/>
+
+      <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored"/>
+
+      <feMerge>
+        <feMergeNode in="softGlow_colored"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
+
+    <filter id="softGlowComputer"
+            height="300%" width="300%"
+            x="-75%" y="-75%">
+      <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken"/>
+
+      <feGaussianBlur in="thicken" stdDeviation="7" result="blurred"/>
+
+      <feFlood flood-color="#33EEFF" result="glowColor"/>
+
+      <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored"/>
+
+      <feMerge>
+        <feMergeNode in="softGlow_colored"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
+
+  </svg>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet href="style.css" ?>
+
+<!--Element główny = korzeń-->
+<cds:exercise
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:cds="plytoteka"
+xsi:schemaLocation="plytoteka schema.xsd">
+  <!--Nagłówek strony i podstawowe informacje-->
+  <cds:heading>
+    <cds:projectName>Płytoteka CD z różnymi gatunkami muzyki</cds:projectName>
+    <cds:subject>Technologie XML</cds:subject>
+    <cds:author>Grzegorz Bednarek</cds:author>
+    <cds:index>242359</cds:index>
+    <cds:lastModified>2022-11-06</cds:lastModified>
+  </cds:heading>
+    
+  <cds:library text="Moja biblioteka płyt CD">
+    <cds:disk diskId="D1" genreId="Progressive Metal" studentId="S3">
+      <cds:author>TOOL</cds:author>
+      <cds:title>10.000 Days</cds:title>
+      <cds:info>
+        <cds:released>28/04/2006</cds:released>
+        <cds:howManySongs>11</cds:howManySongs>
+        <cds:length time="75:45"/>
+        <cds:price currency="PLN">62.99</cds:price>
+        <cds:ratings>4.9</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D2" genreId="Alternative Metal" studentId="S5">
+      <cds:author>A Perfect Circle</cds:author>
+      <cds:title>Thirteenth Step</cds:title>
+      <cds:info>
+        <cds:released>16/09/2003</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="50:36"/>
+        <cds:price currency="PLN">53.99</cds:price>
+        <cds:ratings>4.2</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D3" genreId="Nu Metal" studentId="S4">
+      <cds:author>Limp Bizkit</cds:author>
+      <cds:title>STILL SUCKS</cds:title>
+      <cds:info>
+        <cds:released>31/10/2021</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="31:55"/>
+        <cds:price currency="PLN">40.00</cds:price>
+        <cds:ratings>4.8</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D4" genreId="Grunge" studentId="S8">
+      <cds:author>Pearl Jam</cds:author>
+      <cds:title>Ten</cds:title>
+      <cds:info>
+        <cds:released>27/08/1991</cds:released>
+        <cds:howManySongs>11</cds:howManySongs>
+        <cds:length time="53:20"/>
+        <cds:price currency="PLN">35.97</cds:price>
+        <cds:ratings>4.5</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D5" genreId="Alternative Metal" studentId="S4">
+      <cds:author>Karnivool</cds:author>
+      <cds:title>Themata</cds:title>
+      <cds:info>
+        <cds:released>07/02/2005</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="48:52"/>
+        <cds:price currency="PLN">30.00</cds:price>
+        <cds:ratings>4.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://m.media-amazon.com/images/I/8173EyIhkRL.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D6" genreId="Hip-Hop" studentId="S3">
+      <cds:author>Matt Large</cds:author>
+      <cds:title>As real as it gets</cds:title>
+      <cds:info>
+        <cds:released>18/05/2018</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="31:33"/>
+        <cds:price currency="PLN">22.99</cds:price>
+        <cds:ratings>4.5</cds:ratings>
+      </cds:info>      
+      <cds:albumCover URL="https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D7" genreId="Indie Rock" studentId="S6">
+      <cds:author>Low Roar</cds:author>
+      <cds:title>0</cds:title>
+      <cds:info>
+        <cds:released>05/08/2014</cds:released>
+        <cds:howManySongs>13</cds:howManySongs>
+        <cds:length time="68:14"/>
+        <cds:price currency="PLN">32.99</cds:price>
+        <cds:ratings>4.2</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D8" genreId="Grunge" studentId="S3">
+      <cds:author>Nirvana</cds:author>
+      <cds:title>Nevermind</cds:title>
+      <cds:info>
+        <cds:released>24/09/1991</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="42:38"/>
+        <cds:price currency="PLN">32.00</cds:price>
+        <cds:ratings>4.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D9" genreId="Techno" studentId="S9">
+      <cds:author>The Prodigy</cds:author>
+      <cds:title>The Day Is My Enemy</cds:title>
+      <cds:info>
+        <cds:released>30/03/2015</cds:released>
+        <cds:howManySongs>15</cds:howManySongs>
+        <cds:length time="56:12"/>
+        <cds:price currency="PLN">45.87</cds:price>
+        <cds:ratings>3.9</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D10" genreId="Hip-Hop" studentId="S10">
+      <cds:author>Snoop Dogg</cds:author>
+      <cds:title>Ego Trippin'</cds:title>
+      <cds:info>
+        <cds:released>11/03/2008</cds:released>
+        <cds:howManySongs>24</cds:howManySongs>
+        <cds:length time="77:43"/>
+        <cds:price currency="PLN">72.89</cds:price>
+        <cds:ratings>4.3</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D11" genreId="Electronica" studentId="S1">
+      <cds:author>Michal Aniol</cds:author>
+      <cds:title>U</cds:title>
+      <cds:info>
+        <cds:released>19/02/2021</cds:released>
+        <cds:howManySongs>10</cds:howManySongs>
+        <cds:length time="34:27"/>
+        <cds:price currency="PLN">29.99</cds:price>
+        <cds:ratings>4.1</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://ecsmedia.pl/c/u-b-iext67667192.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D12" genreId="Alternative Rap" studentId="S1">
+      <cds:author>CatchUp</cds:author>
+      <cds:title>Jesieniarze - Single</cds:title>
+      <cds:info>
+        <cds:released>12/10/2020</cds:released>
+        <cds:howManySongs>1</cds:howManySongs>
+        <cds:length time="2:35"/>
+        <cds:price currency="PLN">12.99</cds:price>
+        <cds:ratings>4.7</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D13" genreId="Alternative Rap" studentId="S1">
+      <cds:author>Michal Aniol</cds:author>
+      <cds:title>Bo to sie zwykle tak zaczyna - EP</cds:title>
+      <cds:info>
+        <cds:released>08/04/2022</cds:released>
+        <cds:howManySongs>4</cds:howManySongs>
+        <cds:length time="11:39"/>
+        <cds:price currency="PLN">21.37</cds:price>
+        <cds:ratings>4.9</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D14" genreId="Electronica" studentId="S1">
+      <cds:author>Michal Aniol</cds:author>
+      <cds:title>Blisko - Single</cds:title>
+      <cds:info>
+        <cds:released>05/08/2020</cds:released>
+        <cds:howManySongs>1</cds:howManySongs>
+        <cds:length time="3:03"/>
+        <cds:price currency="PLN">9.99</cds:price>
+        <cds:ratings>5.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D15" genreId="Alternative Rap" studentId="S7">
+      <cds:author>Kacperczyk</cds:author>
+      <cds:title>Kryzys Wieku Wczesnego</cds:title>
+      <cds:info>
+        <cds:released>26/11/2021</cds:released>
+        <cds:howManySongs>14</cds:howManySongs>
+        <cds:length time="35:56"/>
+        <cds:price currency="PLN">44.99</cds:price>
+        <cds:ratings>4.6</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D16" genreId="Electronica" studentId="S7">
+      <cds:author>Frank Leen</cds:author>
+      <cds:title>Za dobrze by zapomniec</cds:title>
+      <cds:info>
+        <cds:released>09/09/2022</cds:released>
+        <cds:howManySongs>1</cds:howManySongs>
+        <cds:length time="2:32"/>
+        <cds:price currency="PLN">7.99</cds:price>
+        <cds:ratings>5.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D17" genreId="Hip-Hop" studentId="S5">
+      <cds:author>Eminem</cds:author>
+      <cds:title>Kamikaze</cds:title>
+      <cds:info>
+        <cds:released>31/08/2018</cds:released>
+        <cds:howManySongs>13</cds:howManySongs>
+        <cds:length time="45:49"/>
+        <cds:price currency="PLN">55.55</cds:price>
+        <cds:ratings>4.4</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D18" genreId="Hip-Hop" studentId="S6">
+      <cds:author>Eminem</cds:author>
+      <cds:title>Music To Be Murdered By</cds:title>
+      <cds:info>
+        <cds:released>17/01/2020</cds:released>
+        <cds:howManySongs>20</cds:howManySongs>
+        <cds:length time="64:23"/>
+        <cds:price currency="PLN">59.99</cds:price>
+        <cds:ratings>4.4</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D19" genreId="Alternative Metal" studentId="S2">
+      <cds:author>A Perfect Circle</cds:author>
+      <cds:title>Eat the Elephant</cds:title>
+      <cds:info>
+        <cds:released>20/04/2018</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="57:07"/>
+        <cds:price currency="PLN">62.99</cds:price>
+        <cds:ratings>4.3</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D20" genreId="Phonk" studentId="S2">
+      <cds:author>Sxmpra</cds:author>
+      <cds:title>Cowbell Warrior! - Single</cds:title>
+      <cds:info>
+        <cds:released>08/12/2021</cds:released>
+        <cds:howManySongs>1</cds:howManySongs>
+        <cds:length time="2:29"/>
+        <cds:price currency="PLN">6.66</cds:price>
+        <cds:ratings>5.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D21" genreId="Hip-Hop" studentId="S10">
+      <cds:author>Vince Staples</cds:author>
+      <cds:title>Summertime '06'</cds:title>
+      <cds:info>
+        <cds:released>30/06/2015</cds:released>
+        <cds:howManySongs>20</cds:howManySongs>
+        <cds:length time="59:05"/>
+        <cds:price currency="PLN">42.99</cds:price>
+        <cds:ratings>4.1</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D22" genreId="Hip-Hop" studentId="S10">
+      <cds:author>Szczyl</cds:author>
+      <cds:title>Polska Floryda</cds:title>
+      <cds:info>
+        <cds:released>15/10/2021</cds:released>
+        <cds:howManySongs>13</cds:howManySongs>
+        <cds:length time="38:57"/>
+        <cds:price currency="PLN">38.99</cds:price>
+        <cds:ratings>4.2</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D23" genreId="Post-punk" studentId="S1">
+      <cds:author>Molchat Doma</cds:author>
+      <cds:title>Etazhi</cds:title>
+      <cds:info>
+        <cds:released>07/09/2018</cds:released>
+        <cds:howManySongs>9</cds:howManySongs>
+        <cds:length time="33:13"/>
+        <cds:price currency="PLN">40.99</cds:price>
+        <cds:ratings>4.5</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D24" genreId="Post-punk" studentId="S4">
+      <cds:author>Nurnberg</cds:author>
+      <cds:title>Skryvaj</cds:title>
+      <cds:info>
+        <cds:released>05/11/2018</cds:released>
+        <cds:howManySongs>8</cds:howManySongs>
+        <cds:length time="25:01"/>
+        <cds:price currency="PLN">35.99</cds:price>
+        <cds:ratings>4.5</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D25" genreId="Synthwave" studentId="S7">
+      <cds:author>ALEX</cds:author>
+      <cds:title>Akuma</cds:title>
+      <cds:info>
+        <cds:released>23/06/2017</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="41:18"/>
+        <cds:price currency="PLN">30.99</cds:price>
+        <cds:ratings>4.7</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D26" genreId="Synthwave" studentId="S8">
+      <cds:author>ALEX</cds:author>
+      <cds:title>Akuma II</cds:title>
+      <cds:info>
+        <cds:released>10/05/2019</cds:released>
+        <cds:howManySongs>10</cds:howManySongs>
+        <cds:length time="38:56"/>
+        <cds:price currency="PLN">32.99</cds:price>
+        <cds:ratings>4.8</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D27" genreId="Techno" studentId="S9">
+      <cds:author>The Prodigy</cds:author>
+      <cds:title>Music for the Jilted Generation</cds:title>
+      <cds:info>
+        <cds:released>04/04/1994</cds:released>
+        <cds:howManySongs>13</cds:howManySongs>
+        <cds:length time="78:07"/>
+        <cds:price currency="PLN">45.99</cds:price>
+        <cds:ratings>4.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D28" genreId="Nu Metal" studentId="S6">
+      <cds:author>KoRn</cds:author>
+      <cds:title>Follow The Leader</cds:title>
+      <cds:info>
+        <cds:released>18/08/1998</cds:released>
+        <cds:howManySongs>14</cds:howManySongs>
+        <cds:length time="70:08"/>
+        <cds:price currency="PLN">42.99</cds:price>
+        <cds:ratings>4.2</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D29" genreId="Phonk" studentId="S3">
+      <cds:author>SAOTOMAMORE</cds:author>
+      <cds:title>Fool - Single</cds:title>
+      <cds:info>
+        <cds:released>07/12/2021</cds:released>
+        <cds:howManySongs>1</cds:howManySongs>
+        <cds:length time="2:06"/>
+        <cds:price currency="PLN">12.99</cds:price>
+        <cds:ratings>5.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D30" genreId="Phonk" studentId="S9">
+      <cds:author>GREEN ORXNGE</cds:author>
+      <cds:title>TYPICAL CHILL SONG - Single</cds:title>
+      <cds:info>
+        <cds:released>15/10/2021</cds:released>
+        <cds:howManySongs>1</cds:howManySongs>
+        <cds:length time="1:52"/>
+        <cds:price currency="PLN">6.99</cds:price>
+        <cds:ratings>4.9</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D31" genreId="Phonk" studentId="S1">
+      <cds:author>DVRST</cds:author>
+      <cds:title>A Little Story - Single</cds:title>
+      <cds:info>
+        <cds:released>29/10/2021</cds:released>
+        <cds:howManySongs>1</cds:howManySongs>
+        <cds:length time="2:03"/>
+        <cds:price currency="PLN">11.99</cds:price>
+        <cds:ratings>5.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D32" genreId="Phonk" studentId="S4">
+      <cds:author>Kordhell</cds:author>
+      <cds:title>Memphis Doom - Single</cds:title>
+      <cds:info>
+        <cds:released>08/10/2021</cds:released>
+        <cds:howManySongs>1</cds:howManySongs>
+        <cds:length time="2:34"/>
+        <cds:price currency="PLN">11.99</cds:price>
+        <cds:ratings>5.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D33" genreId="Hip-Hop" studentId="S8">
+      <cds:author>Swell</cds:author>
+      <cds:title>theres still us - EP</cds:title>
+      <cds:info>
+        <cds:released>19/01/2016</cds:released>
+        <cds:howManySongs>5</cds:howManySongs>
+        <cds:length time="11:38"/>
+        <cds:price currency="PLN">12.99</cds:price>
+        <cds:ratings>4.8</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D34" genreId="Indie Rock" studentId="S1">
+      <cds:author>Low Roar</cds:author>
+      <cds:title>maybe tomorrow...</cds:title>
+      <cds:info>
+        <cds:released>30/07/2021</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="63:19"/>
+        <cds:price currency="PLN">38.99</cds:price>
+        <cds:ratings>4.9</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp"/>
+    </cds:disk>
+    
+    <cds:disk diskId="D35" genreId="Indie Rock" studentId="S1">
+      <cds:author>Low Roar</cds:author>
+      <cds:title>Once in a Long. Long While...</cds:title>
+      <cds:info>
+        <cds:released>05/04/2017</cds:released>
+        <cds:howManySongs>12</cds:howManySongs>
+        <cds:length time="49:00"/>
+        <cds:price currency="PLN">40.99</cds:price>
+        <cds:ratings>5.0</cds:ratings>
+      </cds:info>
+      <cds:albumCover URL="https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg"/>
+    </cds:disk>
+  </cds:library>
+  
+  <cds:students>
+    <cds:student studentId="S1">Grzegorz Bednarek</cds:student>
+    <cds:student studentId="S2">Jan Nowak</cds:student>
+    <cds:student studentId="S3">Peter Mountain</cds:student>
+    <cds:student studentId="S4">Juan Pablo</cds:student>
+    <cds:student studentId="S5">Kanye West</cds:student>
+    <cds:student studentId="S6">Blaise Peck</cds:student>
+    <cds:student studentId="S7">Matthias Long</cds:student>
+    <cds:student studentId="S8">Jorge Mario Bergoglio</cds:student>
+    <cds:student studentId="S9">Matthew Tar</cds:student>
+    <cds:student studentId="S10">Adam</cds:student>
+  </cds:students>
+  
+  <cds:genres>
+   <cds:genre genreId="Progressive Metal">Progessive Metal</cds:genre>
+   <cds:genre genreId="Alternative Metal">Alternative Metal</cds:genre>
+   <cds:genre genreId="Nu Metal">Nu Metal </cds:genre>
+   <cds:genre genreId="Grunge">Grunge</cds:genre>
+   <cds:genre genreId="Hip-Hop">Hip-Hop</cds:genre>
+   <cds:genre genreId="Indie Rock">Indie Rock</cds:genre>
+   <cds:genre genreId="Techno">Techno</cds:genre>
+   <cds:genre genreId="Electronica">Electronica</cds:genre>
+   <cds:genre genreId="Alternative Rap">Alternative Rap</cds:genre>
+   <cds:genre genreId="Phonk">Phonk</cds:genre>
+   <cds:genre genreId="Post-punk">Post-punk</cds:genre>
+   <cds:genre genreId="Synthwave">Synthwave</cds:genre>
+  </cds:genres>
+  
+</cds:exercise>

@@ -20,7 +20,7 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-track {
-    background: #1e1e24;
+    background: white;
 }
 
 body::-webkit-scrollbar-thumb {
@@ -28,8 +28,21 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-    margin-left: 5rem;
-    padding: 1rem;
+    margin-left: 4rem;
+    padding-left : 2rem;
+    font-family: Helvetica Neue, monospace;
+}
+
+.exInfo {
+    font-weight: bold;
+}
+
+.criteria {
+    font-weight: bold;
+}
+
+.maxScore {
+    font-weight: bold;
 }
 
 .navbar {
@@ -52,7 +65,7 @@ main {
 }
 
 .nav-item:last-child {
-    margin-top: 42rem;
+    margin-top: 22rem;
 }
 
 .nav-link {
@@ -100,6 +113,46 @@ main {
 
 .navbar:hover .logo svg {
     transform: rotate(-180deg);
+}
+
+.heading {
+    display: block;
+    color: blueviolet;
+    font-size: 1.4rem;
+}
+
+tr {
+    transition: background-color 200ms ease-out 100ms,
+                color 200ms ease-out 100ms;
+}
+
+tr:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+.criteriaTable, .tableData {
+    border-bottom: 1px solid;
+    border-collapse: collapse;
+
+    padding: 1rem;
+}
+
+.criteria {
+    padding-bottom: 1rem;
+}
+
+.maxScore {
+    padding-top: 1rem;
+}
+
+hr.rounded {
+    border-top: 8px solid blueviolet;
+    border-radius: 5px;
+}
+
+.codeBox {
+    font-size: 13px;
 }
 
 /* Small screens */
