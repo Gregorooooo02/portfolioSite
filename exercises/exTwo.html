@@ -675,7 +675,611 @@
         <div class="accordionPanel codeBox">
             <pre>
                 <code>
+@keyframes colorHover {
+	from {background-color: white; color:black;}
+	to {	background-color: #70f; color: white;}
+}
 
+exercise {
+	font-family: Helvetica;
+	background-color: rgb(255, 255, 255);
+}
+
+heading &gt projectName {
+	display: block;
+	text-align: center;
+	font-size: 40pt;
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 15px;
+	background-color: rgb(211, 211, 211);
+}
+
+heading &gt subject {
+	display: block;
+	text-align: center;
+	font-size: 32pt;
+	font-weight: bold;
+	padding: 10px;
+	background-color: rgb(167, 255, 157);
+}
+
+heading &gt author, index, lastModified {
+	display: block;
+	text-align: center;
+	font-size: 24pt;
+	font-weight: bold;
+	padding: 5px;
+	background-color: rgb(174, 185, 255);
+}
+
+library:before {
+	display: block;
+	content: attr(text);
+	text-align: center;
+	font-size: 30pt;
+	font-weight: bold;
+	color: white;
+	padding: 15px;
+	background-color: rgb(120, 0, 255);
+}
+
+disk:before {
+	display: block;
+	font-weight: bold;
+	font-size: 18pt;
+	content: &quotGatunek: &quot attr(genreId);
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 185px;
+}
+
+disk:after {
+	display: block;
+	font-weight: bold;
+	font-size: 18pt;
+	content: &quotUlubiona płyta &quot attr(favorite);
+	margin-top: 10px;
+	margin-bottom: 50px;
+	margin-left: 185px;
+}
+
+disk &gt info {
+	display: table-row-group;
+}
+
+disk &gt author {
+	display: table-caption;
+	color: white;
+	background-color: rgb(120, 0, 255);
+	font-size: 22pt;
+	font-weight: bold;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 3px;
+}
+
+disk &gt title {
+	display: table-caption;
+	color: white;
+	background-color: rgb(120, 0, 255);
+	font-size: 20pt;
+	padding-bottom: 10px;
+	text-align: center;
+}
+
+info &gt released:before {
+	display: table-row;
+	font-weight: bold;
+	content: &quotData wydania&quot
+}
+
+info &gt released {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	text-align: left;
+	border-bottom: 1px solid #bbb;
+	width: 180pt;
+}
+
+info &gt released:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+info &gt howManySongs:before {
+	display: table-row;
+	font-weight: bold;
+	content: &quotIlość piosenek&quot;
+}
+
+info &gt howManySongs {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+	width: 180pt;
+}
+
+info &gt howManySongs:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+info &gt length:before {
+	display: table-row;
+	font-weight: bold;
+	content: &quotCzas trwania&quot;
+}
+
+info &gt length {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+	width: 180pt;
+}
+
+info &gt length:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+info &gt length:after {
+	content: attr(time);
+}
+
+
+info &gt price:before {
+	display:table-row;
+	font-weight: bold;
+	content: &quotCena&quot;
+}
+
+info &gt price {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+	width: 180pt;
+}
+
+info &gt price:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+info &gt price:after {
+	display: inline;
+	content: &quot &quot attr(currency);
+}
+
+info &gt ratings:before {
+	display: table-row;
+	font-weight: bold;
+	padding-bottom: 10px;
+	content: &quotOcena&quot;
+}
+
+info &gt ratings {
+	display: table-cell;
+	font-size: 18pt;
+	padding: 10px;
+	border-bottom: 1px solid #bbb;
+	width: 160pt;
+}
+
+info &gt ratings:hover {
+	animation-name: colorHover;
+	animation-duration: 300ms;
+	animation-fill-mode: forwards;
+}
+
+students:before {
+	font-size: 30pt;
+	content: &quotLista studentów:&quot;
+	font-weight: bold;
+}
+
+students {
+	display: inline-table;
+	padding: 10px;
+	margin-left: 100pt;
+}
+
+students &gt student {
+	display: table-row;
+	counter-increment: student;
+	font-size: 22pt;
+}
+
+students &gt student:before {
+	content: counter(student) &quot. &quot;
+}
+
+students &gt student:after {
+	display: table-cell;
+	font-weight: bold;
+	content: attr(studentId);
+	padding-left: 10px;
+}
+
+genres:before {
+	font-size: 30pt;
+	content: &quotLista gatunków:&quot;
+	font-weight: bold;
+}
+
+genres {
+	display: inline-table;
+	float: inline-end;
+	margin-right: 100pt;
+}
+
+genres &gt genre:before {
+	content: counter(genre) &quot. &quot;
+}
+
+genres &gt genre {
+	display: table-row;
+	counter-increment: genre;
+	font-size: 22pt;
+}
+
+disk &gt albumCover[URL=&quothttps://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg&quot] {
+	background-image: url(&quothttps://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*10000 Days*/
+
+disk &gt albumCover[URL=&quothttps://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg&quot] {
+	background-image: url(&quothttps://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Thirteenth Step*/
+
+disk &gt albumCover[URL=&quothttps://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg&quot] {
+	background-image: url(&quothttps://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*STILL SUCKS*/
+
+disk &gt albumCover[URL=&quothttps://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg&quot] {
+	background-image: url(&quothttps://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Ten*/
+
+disk &gt albumCover[URL=&quothttps://m.media-amazon.com/images/I/8173EyIhkRL.jpg&quot] {
+	background-image: url(&quothttps://m.media-amazon.com/images/I/8173EyIhkRL.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Themata*/
+
+disk &gt albumCover[URL=&quothttps://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg&quot] {
+	background-image: url(&quothttps://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*As real as it gets*/
+
+disk &gt albumCover[URL=&quothttps://m.media-amazon.com/images/I/71kUJ6leTCL.jpg&quot] {
+	background-image: url(&quothttps://m.media-amazon.com/images/I/71kUJ6leTCL.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*0*/
+
+disk &gt albumCover[URL=&quothttps://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg&quot] {
+	background-image: url(&quothttps://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Nevermind*/
+
+disk &gt albumCover[URL=&quothttps://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg&quot] {
+	background-image: url(&quothttps://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*The Day Is My Enemy*/
+
+disk &gt albumCover[URL=&quothttps://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg&quot] {
+	background-image: url(&quothttps://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Ego Trippin&apos*/
+
+disk &gt albumCover[URL=&quothttps://ecsmedia.pl/c/u-b-iext67667192.jpg&quot] {
+	background-image: url(&quothttps://ecsmedia.pl/c/u-b-iext67667192.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*U*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Jesieniarze - Single*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Bo to się tak zwykle zaczyna - EP*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Blisko - Single*/
+
+disk &gt albumCover[URL=&quothttps://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg&quot] {
+	background-image: url(&quothttps://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Kryzys Wieku Wczesnego*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Za dobrze by zapomnieć*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Kamikaze*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Music To Be Murdered By*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png&quot] {
+	background-image: url(&quothttps://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Eat the Elephant*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Cowbell Warrior! - Single*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Summertime &apos06*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png&quot] {
+	background-image: url(&quothttps://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Polska Floryda*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Etazhi*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Skryvaj*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg&quot] {
+	background-image: url(&quothttps://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Akuma*/
+
+disk &gt albumCover[URL=&quothttps://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6&quot] {
+	background-image: url(&quothttps://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Akuma II*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png&quot] {
+	background-image: url(&quothttps://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Music for the Jilted Generation*/
+
+disk &gt albumCover[URL=&quothttps://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg&quot] {
+	background-image: url(&quothttps://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Follow The Leader*/
+
+disk &gt albumCover[URL=&quothttps://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c&quot] {
+	background-image: url(&quothttps://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Fool - Single*/
+
+disk &gt albumCover[URL=&quothttps://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2&quot] {
+	background-image: url(&quothttps://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*TYPICAL CHILL SONG - Single*/
+
+disk &gt albumCover[URL=&quothttps://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658&quot] {
+	background-image: url(&quothttps://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*A Little Story - Single*/
+
+disk &gt albumCover[URL=&quothttps://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e&quot] {
+	background-image: url(&quothttps://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Memphis Doom - Single*/
+
+disk &gt albumCover[URL=&quothttps://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f&quot] {
+	background-image: url(&quothttps://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Theres still us EP*/
+
+disk &gt albumCover[URL=&quothttps://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp&quot] {
+	background-image: url(&quothttps://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*maybe tomorrow...*/
+
+disk &gt albumCover[URL=&quothttps://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg&quot] {
+	background-image: url(&quothttps://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg&quot);
+	margin-left: 20px;
+	float: inline-start;
+	background-size: 164px 164px;
+	display: inline-block;
+	width: 164px;
+	height: 164px;
+} /*Once in a Long, Long While...*/
                 </code>
             </pre>
         </div>
@@ -684,10 +1288,188 @@
         <div class="accordionPanel codeBox">
             <pre>
                 <code>
+&lt?xml version=&quot1.0&quot encoding=&quotUTF-8&quot ?&gt
 
+&ltxsd:schema
+xmlns:xsd=&quothttp://www.w3.org/2001/XMLSchema&quot
+targetNamespace=&quotplytoteka&quot
+xmlns:cds=&quotplytoteka&quot
+elementFormDefault=&quotqualified&quot&gt
+
+&ltxsd:element name=&quotexercise&quot type=&quotcds:exerciseType&quot&gt
+	&ltxsd:key name=&quotdiskId&quot&gt
+		&ltxsd:selector xpath=&quot./cds:library/cds:disk&quot/&gt
+		&ltxsd:field xpath=&quot@diskId&quot/&gt
+	&lt/xsd:key&gt
+	&ltxsd:key name=&quotgenreId&quot&gt
+		&ltxsd:selector xpath=&quot./cds:genres/cds:genre&quot/&gt
+		&ltxsd:field xpath=&quot@genreId&quot/&gt
+	&lt/xsd:key&gt
+	&ltxsd:key name=&quotstudentId&quot&gt
+		&ltxsd:selector xpath=&quot./cds:students/cds:student&quot/&gt
+		&ltxsd:field xpath=&quot@studentId&quot/&gt
+	&lt/xsd:key&gt
+	&ltxsd:keyref name=&quotkeyRefGenre&quot refer=&quotcds:genreId&quot&gt
+		&ltxsd:selector xpath=&quot./cds:library/cds:disk&quot/&gt
+		&ltxsd:field xpath=&quot@genreId&quot/&gt
+	&lt/xsd:keyref&gt
+	&ltxsd:keyref name=&quotkeyRefStudent&quot refer=&quotcds:studentId&quot&gt
+		&ltxsd:selector xpath=&quot./cds:genres/cds:genre&quot/&gt
+		&ltxsd:field xpath=&quot@studentId&quot/&gt
+	&lt/xsd:keyref&gt
+&lt/xsd:element&gt
+
+&ltxsd:complexType name=&quotexerciseType&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:group ref=&quotcds:exerciseGroup&quot/&gt
+	&lt/xsd:sequence&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotheadingType&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:element name=&quotprojectName&quot type=&quotxsd:string&quot/&gt
+		&ltxsd:element name=&quotsubject&quot type=&quotxsd:string&quot/&gt
+		&ltxsd:element name=&quotauthor&quot type=&quotxsd:string&quot/&gt
+		&ltxsd:element name=&quotindex&quot type=&quotcds:indexType&quot/&gt
+		&ltxsd:element name=&quotlastModified&quot type=&quotxsd:date&quot/&gt
+	&lt/xsd:sequence&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:simpleType name=&quotindexType&quot&gt
+	&ltxsd:restriction base=&quotxsd:string&quot&gt
+		&ltxsd:pattern value=&quot[0-9]{6}&quot/&gt
+	&lt/xsd:restriction&gt
+&lt/xsd:simpleType&gt
+
+&ltxsd:complexType name=&quotlibraryType&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:element name=&quotdisk&quot type=&quotcds:diskType&quot maxOccurs=&quot35&quot/&gt
+	&lt/xsd:sequence&gt
+	&ltxsd:attribute name=&quottext&quot type=&quotxsd:string&quot/&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotdiskType&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:group ref=&quotcds:diskGroup&quot/&gt
+	&lt/xsd:sequence&gt
+	&ltxsd:attribute name=&quotdiskId&quot type=&quotxsd:string&quot use=&quotrequired&quot/&gt
+	&ltxsd:attribute name=&quotgenreId&quot type=&quotxsd:string&quot use=&quotrequired&quot/&gt
+	&ltxsd:attribute name=&quotfavorite&quot type=&quotxsd:string&quot use=&quotoptional&quot/&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotstudentsType&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:element name=&quotstudent&quot type=&quotcds:studentType&quot maxOccurs=&quot10&quot/&gt
+	&lt/xsd:sequence&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotstudentType&quot&gt
+	&ltxsd:simpleContent&gt
+		&ltxsd:extension base=&quotxsd:string&quot&gt
+			&ltxsd:attribute name=&quotstudentId&quot type=&quotxsd:string&quot use=&quotrequired&quot/&gt
+		&lt/xsd:extension&gt
+	&lt/xsd:simpleContent&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotgenresType&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:element name=&quotgenre&quot type=&quotcds:genreType&quot maxOccurs=&quot12&quot/&gt
+	&lt/xsd:sequence&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotgenreType&quot&gt
+	&ltxsd:simpleContent&gt
+		&ltxsd:extension base=&quotxsd:string&quot&gt
+			&ltxsd:attribute name=&quotgenreId&quot use=&quotrequired&quot&gt
+				&ltxsd:simpleType&gt
+					&ltxsd:restriction base=&quotxsd:string&quot&gt
+						&ltxsd:enumeration value=&quotProgressive Metal&quot/&gt
+						&ltxsd:enumeration value=&quotAlternative Metal&quot/&gt
+						&ltxsd:enumeration value=&quotNu Metal&quot/&gt
+						&ltxsd:enumeration value=&quotGrunge&quot/&gt
+						&ltxsd:enumeration value=&quotHip-Hop&quot/&gt
+						&ltxsd:enumeration value=&quotIndie Rock&quot/&gt
+						&ltxsd:enumeration value=&quotTechno&quot/&gt
+						&ltxsd:enumeration value=&quotElectronica&quot/&gt
+						&ltxsd:enumeration value=&quotAlternative Rap&quot/&gt
+						&ltxsd:enumeration value=&quotPhonk&quot/&gt
+						&ltxsd:enumeration value=&quotPost-punk&quot/&gt
+						&ltxsd:enumeration value=&quotSynthwave&quot/&gt
+					&lt/xsd:restriction&gt
+				&lt/xsd:simpleType&gt
+			&lt/xsd:attribute&gt
+		&lt/xsd:extension&gt
+	&lt/xsd:simpleContent&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotinfoType&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:group ref=&quotcds:diskInfoGroup&quot/&gt
+	&lt/xsd:sequence&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:simpleType name=&quotreleasedType&quot&gt
+	&ltxsd:restriction base=&quotxsd:string&quot&gt
+		&ltxsd:pattern value=&quot[0-3][0-9]/[0-1][0-9]/[0-9]{4}&quot/&gt
+	&lt/xsd:restriction&gt
+&lt/xsd:simpleType&gt
+
+&ltxsd:complexType name=&quotlengthType&quot&gt
+	&ltxsd:attribute name=&quottime&quot&gt
+		&ltxsd:simpleType&gt
+			&ltxsd:restriction base=&quotxsd:string&quot&gt
+				&ltxsd:pattern value=&quot[0-9]{2}:[0-9]{2}|[0-9]:[0-9]{2}&quot/&gt
+			&lt/xsd:restriction&gt
+		&lt/xsd:simpleType&gt
+	&lt/xsd:attribute&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotpriceType&quot&gt
+	&ltxsd:simpleContent&gt
+		&ltxsd:extension base=&quotxsd:decimal&quot&gt
+			&ltxsd:attribute name=&quotcurrency&quot type=&quotxsd:string&quot use=&quotrequired&quot/&gt
+		&lt/xsd:extension&gt
+	&lt/xsd:simpleContent&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:complexType name=&quotalbumCoverType&quot&gt
+	&ltxsd:attribute name=&quotURL&quot type=&quotxsd:anyURI&quot use=&quotoptional&quot/&gt
+&lt/xsd:complexType&gt
+
+&ltxsd:group name=&quotexerciseGroup&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:element name=&quotheading&quot type=&quotcds:headingType&quot/&gt
+		&ltxsd:element name=&quotlibrary&quot type=&quotcds:libraryType&quot/&gt
+		&ltxsd:element name=&quotstudents&quot type=&quotcds:studentsType&quot/&gt
+		&ltxsd:element name=&quotgenres&quot type=&quotcds:genresType&quot/&gt
+	&lt/xsd:sequence&gt
+&lt/xsd:group&gt
+
+&ltxsd:group name=&quotdiskGroup&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:element name=&quotauthor&quot type=&quotxsd:string&quot/&gt
+		&ltxsd:element name=&quottitle&quot type=&quotxsd:string&quot/&gt
+		&ltxsd:element name=&quotinfo&quot type=&quotcds:infoType&quot/&gt
+		&ltxsd:element name=&quotalbumCover&quot type=&quotcds:albumCoverType&quot/&gt
+	&lt/xsd:sequence&gt
+&lt/xsd:group&gt
+
+&ltxsd:group name=&quotdiskInfoGroup&quot&gt
+	&ltxsd:sequence&gt
+		&ltxsd:element name=&quotreleased&quot type=&quotcds:releasedType&quot/&gt
+		&ltxsd:element name=&quothowManySongs&quot type=&quotxsd:integer&quot/&gt
+		&ltxsd:element name=&quotlength&quot type=&quotcds:lengthType&quot/&gt
+		&ltxsd:element name=&quotprice&quot type=&quotcds:priceType&quot/&gt
+		&ltxsd:element name=&quotratings&quot type=&quotxsd:decimal&quot/&gt
+	&lt/xsd:sequence&gt
+&lt/xsd:group&gt
+
+&lt/xsd:schema&gt
                 </code>
             </pre>
         </div>
+
+
 
         <script>
             let accordion = document.getElementsByClassName("accordion");
