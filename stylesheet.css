@@ -30,6 +30,7 @@ body::-webkit-scrollbar-thumb {
 main {
     margin-left: 4rem;
     padding-left : 2rem;
+    padding-right: 1rem;
     font-family: Helvetica Neue, monospace;
 }
 
@@ -153,6 +154,39 @@ hr.rounded {
 
 .codeBox {
     font-size: 13px;
+}
+
+.accordion {
+    background-color: #eee;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+    transition: 0.4s;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.active, .accordion:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+.active:after {
+    content: "\2212";
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+}
+
+.accordionPanel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
 }
 
 /* Small screens */

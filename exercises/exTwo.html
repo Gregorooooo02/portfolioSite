@@ -85,7 +85,628 @@
     </nav>
 
     <main class="exTwo">
+        <div class="heading">
+            <h1>Zadanie 2</h1>
+        </div>
+        <p>
+            Stwórz dowolny dokument <b>XML</b>,
+            który będzie wykorzystywany w kolejnych zadaniach.
+        </p>
+        <p>Struktura dokumentu musi zawierać:</p>
+        <ul class="elementsList">
+            <li>Elementy składające się z tylko wartości</li>
+            <li>Elementy składające się z tylko podelementów</li>
+            <li>Elementy posiadające tylko atrybut/atrybuty</li>
+            <li>Elementy z atrybutem/atrybutami i tylko prostą zawartością (np. tekst, liczba, data, itp.)</li>
+        </ul>
+        <p>Struktura dokumentu musi zawierać dwie grupy informacji umożliwiające odwołanie się jednej informacji do drugiej (połączenie informacji).</p>
+        <p>
+            <b>Przykład</b>: Jeden zbiór informacji zawiera dane o osobie, drugi o gatunkach muzyki - w zbiorze informacji
+            o osobie mamy połączenie danej osoby z gatunkiem muzyki, który lubi (nie wpisujemy wprost gatunku, robimy do niego
+            odwołanie).
+        </p>
+        <p>Struktura dokumentu musi zawierać różne typy danych, m.in.</p>
+        <ul class="elementsList">
+            <li>Napisy o różnym znaczeniu i różnej długości (w tym takie, dla których da się określić wzór testu, np. kod pocztowy XX-XXX)</li>
+            <li>Liczby w różnych formatach</li>
+            <li>Datę (daty), kwoty pieniędzy</li>
+            <li>Elementy o określonym zbiorze wartości (typy wyliczeniowe)</li>
+        </ul>
+        <p>
+            <b>
+                Umieść oprócz danych o usystematyzowanej strukturze informacje dodatkowe, takie jak np.
+                dane o autorze dokumentu, dacie ostatniej modyfikacji, itp.
+                <br/>
+                Powinno być około 20 pozycji danych (może być więcej 😊)
+                - dane powinny być ponumerowane (numeracja w elemencie, format dowolny).
+            </b>
+        </p>
+        <p>
+            Następnie stwórz kaskadowy arkusz stylów <b>CSS</b>, aby móc obejrzeć
+            w przeglądarce treść dokumentu XML. Informacje sformatuj w postaci dwóch
+            sekcji (z użyciem tabel, obramowań, itp.):
+        </p>
+        <ol class="elementsList">
+            <li>
+                W pierwszej sekcji powinny znaleźć się informacje ogólne o dokumencie, odczytane
+                z wybranych znaczników (jak np. autorzy dokumentu, opis jego zawartości, itp.).
+            </li>
+            <li>
+                W drugiej sekcji (z układem kolumnowym lub innym) powinna znaleźć się
+                właściwa zawartość z pozostałych znaczników, zawierających regularne dane.
+            </li>
+        </ol>
+        <p>Przy budowie dokumentu CSS:</p>
+        <ul class="elementsList">
+            <li>Połącz dokument XML z danymi z dokumentem opisującym sposób ich formatowania (zewnętrzny plik CSS)</li>
+            <li>Wykorzystaj różne układy formatowania (styl: display)</li>
+            <li>Wykorzystaj różne selektory i pseudoklasy</li>
+            <li>Wypróbuj formatowanie w postaci listy numerowanej - pokazującej numer kolejnych węzłów/danych</li>
+            <li>Wykorzystaj modyfikacje tła tabel, punktatorów w listach, itp.</li>
+            <li>Dopasuj czcionki, kolory i układ tekstu na stronie</li>
+            <li>Wykonaj projekt profesjonalnie i schludnie, w sposób atrakcyjny dla oka</li>
+        </ul>
+        <p>Następnie należy stworzyć dokument opisujący strukturę dokumentu (wybrano XML Schema).</p>
+        <p>Budując <b>XML Schema</b> należy zwrócić uwagę na:</p>
+        <ul>
+            <li>Deklaracje przestrzeni nazw (standardowe i własne)</li>
+            <li>Dokładne określanie typu (wbudowane: liczby stało- i zmiennoprzecinkowe, daty, waluty, itp.)</li>
+            <li>Stosowanie ograniczeń (np. długości napisów, zakresy liczb), wzorców (xsd:pattern), wyliczeń (xsd:enumeration)</li>
+            <li>Możliwości definiowania własnych typów danych (xsd:simpleType, xsd:complexType), użycie różnych modeli zawartości (np. xsd:choice, xsd:sequence)</li>
+            <li>Specyfikowanie elementów i atrybutów opcjonalnych i wymaganych</li>
+            <li>Specyfikowanie atrybutów dla elementów (xsd:attribute, xsd:attributeGroup)</li>
+            <li>Specyfikowanie grupy elementów  (xsd:group)</li>
+            <li>Umieszczanie odnośników do różnych miejsc w dokumencie, stosowanie kluczy i selektorów (xsd:key, xsd:keyref)</li>
+        </ul>
+        <hr class="rounded"/>
+        <div class="heading">
+            <h2>Rozwiązanie</h2>
+        </div>
 
+        <button class="accordion">Plik XML</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+
+&lt;!--Element główny = korzeń--&gt;
+&lt;exercise&gt;
+  &lt;!--Nagłówek strony i podstawowe informacje--&gt;
+  &lt;heading&gt;
+    &lt;projectName&gt;Płytoteka CD z różnymi gatunkami muzyki&lt;/projectName&gt;
+    &lt;subject&gt;Technologie XML&lt;/subject&gt;
+    &lt;author&gt;Grzegorz Bednarek&lt;/author&gt;
+    &lt;index&gt;242359&lt;/index&gt;
+    &lt;lastModified&gt;2022-11-06&lt;/lastModified&gt;
+  &lt;/heading&gt;
+
+  &lt;library text=&quot;Moja biblioteka płyt CD&quot;&gt;
+    &lt;disk diskId=&quot;D1&quot; genreId=&quot;Progressive Metal&quot; favorite=&quot;S3&quot;&gt;
+      &lt;author&gt;TOOL&lt;/author&gt;
+      &lt;title&gt;10.000 Days&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;28/04/2006&lt;/released&gt;
+        &lt;howManySongs&gt;11&lt;/howManySongs&gt;
+        &lt;length time=&quot;75:45&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;62.99&lt;/price&gt;
+        &lt;ratings&gt;4.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D2&quot; genreId=&quot;Alternative Metal&quot; favorite=&quot;S5&quot;&gt;
+      &lt;author&gt;A Perfect Circle&lt;/author&gt;
+      &lt;title&gt;Thirteenth Step&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;16/09/2003&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;50:36&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;53.99&lt;/price&gt;
+        &lt;ratings&gt;4.2&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D3&quot; genreId=&quot;Nu Metal&quot; favorite=&quot;S4&quot;&gt;
+      &lt;author&gt;Limp Bizkit&lt;/author&gt;
+      &lt;title&gt;STILL SUCKS&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;31/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;31:55&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;40.00&lt;/price&gt;
+        &lt;ratings&gt;4.8&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D4&quot; genreId=&quot;Grunge&quot; favorite=&quot;S8&quot;&gt;
+      &lt;author&gt;Pearl Jam&lt;/author&gt;
+      &lt;title&gt;Ten&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;27/08/1991&lt;/released&gt;
+        &lt;howManySongs&gt;11&lt;/howManySongs&gt;
+        &lt;length time=&quot;53:20&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;35.97&lt;/price&gt;
+        &lt;ratings&gt;4.5&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D5&quot; genreId=&quot;Alternative Metal&quot; favorite=&quot;S4&quot;&gt;
+      &lt;author&gt;Karnivool&lt;/author&gt;
+      &lt;title&gt;Themata&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;07/02/2005&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;48:52&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;30.00&lt;/price&gt;
+        &lt;ratings&gt;4.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://m.media-amazon.com/images/I/8173EyIhkRL.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D6&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S3&quot;&gt;
+      &lt;author&gt;Matt Large&lt;/author&gt;
+      &lt;title&gt;As real as it gets&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;18/05/2018&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;31:33&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;22.99&lt;/price&gt;
+        &lt;ratings&gt;4.5&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D7&quot; genreId=&quot;Indie Rock&quot; favorite=&quot;S6&quot;&gt;
+      &lt;author&gt;Low Roar&lt;/author&gt;
+      &lt;title&gt;0&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;05/08/2014&lt;/released&gt;
+        &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+        &lt;length time=&quot;68:14&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;32.99&lt;/price&gt;
+        &lt;ratings&gt;4.2&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D8&quot; genreId=&quot;Grunge&quot; favorite=&quot;S3&quot;&gt;
+      &lt;author&gt;Nirvana&lt;/author&gt;
+      &lt;title&gt;Nevermind&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;24/09/1991&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;42:38&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;32.00&lt;/price&gt;
+        &lt;ratings&gt;4.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D9&quot; genreId=&quot;Techno&quot; favorite=&quot;S9&quot;&gt;
+      &lt;author&gt;The Prodigy&lt;/author&gt;
+      &lt;title&gt;The Day Is My Enemy&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;30/03/2015&lt;/released&gt;
+        &lt;howManySongs&gt;15&lt;/howManySongs&gt;
+        &lt;length time=&quot;56:12&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;45.87&lt;/price&gt;
+        &lt;ratings&gt;3.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D10&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S10&quot;&gt;
+      &lt;author&gt;Snoop Dogg&lt;/author&gt;
+      &lt;title&gt;Ego Trippin'&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;11/03/2008&lt;/released&gt;
+        &lt;howManySongs&gt;24&lt;/howManySongs&gt;
+        &lt;length time=&quot;77:43&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;72.89&lt;/price&gt;
+        &lt;ratings&gt;4.3&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D11&quot; genreId=&quot;Electronica&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Michał Anioł&lt;/author&gt;
+      &lt;title&gt;U&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;19/02/2021&lt;/released&gt;
+        &lt;howManySongs&gt;10&lt;/howManySongs&gt;
+        &lt;length time=&quot;34:27&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;29.99&lt;/price&gt;
+        &lt;ratings&gt;4.1&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/u-b-iext67667192.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D12&quot; genreId=&quot;Alternative Rap&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;CatchUp&lt;/author&gt;
+      &lt;title&gt;Jesieniarze - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;12/10/2020&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:35&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;12.99&lt;/price&gt;
+        &lt;ratings&gt;4.7&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D13&quot; genreId=&quot;Alternative Rap&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Michał Anioł&lt;/author&gt;
+      &lt;title&gt;Bo to się zwykle tak zaczyna - EP&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;08/04/2022&lt;/released&gt;
+        &lt;howManySongs&gt;4&lt;/howManySongs&gt;
+        &lt;length time=&quot;11:39&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;21.37&lt;/price&gt;
+        &lt;ratings&gt;4.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D14&quot; genreId=&quot;Electronica&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Michał Anioł&lt;/author&gt;
+      &lt;title&gt;Blisko - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;05/08/2020&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;3:03&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;9.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D15&quot; genreId=&quot;Alternative Rap&quot; favorite=&quot;S7&quot;&gt;
+      &lt;author&gt;Kacperczyk&lt;/author&gt;
+      &lt;title&gt;Kryzys Wieku Wczesnego&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;26/11/2021&lt;/released&gt;
+        &lt;howManySongs&gt;14&lt;/howManySongs&gt;
+        &lt;length time=&quot;35:56&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;44.99&lt;/price&gt;
+        &lt;ratings&gt;4.6&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D16&quot; genreId=&quot;Electronica&quot; favorite=&quot;S7&quot;&gt;
+      &lt;author&gt;Frank Leen&lt;/author&gt;
+      &lt;title&gt;Za dobrze by zapomnieć&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;09/09/2022&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:32&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;7.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D17&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S5&quot;&gt;
+      &lt;author&gt;Eminem&lt;/author&gt;
+      &lt;title&gt;Kamikaze&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;31/08/2018&lt;/released&gt;
+        &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+        &lt;length time=&quot;45:49&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;55.55&lt;/price&gt;
+        &lt;ratings&gt;4.4&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D18&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S6&quot;&gt;
+      &lt;author&gt;Eminem&lt;/author&gt;
+      &lt;title&gt;Music To Be Murdered By&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;17/01/2020&lt;/released&gt;
+        &lt;howManySongs&gt;20&lt;/howManySongs&gt;
+        &lt;length time=&quot;64:23&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;59.99&lt;/price&gt;
+        &lt;ratings&gt;4.4&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D19&quot; genreId=&quot;Alternative Metal&quot; favorite=&quot;S2&quot;&gt;
+      &lt;author&gt;A Perfect Circle&lt;/author&gt;
+      &lt;title&gt;Eat the Elephant&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;20/04/2018&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;57:07&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;62.99&lt;/price&gt;
+        &lt;ratings&gt;4.3&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D20&quot; genreId=&quot;Phonk&quot; favorite=&quot;S2&quot;&gt;
+      &lt;author&gt;Sxmpra&lt;/author&gt;
+      &lt;title&gt;Cowbell Warrior! - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;08/12/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:29&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;6.66&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D21&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S10&quot;&gt;
+      &lt;author&gt;Vince Staples&lt;/author&gt;
+      &lt;title&gt;Summertime '06'&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;30/06/2015&lt;/released&gt;
+        &lt;howManySongs&gt;20&lt;/howManySongs&gt;
+        &lt;length time=&quot;59:05&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;42.99&lt;/price&gt;
+        &lt;ratings&gt;4.1&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D22&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S10&quot;&gt;
+      &lt;author&gt;Szczyl&lt;/author&gt;
+      &lt;title&gt;Polska Floryda&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;15/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+        &lt;length time=&quot;38:57&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;38.99&lt;/price&gt;
+        &lt;ratings&gt;4.2&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D23&quot; genreId=&quot;Post-punk&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Molchat Doma&lt;/author&gt;
+      &lt;title&gt;Etazhi&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;07/09/2018&lt;/released&gt;
+        &lt;howManySongs&gt;9&lt;/howManySongs&gt;
+        &lt;length time=&quot;33:13&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;40.99&lt;/price&gt;
+        &lt;ratings&gt;4.5&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D24&quot; genreId=&quot;Post-punk&quot; favorite=&quot;S4&quot;&gt;
+      &lt;author&gt;Nurnberg&lt;/author&gt;
+      &lt;title&gt;Skryvaj&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;05/11/2018&lt;/released&gt;
+        &lt;howManySongs&gt;8&lt;/howManySongs&gt;
+        &lt;length time=&quot;25:01&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;35.99&lt;/price&gt;
+        &lt;ratings&gt;4.5&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D25&quot; genreId=&quot;Synthwave&quot; favorite=&quot;S7&quot;&gt;
+      &lt;author&gt;ALEX&lt;/author&gt;
+      &lt;title&gt;Akuma&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;23/06/2017&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;41:18&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;30.99&lt;/price&gt;
+        &lt;ratings&gt;4.7&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D26&quot; genreId=&quot;Synthwave&quot; favorite=&quot;S8&quot;&gt;
+      &lt;author&gt;ALEX&lt;/author&gt;
+      &lt;title&gt;Akuma II&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;10/05/2019&lt;/released&gt;
+        &lt;howManySongs&gt;10&lt;/howManySongs&gt;
+        &lt;length time=&quot;38:56&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;32.99&lt;/price&gt;
+        &lt;ratings&gt;4.8&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D27&quot; genreId=&quot;Techno&quot; favorite=&quot;S9&quot;&gt;
+      &lt;author&gt;The Prodigy&lt;/author&gt;
+      &lt;title&gt;Music for the Jilted Generation&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;04/04/1994&lt;/released&gt;
+        &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+        &lt;length time=&quot;78:07&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;45.99&lt;/price&gt;
+        &lt;ratings&gt;4.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D28&quot; genreId=&quot;Nu Metal&quot; favorite=&quot;S6&quot;&gt;
+      &lt;author&gt;KoRn&lt;/author&gt;
+      &lt;title&gt;Follow The Leader&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;18/08/1998&lt;/released&gt;
+        &lt;howManySongs&gt;14&lt;/howManySongs&gt;
+        &lt;length time=&quot;70:08&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;42.99&lt;/price&gt;
+        &lt;ratings&gt;4.2&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D29&quot; genreId=&quot;Phonk&quot; favorite=&quot;S3&quot;&gt;
+      &lt;author&gt;SAOTOMAMORE&lt;/author&gt;
+      &lt;title&gt;Fool - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;07/12/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:06&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;12.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D30&quot; genreId=&quot;Phonk&quot; favorite=&quot;S9&quot;&gt;
+      &lt;author&gt;GREEN ORXNGE&lt;/author&gt;
+      &lt;title&gt;TYPICAL CHILL SONG - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;15/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;1:52&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;6.99&lt;/price&gt;
+        &lt;ratings&gt;4.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D31&quot; genreId=&quot;Phonk&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;DVRST&lt;/author&gt;
+      &lt;title&gt;A Little Story - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;29/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:03&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;11.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D32&quot; genreId=&quot;Phonk&quot; favorite=&quot;S4&quot;&gt;
+      &lt;author&gt;Kordhell&lt;/author&gt;
+      &lt;title&gt;Memphis Doom - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;08/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:34&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;11.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D33&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S8&quot;&gt;
+      &lt;author&gt;Swell&lt;/author&gt;
+      &lt;title&gt;theres still us - EP&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;19/01/2016&lt;/released&gt;
+        &lt;howManySongs&gt;5&lt;/howManySongs&gt;
+        &lt;length time=&quot;11:38&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;12.99&lt;/price&gt;
+        &lt;ratings&gt;4.8&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D34&quot; genreId=&quot;Indie Rock&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Low Roar&lt;/author&gt;
+      &lt;title&gt;maybe tomorrow...&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;30/07/2021&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;63:19&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;38.99&lt;/price&gt;
+        &lt;ratings&gt;4.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D35&quot; genreId=&quot;Indie Rock&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Low Roar&lt;/author&gt;
+      &lt;title&gt;Once in a Long. Long While...&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;05/04/2017&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;49:00&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;40.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg&quot;/&gt;
+    &lt;/disk&gt;
+  &lt;/library&gt;
+
+  &lt;students&gt;
+    &lt;student studentId=&quot;S1&quot;&gt;Grzegorz Bednarek&lt;/student&gt;
+    &lt;student studentId=&quot;S2&quot;&gt;Jan Nowak&lt;/student&gt;
+    &lt;student studentId=&quot;S3&quot;&gt;Peter Mountain&lt;/student&gt;
+    &lt;student studentId=&quot;S4&quot;&gt;Juan Pablo&lt;/student&gt;
+    &lt;student studentId=&quot;S5&quot;&gt;Kanye West&lt;/student&gt;
+    &lt;student studentId=&quot;S6&quot;&gt;Blaise Peck&lt;/student&gt;
+    &lt;student studentId=&quot;S7&quot;&gt;Matthias Long&lt;/student&gt;
+    &lt;student studentId=&quot;S8&quot;&gt;Jorge Mario Bergoglio&lt;/student&gt;
+    &lt;student studentId=&quot;S9&quot;&gt;Matthew Tar&lt;/student&gt;
+    &lt;student studentId=&quot;S10&quot;&gt;Adam&lt;/student&gt;
+  &lt;/students&gt;
+
+  &lt;genres&gt;
+   &lt;genre genreId=&quot;Progressive Metal&quot;&gt;Progessive Metal&lt;/genre&gt;
+   &lt;genre genreId=&quot;Alternative Metal&quot;&gt;Alternative Metal&lt;/genre&gt;
+   &lt;genre genreId=&quot;Nu Metal&quot;&gt;Nu Metal &lt;/genre&gt;
+   &lt;genre genreId=&quot;Grunge&quot;&gt;Grunge&lt;/genre&gt;
+   &lt;genre genreId=&quot;Hip-Hop&quot;&gt;Hip-Hop&lt;/genre&gt;
+   &lt;genre genreId=&quot;Indie Rock&quot;&gt;Indie Rock&lt;/genre&gt;
+   &lt;genre genreId=&quot;Techno&quot;&gt;Techno&lt;/genre&gt;
+   &lt;genre genreId=&quot;Electronica&quot;&gt;Electronica&lt;/genre&gt;
+   &lt;genre genreId=&quot;Alternative Rap&quot;&gt;Alternative Rap&lt;/genre&gt;
+   &lt;genre genreId=&quot;Phonk&quot;&gt;Phonk&lt;/genre&gt;
+   &lt;genre genreId=&quot;Post-punk&quot;&gt;Post-punk&lt;/genre&gt;
+   &lt;genre genreId=&quot;Synthwave&quot;&gt;Synthwave&lt;/genre&gt;
+  &lt;/genres&gt;
+
+&lt;/exercise&gt;
+
+                </code>
+            </pre>
+        </div>
+
+        <button class="accordion">Plik CSS</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+
+                </code>
+            </pre>
+        </div>
+
+        <button class="accordion">Plik XML Schema</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+
+                </code>
+            </pre>
+        </div>
+
+        <script>
+            let accordion = document.getElementsByClassName("accordion");
+            let i;
+
+            for (i = 0; i < accordion.length; ++i) {
+                accordion[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    let panel = this.nextElementSibling;
+
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    }
+                    else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
     </main>
 </body>
 </html>
