@@ -189,6 +189,19 @@ hr.rounded {
     transition: max-height 0.3s ease-out;
 }
 
+.exerciseLink {
+    background-color: blueviolet;
+    color: white;
+    font-weight: bold;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 24px;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
 /* Small screens */
 @media only screen and (max-width: 600px) {
     .navbar {
