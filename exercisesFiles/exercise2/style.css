@@ -240,7 +240,7 @@ genres:before {
 
 genres {
 	display: inline-table;
-	float: inline-end;
+	float: end;
 	margin-right: 100pt;
 }
 
@@ -257,7 +257,7 @@ genres > genre {
 disk > albumCover[URL="https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg"] {
 	background-image: url("https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -267,7 +267,7 @@ disk > albumCover[URL="https://image.ceneostatic.pl/data/products/2735398/i-tool
 disk > albumCover[URL="https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg"] {
 	background-image: url("https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -277,7 +277,7 @@ disk > albumCover[URL="https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg
 disk > albumCover[URL="https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg"] {
 	background-image: url("https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -287,7 +287,7 @@ disk > albumCover[URL="https://soundrive.pl/assets/front/images/content/1fW4VGNk
 disk > albumCover[URL="https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg"] {
 	background-image: url("https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -297,7 +297,7 @@ disk > albumCover[URL="https://image.ceneostatic.pl/data/products/2734314/i-pear
 disk > albumCover[URL="https://m.media-amazon.com/images/I/8173EyIhkRL.jpg"] {
 	background-image: url("https://m.media-amazon.com/images/I/8173EyIhkRL.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -307,7 +307,7 @@ disk > albumCover[URL="https://m.media-amazon.com/images/I/8173EyIhkRL.jpg"] {
 disk > albumCover[URL="https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg"] {
 	background-image: url("https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -317,7 +317,7 @@ disk > albumCover[URL="https://cdn.epidemicsound.com/curation-assets/commercial-
 disk > albumCover[URL="https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg"] {
 	background-image: url("https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -327,7 +327,7 @@ disk > albumCover[URL="https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg"] {
 disk > albumCover[URL="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg"] {
 	background-image: url("https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -337,7 +337,7 @@ disk > albumCover[URL="https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNev
 disk > albumCover[URL="https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg"] {
 	background-image: url("https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -347,7 +347,7 @@ disk > albumCover[URL="https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294
 disk > albumCover[URL="https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg"] {
 	background-image: url("https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -357,7 +357,7 @@ disk > albumCover[URL="https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop
 disk > albumCover[URL="https://ecsmedia.pl/c/u-b-iext67667192.jpg"] {
 	background-image: url("https://ecsmedia.pl/c/u-b-iext67667192.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -367,7 +367,7 @@ disk > albumCover[URL="https://ecsmedia.pl/c/u-b-iext67667192.jpg"] {
 disk > albumCover[URL="https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg"] {
 	background-image: url("https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -377,7 +377,7 @@ disk > albumCover[URL="https://images.genius.com/7dd383abb733bc4cdfb036e2163c169
 disk > albumCover[URL="https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg"] {
 	background-image: url("https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -387,7 +387,7 @@ disk > albumCover[URL="https://images.genius.com/d46edce1e54ee7b87242472a4816375
 disk > albumCover[URL="https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg"] {
 	background-image: url("https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -397,7 +397,7 @@ disk > albumCover[URL="https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d9
 disk > albumCover[URL="https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg"] {
 	background-image: url("https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -407,7 +407,7 @@ disk > albumCover[URL="https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104
 disk > albumCover[URL="https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg"] {
 	background-image: url("https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -417,7 +417,7 @@ disk > albumCover[URL="https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f9
 disk > albumCover[URL="https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg"] {
 	background-image: url("https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -427,7 +427,7 @@ disk > albumCover[URL="https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652
 disk > albumCover[URL="https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg"] {
 	background-image: url("https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -437,7 +437,7 @@ disk > albumCover[URL="https://images.genius.com/ac22d30db0ea4783bf0953ee9683359
 disk > albumCover[URL="https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png"] {
 	background-image: url("https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -447,7 +447,7 @@ disk > albumCover[URL="https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d
 disk > albumCover[URL="https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg"] {
 	background-image: url("https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -457,7 +457,7 @@ disk > albumCover[URL="https://images.genius.com/090eb1d20e0f553a6a57432ec15ab55
 disk > albumCover[URL="https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg"] {
 	background-image: url("https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -467,7 +467,7 @@ disk > albumCover[URL="https://images.genius.com/33a9265391b2dcfc1f37a725f309746
 disk > albumCover[URL="https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png"] {
 	background-image: url("https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -477,7 +477,7 @@ disk > albumCover[URL="https://images.genius.com/101b1939124b4d87e936c1eb0762437
 disk > albumCover[URL="https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg"] {
 	background-image: url("https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -487,7 +487,7 @@ disk > albumCover[URL="https://images.genius.com/fad2a24bb65296bfd39d25d4a2335db
 disk > albumCover[URL="https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg"] {
 	background-image: url("https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -497,7 +497,7 @@ disk > albumCover[URL="https://images.genius.com/f38cf0401e222411c5231b9cd367634
 disk > albumCover[URL="https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg"] {
 	background-image: url("https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -507,7 +507,7 @@ disk > albumCover[URL="https://images.genius.com/8b683d162d64f2ce1474a7c42acca28
 disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6"] {
 	background-image: url("https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -517,7 +517,7 @@ disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefb
 disk > albumCover[URL="https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png"] {
 	background-image: url("https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -527,7 +527,7 @@ disk > albumCover[URL="https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b
 disk > albumCover[URL="https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg"] {
 	background-image: url("https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -537,7 +537,7 @@ disk > albumCover[URL="https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.j
 disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c"] {
 	background-image: url("https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -547,7 +547,7 @@ disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273232f6356ae2927890
 disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2"] {
 	background-image: url("https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -557,7 +557,7 @@ disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a
 disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658"] {
 	background-image: url("https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -567,7 +567,7 @@ disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0
 disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e"] {
 	background-image: url("https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -577,7 +577,7 @@ disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee
 disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f"] {
 	background-image: url("https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -587,7 +587,7 @@ disk > albumCover[URL="https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf38
 disk > albumCover[URL="https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp"] {
 	background-image: url("https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
@@ -597,7 +597,7 @@ disk > albumCover[URL="https://images.genius.com/6963cee262cdc11634a4333bc5ae792
 disk > albumCover[URL="https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg"] {
 	background-image: url("https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg");
 	margin-left: 20px;
-	float: inline-start;
+	float: start;
 	background-size: 164px 164px;
 	display: inline-block;
 	width: 164px; 
