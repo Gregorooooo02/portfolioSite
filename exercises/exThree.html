@@ -78,14 +78,2474 @@
                          viewBox="0 0 512 512" fill="blueviolet"><!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                         <path d="M256 512c141.4 0 256-114.6 256-256S397.4 0 256 0S0 114.6 0 256S114.6 512 256 512zM169.8 165.3c7.9-22.3 29.1-37.3 52.8-37.3h58.3c34.9 0 63.1 28.3 63.1 63.1c0 22.6-12.1 43.5-31.7 54.8L280 264.4c-.2 13-10.9 23.6-24 23.6c-13.3 0-24-10.7-24-24V250.5c0-8.6 4.6-16.5 12.1-20.8l44.3-25.4c4.7-2.7 7.6-7.7 7.6-13.1c0-8.4-6.8-15.1-15.1-15.1H222.6c-3.4 0-6.4 2.1-7.5 5.3l-.4 1.2c-4.4 12.5-18.2 19-30.6 14.6s-19-18.2-14.6-30.6l.4-1.2zM288 352c0 17.7-14.3 32-32 32s-32-14.3-32-32s14.3-32 32-32s32 14.3 32 32z"/>
                     </svg>
-                    <span class="link-text">Podsumowanie</span>
+                    <span class="link-text">Informacje</span>
                 </a>
             </li>
         </ul>
     </nav>
 
     <main class="exThree">
+        <div class="heading">
+            <h1>Zadanie 3</h1>
+        </div>
+        <p><b>Transformacja z użyciem XSLT</b></p>
 
+        <p>Dla dokumentu XML z zadania 2 stwórz <b>cztery</b> szablony przekształceń XSLT.</p>
+        <ul class="elementsList">
+            <li>
+                Pierwsze przekształcenie będzie miało na celu stworzenie pomocniczego dokumentu w formacje XML,
+                będącego raportem, uzyskanym na podstawie dokumentu źródłowego.
+            </li>
+            <li>
+                Drugie przekształcenie będzie miało na celu stworzenie pomocniczego dokumentu do prezentacji w formacje XHTML,
+                przy zastosowaniu dodatkowych wymogów podnoszących funkcjonalność dokumentu.
+            </li>
+            <li>
+                Trzecie przekształcenie będzie miało na celu uzyskanie z dokumentu pomocniczego dokumentu
+                wyjściowego w formacie tekstowym.
+            </li>
+            <li>
+                Czwarte przekształcenie będzie miało na celu uzyskanie z dokumentu pomocniczego
+                dokumentu (wykresu) w formacie SVG jako inny sposób prezentacji danych.
+            </li>
+        </ul>
+        <p><b>Dokument pomocniczy</b></p>
+
+        <p>
+            Docelowo ma on być raportem, zestawieniem, podsumowaniem, lub wydrukiem dla klienta.
+            Dokument taki powinien zawierać znaczniki XML potrzebne do łatwego uzyskania dokumentu wyjściowego przeznaczonego do prezentacji.
+        </p>
+        <p>
+            Jest to dobry moment, żeby <b>połączyć ze sobą elementy powiązane z atrybutami ID i IDREF(S) / key i keyrefs</b>.
+        </p>
+        <p>
+            Przykładowo, można na fakturze obok towaru dołączyć nazwę producenta, w zestawieniu filmów obok płyty z filmem dołączyć nazwę wydawcy, itd.
+            Jeśli dokument źródłowy zawierał ceny i liczbę towarów, należy obliczyć sumy częściowe, kwoty VAT, itp. Dzięki temu w dokumencie końcowym
+            będzie łatwiej uzyskać sumę końcową(e).
+        </p>
+        <p>
+            Możliwe jest także grupowanie i/lub posortowanie elementów względem pewnego kryterium, np.
+            filmów według gatunków i tytułów, towarów według producentów lub rodzaju, itp.
+        </p>
+        <p>
+            Na końcu dokumentu należy zawrzeć podsumowanie zawierające statystyki dokumentu oryginalnego. Podsumowanie to może zawierać
+            takie informacje jak:
+        </p>
+        <ul class="elementsList">
+            <li>Liczbę elementów danych</li>
+            <li>Liczbę różnych kategorii elementów (jeśli takie są - np. dla enumeracji)</li>
+            <li>Sumy częściowe, sumę końcową (dla znaczników typu "cena"), sumy kwot VAT (dla różnych stawek VAT)</li>
+            <li>Datę wygenerowania raportu</li>
+        </ul>
+        <p><b>Dokument XHTML</b></p>
+
+        <p>
+            Oprócz użycia tego formatu należy także wziąć pod uwagę zalecenia dotyczące dostępności stron HTML: <a href="https://www.w3.org/TR/WCAG10/" target="_blank">Web Content Accessibility Guidelines</a>.
+        </p>
+        <p>
+            Elementy, na które będzie zwracana szczegołna uwaga:
+        </p>
+        <ul>
+            <li>Walidacja dokumentu jako <b>XHTML 1.0 Strict</b> np. w <a href="https://validator.w3.org" target="_blank">usłudze walidacji W3C</a></li>
+            <li>Użycie opisów i/lub tekstu zastępczego dla wszystkich elementów wizualnych, które inaczej nie byłby dostępne np. dla użytkowników niewidzących.</li>
+        </ul>
+        <p><b>Dokument tekstowy</b></p>
+
+        <p>
+            Stwórz <b>regularne kolumny tekstu</b> z użyciem dodatkowych spacji - funkcje XPath concat i substring.
+        </p>
+        <p><b>Dokument SVG</b></p>
+
+        <p>
+            Stwórz transformację pomocniczego dokumentu XML do postaci obrazu SVG (Scalable Vector Graphics).
+            Ma on stanowić inną formę prezentacji danych z raportu w postaci wykresów.
+            Dołącz transformację wybranych elementów lub parametrów obrazu tak, aby powstały proste animacje.
+        </p>
+        <p><b>Formaty wyjściowe</b></p>
+
+        <ul>
+            <li>Dokument XML</li>
+            <li>Dokument XHTML</li>
+            <li>Dokument TXT</li>
+            <li>Dokument SVG</li>
+        </ul>
+
+        <p>
+            Postaraj się uzyskać pliki w wyjściowych formatach, a nie tylko oglądać efekt końcowy transformacji w oknie przeglądarki.
+        </p>
+
+        <hr class="rounded"/>
+
+        <div class="heading">
+            <h2>Rozwiązanie</h2>
+        </div>
+
+        <div class="heading">
+            <h3>XML</h3>
+        </div>
+        <button class="accordion">Plik XML</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+
+&lt;!--Element główny = korzeń--&gt;
+&lt;exercise&gt;
+  &lt;!--Nagłówek strony i podstawowe informacje--&gt;
+  &lt;heading&gt;
+    &lt;projectName&gt;Płytoteka CD z różnymi gatunkami muzyki&lt;/projectName&gt;
+    &lt;subject&gt;Technologie XML&lt;/subject&gt;
+    &lt;author&gt;Grzegorz Bednarek&lt;/author&gt;
+    &lt;index&gt;242359&lt;/index&gt;
+    &lt;lastModified&gt;2022-11-06&lt;/lastModified&gt;
+  &lt;/heading&gt;
+
+  &lt;library text=&quot;Moja biblioteka płyt CD&quot;&gt;
+    &lt;disk diskId=&quot;D1&quot; genreId=&quot;Progressive Metal&quot; favorite=&quot;S3&quot;&gt;
+      &lt;author&gt;TOOL&lt;/author&gt;
+      &lt;title&gt;10.000 Days&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;28/04/2006&lt;/released&gt;
+        &lt;howManySongs&gt;11&lt;/howManySongs&gt;
+        &lt;length time=&quot;75:45&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;62.99&lt;/price&gt;
+        &lt;ratings&gt;4.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D2&quot; genreId=&quot;Alternative Metal&quot; favorite=&quot;S5&quot;&gt;
+      &lt;author&gt;A Perfect Circle&lt;/author&gt;
+      &lt;title&gt;Thirteenth Step&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;16/09/2003&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;50:36&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;53.99&lt;/price&gt;
+        &lt;ratings&gt;4.2&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D3&quot; genreId=&quot;Nu Metal&quot; favorite=&quot;S4&quot;&gt;
+      &lt;author&gt;Limp Bizkit&lt;/author&gt;
+      &lt;title&gt;STILL SUCKS&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;31/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;31:55&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;40.00&lt;/price&gt;
+        &lt;ratings&gt;4.8&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D4&quot; genreId=&quot;Grunge&quot; favorite=&quot;S8&quot;&gt;
+      &lt;author&gt;Pearl Jam&lt;/author&gt;
+      &lt;title&gt;Ten&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;27/08/1991&lt;/released&gt;
+        &lt;howManySongs&gt;11&lt;/howManySongs&gt;
+        &lt;length time=&quot;53:20&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;35.97&lt;/price&gt;
+        &lt;ratings&gt;4.5&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D5&quot; genreId=&quot;Alternative Metal&quot; favorite=&quot;S4&quot;&gt;
+      &lt;author&gt;Karnivool&lt;/author&gt;
+      &lt;title&gt;Themata&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;07/02/2005&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;48:52&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;30.00&lt;/price&gt;
+        &lt;ratings&gt;4.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://m.media-amazon.com/images/I/8173EyIhkRL.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D6&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S3&quot;&gt;
+      &lt;author&gt;Matt Large&lt;/author&gt;
+      &lt;title&gt;As real as it gets&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;18/05/2018&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;31:33&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;22.99&lt;/price&gt;
+        &lt;ratings&gt;4.5&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D7&quot; genreId=&quot;Indie Rock&quot; favorite=&quot;S6&quot;&gt;
+      &lt;author&gt;Low Roar&lt;/author&gt;
+      &lt;title&gt;0&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;05/08/2014&lt;/released&gt;
+        &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+        &lt;length time=&quot;68:14&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;32.99&lt;/price&gt;
+        &lt;ratings&gt;4.2&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D8&quot; genreId=&quot;Grunge&quot; favorite=&quot;S3&quot;&gt;
+      &lt;author&gt;Nirvana&lt;/author&gt;
+      &lt;title&gt;Nevermind&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;24/09/1991&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;42:38&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;32.00&lt;/price&gt;
+        &lt;ratings&gt;4.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D9&quot; genreId=&quot;Techno&quot; favorite=&quot;S9&quot;&gt;
+      &lt;author&gt;The Prodigy&lt;/author&gt;
+      &lt;title&gt;The Day Is My Enemy&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;30/03/2015&lt;/released&gt;
+        &lt;howManySongs&gt;15&lt;/howManySongs&gt;
+        &lt;length time=&quot;56:12&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;45.87&lt;/price&gt;
+        &lt;ratings&gt;3.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D10&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S10&quot;&gt;
+      &lt;author&gt;Snoop Dogg&lt;/author&gt;
+      &lt;title&gt;Ego Trippin'&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;11/03/2008&lt;/released&gt;
+        &lt;howManySongs&gt;24&lt;/howManySongs&gt;
+        &lt;length time=&quot;77:43&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;72.89&lt;/price&gt;
+        &lt;ratings&gt;4.3&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D11&quot; genreId=&quot;Electronica&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Michał Anioł&lt;/author&gt;
+      &lt;title&gt;U&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;19/02/2021&lt;/released&gt;
+        &lt;howManySongs&gt;10&lt;/howManySongs&gt;
+        &lt;length time=&quot;34:27&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;29.99&lt;/price&gt;
+        &lt;ratings&gt;4.1&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/u-b-iext67667192.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D12&quot; genreId=&quot;Alternative Rap&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;CatchUp&lt;/author&gt;
+      &lt;title&gt;Jesieniarze - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;12/10/2020&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:35&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;12.99&lt;/price&gt;
+        &lt;ratings&gt;4.7&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D13&quot; genreId=&quot;Alternative Rap&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Michał Anioł&lt;/author&gt;
+      &lt;title&gt;Bo to się zwykle tak zaczyna - EP&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;08/04/2022&lt;/released&gt;
+        &lt;howManySongs&gt;4&lt;/howManySongs&gt;
+        &lt;length time=&quot;11:39&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;21.37&lt;/price&gt;
+        &lt;ratings&gt;4.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D14&quot; genreId=&quot;Electronica&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Michał Anioł&lt;/author&gt;
+      &lt;title&gt;Blisko - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;05/08/2020&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;3:03&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;9.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D15&quot; genreId=&quot;Alternative Rap&quot; favorite=&quot;S7&quot;&gt;
+      &lt;author&gt;Kacperczyk&lt;/author&gt;
+      &lt;title&gt;Kryzys Wieku Wczesnego&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;26/11/2021&lt;/released&gt;
+        &lt;howManySongs&gt;14&lt;/howManySongs&gt;
+        &lt;length time=&quot;35:56&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;44.99&lt;/price&gt;
+        &lt;ratings&gt;4.6&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D16&quot; genreId=&quot;Electronica&quot; favorite=&quot;S7&quot;&gt;
+      &lt;author&gt;Frank Leen&lt;/author&gt;
+      &lt;title&gt;Za dobrze by zapomnieć&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;09/09/2022&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:32&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;7.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D17&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S5&quot;&gt;
+      &lt;author&gt;Eminem&lt;/author&gt;
+      &lt;title&gt;Kamikaze&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;31/08/2018&lt;/released&gt;
+        &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+        &lt;length time=&quot;45:49&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;55.55&lt;/price&gt;
+        &lt;ratings&gt;4.4&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D18&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S6&quot;&gt;
+      &lt;author&gt;Eminem&lt;/author&gt;
+      &lt;title&gt;Music To Be Murdered By&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;17/01/2020&lt;/released&gt;
+        &lt;howManySongs&gt;20&lt;/howManySongs&gt;
+        &lt;length time=&quot;64:23&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;59.99&lt;/price&gt;
+        &lt;ratings&gt;4.4&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D19&quot; genreId=&quot;Alternative Metal&quot; favorite=&quot;S2&quot;&gt;
+      &lt;author&gt;A Perfect Circle&lt;/author&gt;
+      &lt;title&gt;Eat the Elephant&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;20/04/2018&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;57:07&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;62.99&lt;/price&gt;
+        &lt;ratings&gt;4.3&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D20&quot; genreId=&quot;Phonk&quot; favorite=&quot;S2&quot;&gt;
+      &lt;author&gt;Sxmpra&lt;/author&gt;
+      &lt;title&gt;Cowbell Warrior! - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;08/12/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:29&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;6.66&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D21&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S10&quot;&gt;
+      &lt;author&gt;Vince Staples&lt;/author&gt;
+      &lt;title&gt;Summertime '06'&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;30/06/2015&lt;/released&gt;
+        &lt;howManySongs&gt;20&lt;/howManySongs&gt;
+        &lt;length time=&quot;59:05&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;42.99&lt;/price&gt;
+        &lt;ratings&gt;4.1&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D22&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S10&quot;&gt;
+      &lt;author&gt;Szczyl&lt;/author&gt;
+      &lt;title&gt;Polska Floryda&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;15/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+        &lt;length time=&quot;38:57&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;38.99&lt;/price&gt;
+        &lt;ratings&gt;4.2&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D23&quot; genreId=&quot;Post-punk&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Molchat Doma&lt;/author&gt;
+      &lt;title&gt;Etazhi&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;07/09/2018&lt;/released&gt;
+        &lt;howManySongs&gt;9&lt;/howManySongs&gt;
+        &lt;length time=&quot;33:13&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;40.99&lt;/price&gt;
+        &lt;ratings&gt;4.5&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D24&quot; genreId=&quot;Post-punk&quot; favorite=&quot;S4&quot;&gt;
+      &lt;author&gt;Nurnberg&lt;/author&gt;
+      &lt;title&gt;Skryvaj&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;05/11/2018&lt;/released&gt;
+        &lt;howManySongs&gt;8&lt;/howManySongs&gt;
+        &lt;length time=&quot;25:01&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;35.99&lt;/price&gt;
+        &lt;ratings&gt;4.5&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D25&quot; genreId=&quot;Synthwave&quot; favorite=&quot;S7&quot;&gt;
+      &lt;author&gt;ALEX&lt;/author&gt;
+      &lt;title&gt;Akuma&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;23/06/2017&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;41:18&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;30.99&lt;/price&gt;
+        &lt;ratings&gt;4.7&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D26&quot; genreId=&quot;Synthwave&quot; favorite=&quot;S8&quot;&gt;
+      &lt;author&gt;ALEX&lt;/author&gt;
+      &lt;title&gt;Akuma II&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;10/05/2019&lt;/released&gt;
+        &lt;howManySongs&gt;10&lt;/howManySongs&gt;
+        &lt;length time=&quot;38:56&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;32.99&lt;/price&gt;
+        &lt;ratings&gt;4.8&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D27&quot; genreId=&quot;Techno&quot; favorite=&quot;S9&quot;&gt;
+      &lt;author&gt;The Prodigy&lt;/author&gt;
+      &lt;title&gt;Music for the Jilted Generation&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;04/04/1994&lt;/released&gt;
+        &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+        &lt;length time=&quot;78:07&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;45.99&lt;/price&gt;
+        &lt;ratings&gt;4.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D28&quot; genreId=&quot;Nu Metal&quot; favorite=&quot;S6&quot;&gt;
+      &lt;author&gt;KoRn&lt;/author&gt;
+      &lt;title&gt;Follow The Leader&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;18/08/1998&lt;/released&gt;
+        &lt;howManySongs&gt;14&lt;/howManySongs&gt;
+        &lt;length time=&quot;70:08&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;42.99&lt;/price&gt;
+        &lt;ratings&gt;4.2&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D29&quot; genreId=&quot;Phonk&quot; favorite=&quot;S3&quot;&gt;
+      &lt;author&gt;SAOTOMAMORE&lt;/author&gt;
+      &lt;title&gt;Fool - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;07/12/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:06&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;12.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D30&quot; genreId=&quot;Phonk&quot; favorite=&quot;S9&quot;&gt;
+      &lt;author&gt;GREEN ORXNGE&lt;/author&gt;
+      &lt;title&gt;TYPICAL CHILL SONG - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;15/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;1:52&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;6.99&lt;/price&gt;
+        &lt;ratings&gt;4.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D31&quot; genreId=&quot;Phonk&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;DVRST&lt;/author&gt;
+      &lt;title&gt;A Little Story - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;29/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:03&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;11.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D32&quot; genreId=&quot;Phonk&quot; favorite=&quot;S4&quot;&gt;
+      &lt;author&gt;Kordhell&lt;/author&gt;
+      &lt;title&gt;Memphis Doom - Single&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;08/10/2021&lt;/released&gt;
+        &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+        &lt;length time=&quot;2:34&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;11.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D33&quot; genreId=&quot;Hip-Hop&quot; favorite=&quot;S8&quot;&gt;
+      &lt;author&gt;Swell&lt;/author&gt;
+      &lt;title&gt;theres still us - EP&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;19/01/2016&lt;/released&gt;
+        &lt;howManySongs&gt;5&lt;/howManySongs&gt;
+        &lt;length time=&quot;11:38&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;12.99&lt;/price&gt;
+        &lt;ratings&gt;4.8&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D34&quot; genreId=&quot;Indie Rock&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Low Roar&lt;/author&gt;
+      &lt;title&gt;maybe tomorrow...&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;30/07/2021&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;63:19&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;38.99&lt;/price&gt;
+        &lt;ratings&gt;4.9&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp&quot;/&gt;
+    &lt;/disk&gt;
+
+    &lt;disk diskId=&quot;D35&quot; genreId=&quot;Indie Rock&quot; favorite=&quot;S1&quot;&gt;
+      &lt;author&gt;Low Roar&lt;/author&gt;
+      &lt;title&gt;Once in a Long. Long While...&lt;/title&gt;
+      &lt;info&gt;
+        &lt;released&gt;05/04/2017&lt;/released&gt;
+        &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+        &lt;length time=&quot;49:00&quot;/&gt;
+        &lt;price currency=&quot;PLN&quot;&gt;40.99&lt;/price&gt;
+        &lt;ratings&gt;5.0&lt;/ratings&gt;
+      &lt;/info&gt;
+      &lt;albumCover URL=&quot;https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg&quot;/&gt;
+    &lt;/disk&gt;
+  &lt;/library&gt;
+
+  &lt;students&gt;
+    &lt;student studentId=&quot;S1&quot;&gt;Grzegorz Bednarek&lt;/student&gt;
+    &lt;student studentId=&quot;S2&quot;&gt;Jan Nowak&lt;/student&gt;
+    &lt;student studentId=&quot;S3&quot;&gt;Peter Mountain&lt;/student&gt;
+    &lt;student studentId=&quot;S4&quot;&gt;Juan Pablo&lt;/student&gt;
+    &lt;student studentId=&quot;S5&quot;&gt;Kanye West&lt;/student&gt;
+    &lt;student studentId=&quot;S6&quot;&gt;Blaise Peck&lt;/student&gt;
+    &lt;student studentId=&quot;S7&quot;&gt;Matthias Long&lt;/student&gt;
+    &lt;student studentId=&quot;S8&quot;&gt;Jorge Mario Bergoglio&lt;/student&gt;
+    &lt;student studentId=&quot;S9&quot;&gt;Matthew Tar&lt;/student&gt;
+    &lt;student studentId=&quot;S10&quot;&gt;Adam&lt;/student&gt;
+  &lt;/students&gt;
+
+  &lt;genres&gt;
+   &lt;genre genreId=&quot;Progressive Metal&quot;&gt;Progessive Metal&lt;/genre&gt;
+   &lt;genre genreId=&quot;Alternative Metal&quot;&gt;Alternative Metal&lt;/genre&gt;
+   &lt;genre genreId=&quot;Nu Metal&quot;&gt;Nu Metal &lt;/genre&gt;
+   &lt;genre genreId=&quot;Grunge&quot;&gt;Grunge&lt;/genre&gt;
+   &lt;genre genreId=&quot;Hip-Hop&quot;&gt;Hip-Hop&lt;/genre&gt;
+   &lt;genre genreId=&quot;Indie Rock&quot;&gt;Indie Rock&lt;/genre&gt;
+   &lt;genre genreId=&quot;Techno&quot;&gt;Techno&lt;/genre&gt;
+   &lt;genre genreId=&quot;Electronica&quot;&gt;Electronica&lt;/genre&gt;
+   &lt;genre genreId=&quot;Alternative Rap&quot;&gt;Alternative Rap&lt;/genre&gt;
+   &lt;genre genreId=&quot;Phonk&quot;&gt;Phonk&lt;/genre&gt;
+   &lt;genre genreId=&quot;Post-punk&quot;&gt;Post-punk&lt;/genre&gt;
+   &lt;genre genreId=&quot;Synthwave&quot;&gt;Synthwave&lt;/genre&gt;
+  &lt;/genres&gt;
+
+&lt;/exercise&gt;
+                </code>
+            </pre>
+        </div>
+        <button class="accordion">Plik XSLT</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt?xml version=&quot1.0&quot encoding=&quotUTF-8&quot ?&gt
+
+&ltxsl:stylesheet version=&quot2.0&quot
+xmlns:xsl=&quothttp://www.w3.org/1999/XSL/Transform&quot
+xmlns:cds=&quotplytoteka&quot&gt
+
+&ltxsl:output method=&quotxml&quot version=&quot1.0&quot encoding=&quotUTF-8&quot indent=&quotyes&quot/&gt
+
+&lt!--Klucze do dokumentu bazowego--&gt
+&ltxsl:key name=&quotgenreKey&quot match=&quot/cds:exercise/cds:genres/cds:genre&quot use=&quot@genreId&quot/&gt
+&ltxsl:key name=&quotstudentKey&quot match=&quot/cds:exercise/cds:students/cds:student&quot use=&quot@studentId&quot/&gt
+
+&lt!--Generowanie raportu--&gt
+&ltxsl:template match=&quot/&quot&gt
+	&ltxsl:element name=&quotraport&quot&gt
+		&ltxsl:element name=&quotlibrary&quot&gt
+			&ltxsl:for-each select=&quotcds:exercise/cds:library/cds:disk&quot&gt
+			&ltxsl:sort select=&quot@diskId&quot/&gt
+			&ltxsl:element name=&quotdisk&quot&gt
+				&ltxsl:element name=&quotauthor&quot&gt
+					&ltxsl:value-of select=&quotcds:author&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quottitle&quot&gt
+					&ltxsl:value-of select=&quotcds:title&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quotreleased&quot&gt
+					&ltxsl:value-of select=&quotcds:info/cds:released&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quothowManySongs&quot&gt
+					&ltxsl:value-of select=&quotcds:info/cds:howManySongs&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quotlength&quot&gt
+					&ltxsl:value-of select=&quotcds:info/cds:length/@time&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quotprice&quot&gt
+					&ltxsl:variable name=&quotprice&quot select=&quotconcat(cds:info/cds:price,&#39; &#39;,cds:info/cds:price/@currency)&quot/&gt
+					&ltxsl:value-of select=&quot$price&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quotratings&quot&gt
+					&ltxsl:value-of select=&quotcds:info/cds:ratings&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quotalbumCover&quot&gt
+					&ltxsl:value-of select=&quotcds:albumCover/@URL&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quotgenre&quot&gt
+					&ltxsl:variable name=&quotname&quot&gt
+						&ltxsl:value-of select=&quotkey(&#39;genreKey&#39;,@genreId)&quot/&gt
+					&lt/xsl:variable&gt
+					&ltxsl:value-of select=&quot$name&quot/&gt
+				&lt/xsl:element&gt
+				&ltxsl:element name=&quotstudent&quot&gt
+					&ltxsl:variable name=&quotname&quot&gt
+						&ltxsl:value-of select=&quotkey(&#39;studentKey&#39;,@studentId)&quot/&gt
+					&lt/xsl:variable&gt
+					&ltxsl:value-of select=&quot$name&quot/&gt
+				&lt/xsl:element&gt
+			&lt/xsl:element&gt
+			&lt/xsl:for-each&gt
+		&lt/xsl:element&gt
+
+		&ltxsl:element name=&quotstatistics&quot&gt
+			&ltxsl:element name=&quotnumberOfDisks&quot&gt
+				&ltxsl:variable name=&quotnumber&quot
+						  	select=&quotcount(cds:exercise/cds:library/cds:disk)&quot/&gt
+				&ltxsl:value-of select=&quot$number&quot/&gt
+			&lt/xsl:element&gt
+			&ltxsl:element name=&quotnumberOfGenres&quot&gt
+				&ltxsl:variable name=&quotnumber&quot
+						  	select=&quotcount(cds:exercise/cds:genres/cds:genre)&quot/&gt
+				&ltxsl:value-of select=&quot$number&quot/&gt
+			&lt/xsl:element&gt
+			&ltxsl:element name=&quotnumberOfStudents&quot&gt
+				&ltxsl:variable name=&quotnumber&quot
+						  	select=&quotcount(cds:exercise/cds:students/cds:student)&quot/&gt
+				&ltxsl:value-of select=&quot$number&quot/&gt
+			&lt/xsl:element&gt
+			&ltxsl:element name=&quotaverageRating&quot&gt
+				&ltxsl:variable name=&quotaverage&quot
+						  	select=&quotavg(cds:exercise/cds:library/cds:disk/cds:info/cds:ratings)&quot/&gt
+				&ltxsl:value-of select=&quotformat-number($average,&#39;#.##&#39;)&quot/&gt
+			&lt/xsl:element&gt
+			&ltxsl:element name=&quotbestRating&quot&gt
+				&ltxsl:for-each select=&quotcds:exercise/cds:library/cds:disk&quot&gt
+				&ltxsl:sort select=&quotcds:info/cds:ratings&quot order=&quotdescending&quot/&gt
+				&ltxsl:if test=&quotposition() = 1&quot&gt
+					&ltxsl:element name=&quotrating&quot&gt
+						&ltxsl:value-of select=&quotcds:info/cds:ratings&quot/&gt
+					&lt/xsl:element&gt
+					&ltxsl:element name=&quottitle&quot&gt
+						&ltxsl:value-of select=&quotcds:title&quot/&gt
+					&lt/xsl:element&gt
+					&ltxsl:element name=&quotauthor&quot&gt
+						&ltxsl:value-of select=&quotcds:author&quot/&gt
+					&lt/xsl:element&gt
+				&lt/xsl:if&gt
+				&lt/xsl:for-each&gt
+			&lt/xsl:element&gt
+			&ltxsl:element name=&quotworstRating&quot&gt
+				&ltxsl:for-each select=&quotcds:exercise/cds:library/cds:disk&quot&gt
+				&ltxsl:sort select=&quotcds:info/cds:ratings&quot/&gt
+				&ltxsl:if test=&quotposition() = 1&quot&gt
+					&ltxsl:element name=&quotrating&quot&gt
+						&ltxsl:value-of select=&quotcds:info/cds:ratings&quot/&gt
+					&lt/xsl:element&gt
+					&ltxsl:element name=&quottitle&quot&gt
+						&ltxsl:value-of select=&quotcds:title&quot/&gt
+					&lt/xsl:element&gt
+					&ltxsl:element name=&quotauthor&quot&gt
+						&ltxsl:value-of select=&quotcds:author&quot/&gt
+					&lt/xsl:element&gt
+				&lt/xsl:if&gt
+				&lt/xsl:for-each&gt
+			&lt/xsl:element&gt
+			&ltxsl:element name=&quotaveragePrice&quot&gt
+				&ltxsl:variable name=&quotaverage&quot
+						  	select=&quotavg(cds:exercise/cds:library/cds:disk/cds:info/cds:price)&quot/&gt
+				&ltxsl:value-of select=&quotformat-number($average,&#39;#.##&#39;)&quot/&gt
+			&lt/xsl:element&gt
+			&ltxsl:element name=&quotsumOfPrices&quot&gt
+				&ltxsl:variable name=&quotsum&quot
+						  	select=&quotsum(cds:exercise/cds:library/cds:disk/cds:info/cds:price)&quot/&gt
+				&ltxsl:value-of select=&quot$sum&quot/&gt
+			&lt/xsl:element&gt
+			&ltxsl:element name=&quotgeneratedDate&quot&gt
+				&ltxsl:value-of select=&quotformat-date(current-date(),&#39;[D01].[M01].[Y0001]&#39;)&quot/&gt
+			&lt/xsl:element&gt
+		&lt/xsl:element&gt
+	&lt/xsl:element&gt
+&lt/xsl:template&gt
+
+&lt/xsl:stylesheet&gt
+                </code>
+            </pre>
+        </div>
+        <button class="accordion">Wygenerowany raport</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;raport&gt;
+   &lt;library&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;TOOL&lt;/author&gt;
+		 &lt;title&gt;10.000 Days&lt;/title&gt;
+		 &lt;released&gt;28/04/2006&lt;/released&gt;
+		 &lt;howManySongs&gt;11&lt;/howManySongs&gt;
+		 &lt;length&gt;75:45&lt;/length&gt;
+		 &lt;price&gt;62.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.9&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://image.ceneostatic.pl/data/products/2735398/i-tool-10-000-days-cd.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Progessive Metal&lt;/genre&gt;
+		 &lt;student&gt;Peter Mountain&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Snoop Dogg&lt;/author&gt;
+		 &lt;title&gt;Ego Trippin&#39;&lt;/title&gt;
+		 &lt;released&gt;11/03/2008&lt;/released&gt;
+		 &lt;howManySongs&gt;24&lt;/howManySongs&gt;
+		 &lt;length&gt;77:43&lt;/length&gt;
+		 &lt;price&gt;72.89 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.3&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://kolekcjonerrapu.pl/userdata/public/gfx/3941/Snoop-Dogg---Ego-Trippin--cover-okladka.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Hip-Hop&lt;/genre&gt;
+		 &lt;student&gt;Adam&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Michal Aniol&lt;/author&gt;
+		 &lt;title&gt;U&lt;/title&gt;
+		 &lt;released&gt;19/02/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;10&lt;/howManySongs&gt;
+		 &lt;length&gt;34:27&lt;/length&gt;
+		 &lt;price&gt;29.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.1&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://ecsmedia.pl/c/u-b-iext67667192.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Electronica&lt;/genre&gt;
+		 &lt;student&gt;Grzegorz Bednarek&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;CatchUp&lt;/author&gt;
+		 &lt;title&gt;Jesieniarze - Single&lt;/title&gt;
+		 &lt;released&gt;12/10/2020&lt;/released&gt;
+		 &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+		 &lt;length&gt;2:35&lt;/length&gt;
+		 &lt;price&gt;12.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.7&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/7dd383abb733bc4cdfb036e2163c1691.720x720x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Alternative Rap&lt;/genre&gt;
+		 &lt;student&gt;Grzegorz Bednarek&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Michal Aniol&lt;/author&gt;
+		 &lt;title&gt;Bo to sie zwykle tak zaczyna - EP&lt;/title&gt;
+		 &lt;released&gt;08/04/2022&lt;/released&gt;
+		 &lt;howManySongs&gt;4&lt;/howManySongs&gt;
+		 &lt;length&gt;11:39&lt;/length&gt;
+		 &lt;price&gt;21.37 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.9&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/d46edce1e54ee7b87242472a4816375c.1000x1000x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Alternative Rap&lt;/genre&gt;
+		 &lt;student&gt;Grzegorz Bednarek&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Michal Aniol&lt;/author&gt;
+		 &lt;title&gt;Blisko - Single&lt;/title&gt;
+		 &lt;released&gt;05/08/2020&lt;/released&gt;
+		 &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+		 &lt;length&gt;3:03&lt;/length&gt;
+		 &lt;price&gt;9.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;5.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/2f7bda4b7fd1613eaec073cd61ec2d99.640x640x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Electronica&lt;/genre&gt;
+		 &lt;student&gt;Grzegorz Bednarek&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Kacperczyk&lt;/author&gt;
+		 &lt;title&gt;Kryzys Wieku Wczesnego&lt;/title&gt;
+		 &lt;released&gt;26/11/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;14&lt;/howManySongs&gt;
+		 &lt;length&gt;35:56&lt;/length&gt;
+		 &lt;price&gt;44.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.6&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://ecsmedia.pl/c/kryzys-wieku-wczesnego-pl-b-iext104212093.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Alternative Rap&lt;/genre&gt;
+		 &lt;student&gt;Matthias Long&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Frank Leen&lt;/author&gt;
+		 &lt;title&gt;Za dobrze by zapomniec&lt;/title&gt;
+		 &lt;released&gt;09/09/2022&lt;/released&gt;
+		 &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+		 &lt;length&gt;2:32&lt;/length&gt;
+		 &lt;price&gt;7.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;5.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/f1a7457f2e1d93b10e189eb5202e8f91.1000x1000x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Electronica&lt;/genre&gt;
+		 &lt;student&gt;Matthias Long&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Eminem&lt;/author&gt;
+		 &lt;title&gt;Kamikaze&lt;/title&gt;
+		 &lt;released&gt;31/08/2018&lt;/released&gt;
+		 &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+		 &lt;length&gt;45:49&lt;/length&gt;
+		 &lt;price&gt;55.55 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.4&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/f1422cedbca472fd80dc00fa7f6e652c.1000x1000x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Hip-Hop&lt;/genre&gt;
+		 &lt;student&gt;Kanye West&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Eminem&lt;/author&gt;
+		 &lt;title&gt;Music To Be Murdered By&lt;/title&gt;
+		 &lt;released&gt;17/01/2020&lt;/released&gt;
+		 &lt;howManySongs&gt;20&lt;/howManySongs&gt;
+		 &lt;length&gt;64:23&lt;/length&gt;
+		 &lt;price&gt;59.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.4&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/ac22d30db0ea4783bf0953ee96833595.1000x1000x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Hip-Hop&lt;/genre&gt;
+		 &lt;student&gt;Blaise Peck&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;A Perfect Circle&lt;/author&gt;
+		 &lt;title&gt;Eat the Elephant&lt;/title&gt;
+		 &lt;released&gt;20/04/2018&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;57:07&lt;/length&gt;
+		 &lt;price&gt;62.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.3&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/ea4f7bf4dc61db93f10d0d06ba7fb7d3.1000x1000x1.png&lt;/albumCover&gt;
+		 &lt;genre&gt;Alternative Metal&lt;/genre&gt;
+		 &lt;student&gt;Jan Nowak&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;A Perfect Circle&lt;/author&gt;
+		 &lt;title&gt;Thirteenth Step&lt;/title&gt;
+		 &lt;released&gt;16/09/2003&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;50:36&lt;/length&gt;
+		 &lt;price&gt;53.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.2&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://ecsmedia.pl/c/thirteenth-step-b-iext120253671.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Alternative Metal&lt;/genre&gt;
+		 &lt;student&gt;Kanye West&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Sxmpra&lt;/author&gt;
+		 &lt;title&gt;Cowbell Warrior! - Single&lt;/title&gt;
+		 &lt;released&gt;08/12/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+		 &lt;length&gt;2:29&lt;/length&gt;
+		 &lt;price&gt;6.66 PLN&lt;/price&gt;
+		 &lt;ratings&gt;5.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/090eb1d20e0f553a6a57432ec15ab558.500x500x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Phonk&lt;/genre&gt;
+		 &lt;student&gt;Jan Nowak&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Vince Staples&lt;/author&gt;
+		 &lt;title&gt;Summertime &#39;06&#39;&lt;/title&gt;
+		 &lt;released&gt;30/06/2015&lt;/released&gt;
+		 &lt;howManySongs&gt;20&lt;/howManySongs&gt;
+		 &lt;length&gt;59:05&lt;/length&gt;
+		 &lt;price&gt;42.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.1&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/33a9265391b2dcfc1f37a725f309746c.1000x1000x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Hip-Hop&lt;/genre&gt;
+		 &lt;student&gt;Adam&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Szczyl&lt;/author&gt;
+		 &lt;title&gt;Polska Floryda&lt;/title&gt;
+		 &lt;released&gt;15/10/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+		 &lt;length&gt;38:57&lt;/length&gt;
+		 &lt;price&gt;38.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.2&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/101b1939124b4d87e936c1eb07624370.639x639x1.png&lt;/albumCover&gt;
+		 &lt;genre&gt;Hip-Hop&lt;/genre&gt;
+		 &lt;student&gt;Adam&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Molchat Doma&lt;/author&gt;
+		 &lt;title&gt;Etazhi&lt;/title&gt;
+		 &lt;released&gt;07/09/2018&lt;/released&gt;
+		 &lt;howManySongs&gt;9&lt;/howManySongs&gt;
+		 &lt;length&gt;33:13&lt;/length&gt;
+		 &lt;price&gt;40.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.5&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/fad2a24bb65296bfd39d25d4a2335dbe.917x917x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Post-punk&lt;/genre&gt;
+		 &lt;student&gt;Grzegorz Bednarek&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Nurnberg&lt;/author&gt;
+		 &lt;title&gt;Skryvaj&lt;/title&gt;
+		 &lt;released&gt;05/11/2018&lt;/released&gt;
+		 &lt;howManySongs&gt;8&lt;/howManySongs&gt;
+		 &lt;length&gt;25:01&lt;/length&gt;
+		 &lt;price&gt;35.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.5&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/f38cf0401e222411c5231b9cd3676342.1000x1000x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Post-punk&lt;/genre&gt;
+		 &lt;student&gt;Juan Pablo&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;ALEX&lt;/author&gt;
+		 &lt;title&gt;Akuma&lt;/title&gt;
+		 &lt;released&gt;23/06/2017&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;41:18&lt;/length&gt;
+		 &lt;price&gt;30.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.7&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/8b683d162d64f2ce1474a7c42acca28e.800x800x1.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Synthwave&lt;/genre&gt;
+		 &lt;student&gt;Matthias Long&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;ALEX&lt;/author&gt;
+		 &lt;title&gt;Akuma II&lt;/title&gt;
+		 &lt;released&gt;10/05/2019&lt;/released&gt;
+		 &lt;howManySongs&gt;10&lt;/howManySongs&gt;
+		 &lt;length&gt;38:56&lt;/length&gt;
+		 &lt;price&gt;32.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.8&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://i.scdn.co/image/ab67616d0000b273bb92fb5ce4500eefbed577c6&lt;/albumCover&gt;
+		 &lt;genre&gt;Synthwave&lt;/genre&gt;
+		 &lt;student&gt;Jorge Mario Bergoglio&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;The Prodigy&lt;/author&gt;
+		 &lt;title&gt;Music for the Jilted Generation&lt;/title&gt;
+		 &lt;released&gt;04/04/1994&lt;/released&gt;
+		 &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+		 &lt;length&gt;78:07&lt;/length&gt;
+		 &lt;price&gt;45.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/c0de89f213914fa2a740ebe022d0d1b7.1000x1000x1.png&lt;/albumCover&gt;
+		 &lt;genre&gt;Techno&lt;/genre&gt;
+		 &lt;student&gt;Matthew Tar&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;KoRn&lt;/author&gt;
+		 &lt;title&gt;Follow The Leader&lt;/title&gt;
+		 &lt;released&gt;18/08/1998&lt;/released&gt;
+		 &lt;howManySongs&gt;14&lt;/howManySongs&gt;
+		 &lt;length&gt;70:08&lt;/length&gt;
+		 &lt;price&gt;42.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.2&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://ecsmedia.pl/c/follow-the-leader-b-iext120249259.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Nu Metal &lt;/genre&gt;
+		 &lt;student&gt;Blaise Peck&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;SAOTOMAMORE&lt;/author&gt;
+		 &lt;title&gt;Fool - Single&lt;/title&gt;
+		 &lt;released&gt;07/12/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+		 &lt;length&gt;2:06&lt;/length&gt;
+		 &lt;price&gt;12.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;5.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://i.scdn.co/image/ab67616d0000b273232f6356ae29278909853d7c&lt;/albumCover&gt;
+		 &lt;genre&gt;Phonk&lt;/genre&gt;
+		 &lt;student&gt;Peter Mountain&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Limp Bizkit&lt;/author&gt;
+		 &lt;title&gt;STILL SUCKS&lt;/title&gt;
+		 &lt;released&gt;31/10/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;31:55&lt;/length&gt;
+		 &lt;price&gt;40.00 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.8&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://soundrive.pl/assets/front/images/content/1fW4VGNkY1e4X3uObVdtefhF5lDqSaG7GZ2fjuAkNOmg9VpCmH0c39kL70Mu_limp-bizkit-still-sucksjpg.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Nu Metal &lt;/genre&gt;
+		 &lt;student&gt;Juan Pablo&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;GREEN ORXNGE&lt;/author&gt;
+		 &lt;title&gt;TYPICAL CHILL SONG - Single&lt;/title&gt;
+		 &lt;released&gt;15/10/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+		 &lt;length&gt;1:52&lt;/length&gt;
+		 &lt;price&gt;6.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.9&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://i.scdn.co/image/ab67616d0000b273d2c92486b974e054a03f54e2&lt;/albumCover&gt;
+		 &lt;genre&gt;Phonk&lt;/genre&gt;
+		 &lt;student&gt;Matthew Tar&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;DVRST&lt;/author&gt;
+		 &lt;title&gt;A Little Story - Single&lt;/title&gt;
+		 &lt;released&gt;29/10/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+		 &lt;length&gt;2:03&lt;/length&gt;
+		 &lt;price&gt;11.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;5.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://i.scdn.co/image/ab67616d0000b27339403b33addbba0a0eee4658&lt;/albumCover&gt;
+		 &lt;genre&gt;Phonk&lt;/genre&gt;
+		 &lt;student&gt;Grzegorz Bednarek&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Kordhell&lt;/author&gt;
+		 &lt;title&gt;Memphis Doom - Single&lt;/title&gt;
+		 &lt;released&gt;08/10/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;1&lt;/howManySongs&gt;
+		 &lt;length&gt;2:34&lt;/length&gt;
+		 &lt;price&gt;11.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;5.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://i.scdn.co/image/ab67616d0000b273350bd33cb53c26eee7fbfe2e&lt;/albumCover&gt;
+		 &lt;genre&gt;Phonk&lt;/genre&gt;
+		 &lt;student&gt;Juan Pablo&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Swell&lt;/author&gt;
+		 &lt;title&gt;theres still us - EP&lt;/title&gt;
+		 &lt;released&gt;19/01/2016&lt;/released&gt;
+		 &lt;howManySongs&gt;5&lt;/howManySongs&gt;
+		 &lt;length&gt;11:38&lt;/length&gt;
+		 &lt;price&gt;12.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.8&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://i.scdn.co/image/ab67616d0000b27364d3f72a0ab6daf386c42e4f&lt;/albumCover&gt;
+		 &lt;genre&gt;Hip-Hop&lt;/genre&gt;
+		 &lt;student&gt;Jorge Mario Bergoglio&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Low Roar&lt;/author&gt;
+		 &lt;title&gt;maybe tomorrow...&lt;/title&gt;
+		 &lt;released&gt;30/07/2021&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;63:19&lt;/length&gt;
+		 &lt;price&gt;38.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.9&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://images.genius.com/6963cee262cdc11634a4333bc5ae792a.1000x1000x1.webp&lt;/albumCover&gt;
+		 &lt;genre&gt;Indie Rock&lt;/genre&gt;
+		 &lt;student&gt;Grzegorz Bednarek&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Low Roar&lt;/author&gt;
+		 &lt;title&gt;Once in a Long. Long While...&lt;/title&gt;
+		 &lt;released&gt;05/04/2017&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;49:00&lt;/length&gt;
+		 &lt;price&gt;40.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;5.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://is3-ssl.mzstatic.com/image/thumb/Music122/v4/95/ff/55/95ff5569-be80-5e50-d9f1-9a6854ce88b1/196925159999.jpg/600x600bf-60.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Indie Rock&lt;/genre&gt;
+		 &lt;student&gt;Grzegorz Bednarek&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Pearl Jam&lt;/author&gt;
+		 &lt;title&gt;Ten&lt;/title&gt;
+		 &lt;released&gt;27/08/1991&lt;/released&gt;
+		 &lt;howManySongs&gt;11&lt;/howManySongs&gt;
+		 &lt;length&gt;53:20&lt;/length&gt;
+		 &lt;price&gt;35.97 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.5&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://image.ceneostatic.pl/data/products/2734314/i-pearl-jam-ten-cd.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Grunge&lt;/genre&gt;
+		 &lt;student&gt;Jorge Mario Bergoglio&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Karnivool&lt;/author&gt;
+		 &lt;title&gt;Themata&lt;/title&gt;
+		 &lt;released&gt;07/02/2005&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;48:52&lt;/length&gt;
+		 &lt;price&gt;30.00 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://m.media-amazon.com/images/I/8173EyIhkRL.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Alternative Metal&lt;/genre&gt;
+		 &lt;student&gt;Juan Pablo&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Matt Large&lt;/author&gt;
+		 &lt;title&gt;As real as it gets&lt;/title&gt;
+		 &lt;released&gt;18/05/2018&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;31:33&lt;/length&gt;
+		 &lt;price&gt;22.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.5&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://cdn.epidemicsound.com/curation-assets/commercial-release-cover-images/424/300x300.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Hip-Hop&lt;/genre&gt;
+		 &lt;student&gt;Peter Mountain&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Low Roar&lt;/author&gt;
+		 &lt;title&gt;0&lt;/title&gt;
+		 &lt;released&gt;05/08/2014&lt;/released&gt;
+		 &lt;howManySongs&gt;13&lt;/howManySongs&gt;
+		 &lt;length&gt;68:14&lt;/length&gt;
+		 &lt;price&gt;32.99 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.2&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://m.media-amazon.com/images/I/71kUJ6leTCL.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Indie Rock&lt;/genre&gt;
+		 &lt;student&gt;Blaise Peck&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;Nirvana&lt;/author&gt;
+		 &lt;title&gt;Nevermind&lt;/title&gt;
+		 &lt;released&gt;24/09/1991&lt;/released&gt;
+		 &lt;howManySongs&gt;12&lt;/howManySongs&gt;
+		 &lt;length&gt;42:38&lt;/length&gt;
+		 &lt;price&gt;32.00 PLN&lt;/price&gt;
+		 &lt;ratings&gt;4.0&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Grunge&lt;/genre&gt;
+		 &lt;student&gt;Peter Mountain&lt;/student&gt;
+	  &lt;/disk&gt;
+	  &lt;disk&gt;
+		 &lt;author&gt;The Prodigy&lt;/author&gt;
+		 &lt;title&gt;The Day Is My Enemy&lt;/title&gt;
+		 &lt;released&gt;30/03/2015&lt;/released&gt;
+		 &lt;howManySongs&gt;15&lt;/howManySongs&gt;
+		 &lt;length&gt;56:12&lt;/length&gt;
+		 &lt;price&gt;45.87 PLN&lt;/price&gt;
+		 &lt;ratings&gt;3.9&lt;/ratings&gt;
+		 &lt;albumCover&gt;https://ecsmedia.pl/c/the-day-is-my-enemy-w-iext120305294.jpg&lt;/albumCover&gt;
+		 &lt;genre&gt;Techno&lt;/genre&gt;
+		 &lt;student&gt;Matthew Tar&lt;/student&gt;
+	  &lt;/disk&gt;
+   &lt;/library&gt;
+   &lt;statistics&gt;
+	  &lt;numberOfDisks&gt;35&lt;/numberOfDisks&gt;
+	  &lt;numberOfGenres&gt;12&lt;/numberOfGenres&gt;
+	  &lt;numberOfStudents&gt;10&lt;/numberOfStudents&gt;
+	  &lt;averageRating&gt;4.55&lt;/averageRating&gt;
+	  &lt;bestRating&gt;
+		 &lt;rating&gt;5.0&lt;/rating&gt;
+		 &lt;title&gt;Blisko - Single&lt;/title&gt;
+		 &lt;author&gt;Michal Aniol&lt;/author&gt;
+	  &lt;/bestRating&gt;
+	  &lt;worstRating&gt;
+		 &lt;rating&gt;3.9&lt;/rating&gt;
+		 &lt;title&gt;The Day Is My Enemy&lt;/title&gt;
+		 &lt;author&gt;The Prodigy&lt;/author&gt;
+	  &lt;/worstRating&gt;
+	  &lt;averagePrice&gt;34.03&lt;/averagePrice&gt;
+	  &lt;sumOfPrices&gt;1191.05&lt;/sumOfPrices&gt;
+	  &lt;generatedDate&gt;05.12.2022&lt;/generatedDate&gt;
+   &lt;/statistics&gt;
+&lt;/raport&gt;
+                </code>
+            </pre>
+        </div>
+
+        <div class="heading">
+            <h3>XHTML</h3>
+        </div>
+        <button class="accordion">Plik XSLT</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+
+&lt;xsl:stylesheet version=&quot;2.0&quot;
+xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+
+&lt;xsl:output method=&quot;xhtml&quot; encoding=&quot;UTF-8&quot;
+doctype-public=&quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;
+doctype-system=&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;/&gt;
+
+&lt;xsl:template match=&quot;/&quot;&gt;
+	&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;pl&quot; lang=&quot;pl&quot;&gt;
+	&lt;head&gt;
+		&lt;title&gt;OutputXHTMl&lt;/title&gt;
+		&lt;style type=&quot;text/css&quot;&gt;
+			@keyframes colorHover {
+			  	from {background-color: #ffff; color:#000000;}
+			  	to {	background-color: #a5f; color: #ffff;}
+			}
+
+			h1 {
+				text-align: center;
+			}
+
+			body {
+				font-family: Helvetica Neue;
+				font-size: 11pt;
+				background-color: #ffff;
+			}
+
+			table {
+				margin-left: auto;
+				margin-right: auto;
+				border: 1px solid black;
+				border-radius: 10px;
+			}
+
+			table &gt; caption {
+				font-weight: bold;
+				margin-bottom: 1%;
+			}
+
+			th {
+				background-color: #8e00ff;
+				color: #ffff;
+				border: 1px solid black;
+				border-radius: 10px;
+			}
+
+			th, td {
+				text-align: center;
+				padding: 4px;
+				padding-bottom: 2px;
+				padding-top: 2px;
+				border: 1px solid black;
+				border-radius: 10px;
+			}
+
+			td:hover {
+				animation-name: colorHover;
+				animation-duration: 300ms;
+				animation-fill-mode: forwards;
+			}
+
+		&lt;/style&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Płytoteka CD&lt;/h1&gt;
+		&lt;table border=&quot;1&quot;&gt;
+			&lt;tr&gt;
+				&lt;th&gt;Autor&lt;/th&gt;
+				&lt;th&gt;Tytuł&lt;/th&gt;
+				&lt;th&gt;Data wydania&lt;/th&gt;
+				&lt;th&gt;Ilość piosenek&lt;/th&gt;
+				&lt;th&gt;Czas trwania&lt;/th&gt;
+				&lt;th&gt;Cena&lt;/th&gt;
+				&lt;th&gt;Ocena&lt;/th&gt;
+				&lt;th&gt;Gatunek&lt;/th&gt;
+				&lt;th&gt;Ulubiona&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;xsl:for-each select=&quot;raport/library/disk&quot;&gt;
+			&lt;tr&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;author&quot;/&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;title&quot;/&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;released&quot;/&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;howManySongs&quot;/&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;length&quot;/&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;price&quot;/&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;ratings&quot;/&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;genre&quot;/&gt;
+				&lt;/td&gt;
+				&lt;td&gt;
+					&lt;xsl:value-of select=&quot;student&quot;/&gt;
+				&lt;/td&gt;
+			&lt;/tr&gt;
+			&lt;/xsl:for-each&gt;
+		&lt;/table&gt;
+		&lt;div style=&quot;margin-top: 1%&quot;&gt;
+			&lt;h1&gt;Statystyki&lt;/h1&gt;
+			&lt;table border=&quot;1&quot;&gt;
+				&lt;caption&gt;Liczba rekordów&lt;/caption&gt;
+				&lt;tr&gt;
+					&lt;th&gt;Liczba płyt&lt;/th&gt;
+					&lt;th&gt;Liczba gatunków&lt;/th&gt;
+					&lt;th&gt;Liczba studentów&lt;/th&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/numberOfDisks&quot;/&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/numberOfGenres&quot;/&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/numberOfStudents&quot;/&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+		&lt;div style=&quot;margin-top: 5%&quot;&gt;
+			&lt;table border=&quot;1&quot;&gt;
+				&lt;caption&gt;Dane o ocenach&lt;/caption&gt;
+				&lt;tr&gt;
+					&lt;th&gt;Średnia ocen&lt;/th&gt;
+					&lt;th&gt;Najlepsza płyta&lt;/th&gt;
+					&lt;th&gt;Ocena&lt;/th&gt;
+					&lt;th&gt;Najgorsza płyta&lt;/th&gt;
+					&lt;th&gt;Ocena&lt;/th&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/averageRating&quot;/&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/bestRating/title&quot;/&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/bestRating/rating&quot;/&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/worstRating/title&quot;/&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/worstRating/rating&quot;/&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+		&lt;div style=&quot;margin-top: 5%&quot;&gt;
+			&lt;table border=&quot;1&quot;&gt;
+				&lt;caption&gt;Dane o cenach&lt;/caption&gt;
+				&lt;tr&gt;
+					&lt;th&gt;Średnia cena&lt;/th&gt;
+					&lt;th&gt;Suma cen&lt;/th&gt;
+				&lt;/tr&gt;
+				&lt;tr&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/averagePrice&quot;/&gt;
+					&lt;/td&gt;
+					&lt;td&gt;
+						&lt;xsl:value-of select=&quot;raport/statistics/sumOfPrices&quot;/&gt;
+					&lt;/td&gt;
+				&lt;/tr&gt;
+			&lt;/table&gt;
+		&lt;/div&gt;
+	&lt;/body&gt;
+	&lt;/html&gt;
+&lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+                </code>
+            </pre>
+        </div>
+        <button class="accordion">Wygenerowany plik XHTML</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE html
+  PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot; &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot; xml:lang=&quot;pl&quot; lang=&quot;pl&quot;&gt;
+   &lt;head&gt;
+	  &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+	  &lt;title&gt;OutputXHTMl&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;
+			@keyframes colorHover {
+				  from {background-color: #ffff; color:#000000;}
+				  to {	background-color: #a5f; color: #ffff;}
+			}
+
+			h1 {
+				text-align: center;
+			}
+
+			body {
+				font-family: Helvetica Neue;
+				font-size: 11pt;
+				background-color: #ffff;
+			}
+
+			table {
+				margin-left: auto;
+				margin-right: auto;
+				border: 1px solid black;
+				border-radius: 10px;
+			}
+
+			table &amp;gt; caption {
+				font-weight: bold;
+				margin-bottom: 1%;
+			}
+
+			th {
+				background-color: #8e00ff;
+				color: #ffff;
+				border: 1px solid black;
+				border-radius: 10px;
+			}
+
+			th, td {
+				text-align: center;
+				padding: 4px;
+				padding-bottom: 2px;
+				padding-top: 2px;
+				border: 1px solid black;
+				border-radius: 10px;
+			}
+
+			td:hover {
+				animation-name: colorHover;
+				animation-duration: 300ms;
+				animation-fill-mode: forwards;
+			}
+
+		&lt;/style&gt;&lt;/head&gt;
+   &lt;body&gt;
+	  &lt;h1&gt;Płytoteka CD&lt;/h1&gt;
+	  &lt;table border=&quot;1&quot;&gt;
+		 &lt;tr&gt;
+			&lt;th&gt;Autor&lt;/th&gt;
+			&lt;th&gt;Tytuł&lt;/th&gt;
+			&lt;th&gt;Data wydania&lt;/th&gt;
+			&lt;th&gt;Ilość piosenek&lt;/th&gt;
+			&lt;th&gt;Czas trwania&lt;/th&gt;
+			&lt;th&gt;Cena&lt;/th&gt;
+			&lt;th&gt;Ocena&lt;/th&gt;
+			&lt;th&gt;Gatunek&lt;/th&gt;
+			&lt;th&gt;Ulubiona&lt;/th&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;TOOL&lt;/td&gt;
+			&lt;td&gt;10.000 Days&lt;/td&gt;
+			&lt;td&gt;28/04/2006&lt;/td&gt;
+			&lt;td&gt;11&lt;/td&gt;
+			&lt;td&gt;75:45&lt;/td&gt;
+			&lt;td&gt;62.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.9&lt;/td&gt;
+			&lt;td&gt;Progessive Metal&lt;/td&gt;
+			&lt;td&gt;Peter Mountain&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Snoop Dogg&lt;/td&gt;
+			&lt;td&gt;Ego Trippin&apos;&lt;/td&gt;
+			&lt;td&gt;11/03/2008&lt;/td&gt;
+			&lt;td&gt;24&lt;/td&gt;
+			&lt;td&gt;77:43&lt;/td&gt;
+			&lt;td&gt;72.89 PLN&lt;/td&gt;
+			&lt;td&gt;4.3&lt;/td&gt;
+			&lt;td&gt;Hip-Hop&lt;/td&gt;
+			&lt;td&gt;Adam&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Michal Aniol&lt;/td&gt;
+			&lt;td&gt;U&lt;/td&gt;
+			&lt;td&gt;19/02/2021&lt;/td&gt;
+			&lt;td&gt;10&lt;/td&gt;
+			&lt;td&gt;34:27&lt;/td&gt;
+			&lt;td&gt;29.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.1&lt;/td&gt;
+			&lt;td&gt;Electronica&lt;/td&gt;
+			&lt;td&gt;Grzegorz Bednarek&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;CatchUp&lt;/td&gt;
+			&lt;td&gt;Jesieniarze - Single&lt;/td&gt;
+			&lt;td&gt;12/10/2020&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;2:35&lt;/td&gt;
+			&lt;td&gt;12.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.7&lt;/td&gt;
+			&lt;td&gt;Alternative Rap&lt;/td&gt;
+			&lt;td&gt;Grzegorz Bednarek&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Michal Aniol&lt;/td&gt;
+			&lt;td&gt;Bo to sie zwykle tak zaczyna - EP&lt;/td&gt;
+			&lt;td&gt;08/04/2022&lt;/td&gt;
+			&lt;td&gt;4&lt;/td&gt;
+			&lt;td&gt;11:39&lt;/td&gt;
+			&lt;td&gt;21.37 PLN&lt;/td&gt;
+			&lt;td&gt;4.9&lt;/td&gt;
+			&lt;td&gt;Alternative Rap&lt;/td&gt;
+			&lt;td&gt;Grzegorz Bednarek&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Michal Aniol&lt;/td&gt;
+			&lt;td&gt;Blisko - Single&lt;/td&gt;
+			&lt;td&gt;05/08/2020&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;3:03&lt;/td&gt;
+			&lt;td&gt;9.99 PLN&lt;/td&gt;
+			&lt;td&gt;5.0&lt;/td&gt;
+			&lt;td&gt;Electronica&lt;/td&gt;
+			&lt;td&gt;Grzegorz Bednarek&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Kacperczyk&lt;/td&gt;
+			&lt;td&gt;Kryzys Wieku Wczesnego&lt;/td&gt;
+			&lt;td&gt;26/11/2021&lt;/td&gt;
+			&lt;td&gt;14&lt;/td&gt;
+			&lt;td&gt;35:56&lt;/td&gt;
+			&lt;td&gt;44.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.6&lt;/td&gt;
+			&lt;td&gt;Alternative Rap&lt;/td&gt;
+			&lt;td&gt;Matthias Long&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Frank Leen&lt;/td&gt;
+			&lt;td&gt;Za dobrze by zapomniec&lt;/td&gt;
+			&lt;td&gt;09/09/2022&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;2:32&lt;/td&gt;
+			&lt;td&gt;7.99 PLN&lt;/td&gt;
+			&lt;td&gt;5.0&lt;/td&gt;
+			&lt;td&gt;Electronica&lt;/td&gt;
+			&lt;td&gt;Matthias Long&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Eminem&lt;/td&gt;
+			&lt;td&gt;Kamikaze&lt;/td&gt;
+			&lt;td&gt;31/08/2018&lt;/td&gt;
+			&lt;td&gt;13&lt;/td&gt;
+			&lt;td&gt;45:49&lt;/td&gt;
+			&lt;td&gt;55.55 PLN&lt;/td&gt;
+			&lt;td&gt;4.4&lt;/td&gt;
+			&lt;td&gt;Hip-Hop&lt;/td&gt;
+			&lt;td&gt;Kanye West&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Eminem&lt;/td&gt;
+			&lt;td&gt;Music To Be Murdered By&lt;/td&gt;
+			&lt;td&gt;17/01/2020&lt;/td&gt;
+			&lt;td&gt;20&lt;/td&gt;
+			&lt;td&gt;64:23&lt;/td&gt;
+			&lt;td&gt;59.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.4&lt;/td&gt;
+			&lt;td&gt;Hip-Hop&lt;/td&gt;
+			&lt;td&gt;Blaise Peck&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;A Perfect Circle&lt;/td&gt;
+			&lt;td&gt;Eat the Elephant&lt;/td&gt;
+			&lt;td&gt;20/04/2018&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;57:07&lt;/td&gt;
+			&lt;td&gt;62.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.3&lt;/td&gt;
+			&lt;td&gt;Alternative Metal&lt;/td&gt;
+			&lt;td&gt;Jan Nowak&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;A Perfect Circle&lt;/td&gt;
+			&lt;td&gt;Thirteenth Step&lt;/td&gt;
+			&lt;td&gt;16/09/2003&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;50:36&lt;/td&gt;
+			&lt;td&gt;53.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.2&lt;/td&gt;
+			&lt;td&gt;Alternative Metal&lt;/td&gt;
+			&lt;td&gt;Kanye West&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Sxmpra&lt;/td&gt;
+			&lt;td&gt;Cowbell Warrior! - Single&lt;/td&gt;
+			&lt;td&gt;08/12/2021&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;2:29&lt;/td&gt;
+			&lt;td&gt;6.66 PLN&lt;/td&gt;
+			&lt;td&gt;5.0&lt;/td&gt;
+			&lt;td&gt;Phonk&lt;/td&gt;
+			&lt;td&gt;Jan Nowak&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Vince Staples&lt;/td&gt;
+			&lt;td&gt;Summertime &apos;06&apos;&lt;/td&gt;
+			&lt;td&gt;30/06/2015&lt;/td&gt;
+			&lt;td&gt;20&lt;/td&gt;
+			&lt;td&gt;59:05&lt;/td&gt;
+			&lt;td&gt;42.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.1&lt;/td&gt;
+			&lt;td&gt;Hip-Hop&lt;/td&gt;
+			&lt;td&gt;Adam&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Szczyl&lt;/td&gt;
+			&lt;td&gt;Polska Floryda&lt;/td&gt;
+			&lt;td&gt;15/10/2021&lt;/td&gt;
+			&lt;td&gt;13&lt;/td&gt;
+			&lt;td&gt;38:57&lt;/td&gt;
+			&lt;td&gt;38.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.2&lt;/td&gt;
+			&lt;td&gt;Hip-Hop&lt;/td&gt;
+			&lt;td&gt;Adam&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Molchat Doma&lt;/td&gt;
+			&lt;td&gt;Etazhi&lt;/td&gt;
+			&lt;td&gt;07/09/2018&lt;/td&gt;
+			&lt;td&gt;9&lt;/td&gt;
+			&lt;td&gt;33:13&lt;/td&gt;
+			&lt;td&gt;40.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.5&lt;/td&gt;
+			&lt;td&gt;Post-punk&lt;/td&gt;
+			&lt;td&gt;Grzegorz Bednarek&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Nurnberg&lt;/td&gt;
+			&lt;td&gt;Skryvaj&lt;/td&gt;
+			&lt;td&gt;05/11/2018&lt;/td&gt;
+			&lt;td&gt;8&lt;/td&gt;
+			&lt;td&gt;25:01&lt;/td&gt;
+			&lt;td&gt;35.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.5&lt;/td&gt;
+			&lt;td&gt;Post-punk&lt;/td&gt;
+			&lt;td&gt;Juan Pablo&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;ALEX&lt;/td&gt;
+			&lt;td&gt;Akuma&lt;/td&gt;
+			&lt;td&gt;23/06/2017&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;41:18&lt;/td&gt;
+			&lt;td&gt;30.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.7&lt;/td&gt;
+			&lt;td&gt;Synthwave&lt;/td&gt;
+			&lt;td&gt;Matthias Long&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;ALEX&lt;/td&gt;
+			&lt;td&gt;Akuma II&lt;/td&gt;
+			&lt;td&gt;10/05/2019&lt;/td&gt;
+			&lt;td&gt;10&lt;/td&gt;
+			&lt;td&gt;38:56&lt;/td&gt;
+			&lt;td&gt;32.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.8&lt;/td&gt;
+			&lt;td&gt;Synthwave&lt;/td&gt;
+			&lt;td&gt;Jorge Mario Bergoglio&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;The Prodigy&lt;/td&gt;
+			&lt;td&gt;Music for the Jilted Generation&lt;/td&gt;
+			&lt;td&gt;04/04/1994&lt;/td&gt;
+			&lt;td&gt;13&lt;/td&gt;
+			&lt;td&gt;78:07&lt;/td&gt;
+			&lt;td&gt;45.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.0&lt;/td&gt;
+			&lt;td&gt;Techno&lt;/td&gt;
+			&lt;td&gt;Matthew Tar&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;KoRn&lt;/td&gt;
+			&lt;td&gt;Follow The Leader&lt;/td&gt;
+			&lt;td&gt;18/08/1998&lt;/td&gt;
+			&lt;td&gt;14&lt;/td&gt;
+			&lt;td&gt;70:08&lt;/td&gt;
+			&lt;td&gt;42.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.2&lt;/td&gt;
+			&lt;td&gt;Nu Metal &lt;/td&gt;
+			&lt;td&gt;Blaise Peck&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;SAOTOMAMORE&lt;/td&gt;
+			&lt;td&gt;Fool - Single&lt;/td&gt;
+			&lt;td&gt;07/12/2021&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;2:06&lt;/td&gt;
+			&lt;td&gt;12.99 PLN&lt;/td&gt;
+			&lt;td&gt;5.0&lt;/td&gt;
+			&lt;td&gt;Phonk&lt;/td&gt;
+			&lt;td&gt;Peter Mountain&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Limp Bizkit&lt;/td&gt;
+			&lt;td&gt;STILL SUCKS&lt;/td&gt;
+			&lt;td&gt;31/10/2021&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;31:55&lt;/td&gt;
+			&lt;td&gt;40.00 PLN&lt;/td&gt;
+			&lt;td&gt;4.8&lt;/td&gt;
+			&lt;td&gt;Nu Metal &lt;/td&gt;
+			&lt;td&gt;Juan Pablo&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;GREEN ORXNGE&lt;/td&gt;
+			&lt;td&gt;TYPICAL CHILL SONG - Single&lt;/td&gt;
+			&lt;td&gt;15/10/2021&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;1:52&lt;/td&gt;
+			&lt;td&gt;6.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.9&lt;/td&gt;
+			&lt;td&gt;Phonk&lt;/td&gt;
+			&lt;td&gt;Matthew Tar&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;DVRST&lt;/td&gt;
+			&lt;td&gt;A Little Story - Single&lt;/td&gt;
+			&lt;td&gt;29/10/2021&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;2:03&lt;/td&gt;
+			&lt;td&gt;11.99 PLN&lt;/td&gt;
+			&lt;td&gt;5.0&lt;/td&gt;
+			&lt;td&gt;Phonk&lt;/td&gt;
+			&lt;td&gt;Grzegorz Bednarek&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Kordhell&lt;/td&gt;
+			&lt;td&gt;Memphis Doom - Single&lt;/td&gt;
+			&lt;td&gt;08/10/2021&lt;/td&gt;
+			&lt;td&gt;1&lt;/td&gt;
+			&lt;td&gt;2:34&lt;/td&gt;
+			&lt;td&gt;11.99 PLN&lt;/td&gt;
+			&lt;td&gt;5.0&lt;/td&gt;
+			&lt;td&gt;Phonk&lt;/td&gt;
+			&lt;td&gt;Juan Pablo&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Swell&lt;/td&gt;
+			&lt;td&gt;theres still us - EP&lt;/td&gt;
+			&lt;td&gt;19/01/2016&lt;/td&gt;
+			&lt;td&gt;5&lt;/td&gt;
+			&lt;td&gt;11:38&lt;/td&gt;
+			&lt;td&gt;12.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.8&lt;/td&gt;
+			&lt;td&gt;Hip-Hop&lt;/td&gt;
+			&lt;td&gt;Jorge Mario Bergoglio&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Low Roar&lt;/td&gt;
+			&lt;td&gt;maybe tomorrow...&lt;/td&gt;
+			&lt;td&gt;30/07/2021&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;63:19&lt;/td&gt;
+			&lt;td&gt;38.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.9&lt;/td&gt;
+			&lt;td&gt;Indie Rock&lt;/td&gt;
+			&lt;td&gt;Grzegorz Bednarek&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Low Roar&lt;/td&gt;
+			&lt;td&gt;Once in a Long. Long While...&lt;/td&gt;
+			&lt;td&gt;05/04/2017&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;49:00&lt;/td&gt;
+			&lt;td&gt;40.99 PLN&lt;/td&gt;
+			&lt;td&gt;5.0&lt;/td&gt;
+			&lt;td&gt;Indie Rock&lt;/td&gt;
+			&lt;td&gt;Grzegorz Bednarek&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Pearl Jam&lt;/td&gt;
+			&lt;td&gt;Ten&lt;/td&gt;
+			&lt;td&gt;27/08/1991&lt;/td&gt;
+			&lt;td&gt;11&lt;/td&gt;
+			&lt;td&gt;53:20&lt;/td&gt;
+			&lt;td&gt;35.97 PLN&lt;/td&gt;
+			&lt;td&gt;4.5&lt;/td&gt;
+			&lt;td&gt;Grunge&lt;/td&gt;
+			&lt;td&gt;Jorge Mario Bergoglio&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Karnivool&lt;/td&gt;
+			&lt;td&gt;Themata&lt;/td&gt;
+			&lt;td&gt;07/02/2005&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;48:52&lt;/td&gt;
+			&lt;td&gt;30.00 PLN&lt;/td&gt;
+			&lt;td&gt;4.0&lt;/td&gt;
+			&lt;td&gt;Alternative Metal&lt;/td&gt;
+			&lt;td&gt;Juan Pablo&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Matt Large&lt;/td&gt;
+			&lt;td&gt;As real as it gets&lt;/td&gt;
+			&lt;td&gt;18/05/2018&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;31:33&lt;/td&gt;
+			&lt;td&gt;22.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.5&lt;/td&gt;
+			&lt;td&gt;Hip-Hop&lt;/td&gt;
+			&lt;td&gt;Peter Mountain&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Low Roar&lt;/td&gt;
+			&lt;td&gt;0&lt;/td&gt;
+			&lt;td&gt;05/08/2014&lt;/td&gt;
+			&lt;td&gt;13&lt;/td&gt;
+			&lt;td&gt;68:14&lt;/td&gt;
+			&lt;td&gt;32.99 PLN&lt;/td&gt;
+			&lt;td&gt;4.2&lt;/td&gt;
+			&lt;td&gt;Indie Rock&lt;/td&gt;
+			&lt;td&gt;Blaise Peck&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;Nirvana&lt;/td&gt;
+			&lt;td&gt;Nevermind&lt;/td&gt;
+			&lt;td&gt;24/09/1991&lt;/td&gt;
+			&lt;td&gt;12&lt;/td&gt;
+			&lt;td&gt;42:38&lt;/td&gt;
+			&lt;td&gt;32.00 PLN&lt;/td&gt;
+			&lt;td&gt;4.0&lt;/td&gt;
+			&lt;td&gt;Grunge&lt;/td&gt;
+			&lt;td&gt;Peter Mountain&lt;/td&gt;
+		 &lt;/tr&gt;
+		 &lt;tr&gt;
+			&lt;td&gt;The Prodigy&lt;/td&gt;
+			&lt;td&gt;The Day Is My Enemy&lt;/td&gt;
+			&lt;td&gt;30/03/2015&lt;/td&gt;
+			&lt;td&gt;15&lt;/td&gt;
+			&lt;td&gt;56:12&lt;/td&gt;
+			&lt;td&gt;45.87 PLN&lt;/td&gt;
+			&lt;td&gt;3.9&lt;/td&gt;
+			&lt;td&gt;Techno&lt;/td&gt;
+			&lt;td&gt;Matthew Tar&lt;/td&gt;
+		 &lt;/tr&gt;
+	  &lt;/table&gt;
+	  &lt;div style=&quot;margin-top: 1%&quot;&gt;
+		 &lt;h1&gt;Statystyki&lt;/h1&gt;
+		 &lt;table border=&quot;1&quot;&gt;
+			&lt;caption&gt;Liczba rekordów&lt;/caption&gt;
+			&lt;tr&gt;
+			   &lt;th&gt;Liczba płyt&lt;/th&gt;
+			   &lt;th&gt;Liczba gatunków&lt;/th&gt;
+			   &lt;th&gt;Liczba studentów&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+			   &lt;td&gt;35&lt;/td&gt;
+			   &lt;td&gt;12&lt;/td&gt;
+			   &lt;td&gt;10&lt;/td&gt;
+			&lt;/tr&gt;
+		 &lt;/table&gt;
+	  &lt;/div&gt;
+	  &lt;div style=&quot;margin-top: 5%&quot;&gt;
+		 &lt;table border=&quot;1&quot;&gt;
+			&lt;caption&gt;Dane o ocenach&lt;/caption&gt;
+			&lt;tr&gt;
+			   &lt;th&gt;Średnia ocen&lt;/th&gt;
+			   &lt;th&gt;Najlepsza płyta&lt;/th&gt;
+			   &lt;th&gt;Ocena&lt;/th&gt;
+			   &lt;th&gt;Najgorsza płyta&lt;/th&gt;
+			   &lt;th&gt;Ocena&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+			   &lt;td&gt;4.55&lt;/td&gt;
+			   &lt;td&gt;Blisko - Single&lt;/td&gt;
+			   &lt;td&gt;5.0&lt;/td&gt;
+			   &lt;td&gt;The Day Is My Enemy&lt;/td&gt;
+			   &lt;td&gt;3.9&lt;/td&gt;
+			&lt;/tr&gt;
+		 &lt;/table&gt;
+	  &lt;/div&gt;
+	  &lt;div style=&quot;margin-top: 5%&quot;&gt;
+		 &lt;table border=&quot;1&quot;&gt;
+			&lt;caption&gt;Dane o cenach&lt;/caption&gt;
+			&lt;tr&gt;
+			   &lt;th&gt;Średnia cena&lt;/th&gt;
+			   &lt;th&gt;Suma cen&lt;/th&gt;
+			&lt;/tr&gt;
+			&lt;tr&gt;
+			   &lt;td&gt;34.03&lt;/td&gt;
+			   &lt;td&gt;1191.05&lt;/td&gt;
+			&lt;/tr&gt;
+		 &lt;/table&gt;
+	  &lt;/div&gt;
+   &lt;/body&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+        <button class="exerciseLink">
+            <a class="exerciseLink" href="../exercisesFiles/exercise3/output/outputXHTML.xhtml" target="download">Sprawdź zadanie!</a>
+        </button>
+
+        <div class="heading">
+            <h3>TXT</h3>
+        </div>
+        <button class="accordion">Plik XSLT</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+
+&lt;xsl:stylesheet version=&quot;2.0&quot;
+xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+
+&lt;xsl:output method=&quot;text&quot; encoding=&quot;UTF-8&quot;/&gt;
+
+&lt;xsl:template match=&quot;/&quot;&gt;
+	&lt;xsl:text&gt;+-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+&amp;#10;&lt;/xsl:text&gt;
+	&lt;xsl:text&gt;| Autor             | Tytul                              | Data wydania | Liczba piosenek | Dlugosc | Cena      | Ocena | Gatunek           | Ulubiona              |&amp;#10;&lt;/xsl:text&gt;
+	&lt;xsl:text&gt;+-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+&amp;#10;&lt;/xsl:text&gt;
+
+	&lt;xsl:for-each select=&quot;raport/library/disk&quot;&gt;
+		&lt;xsl:apply-templates select=&quot;author&quot; mode=&quot;format&quot;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;20&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:apply-templates select=&quot;title&quot; mode=&apos;format&apos;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;37&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:apply-templates select=&quot;released&quot; mode=&apos;format&apos;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;15&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:apply-templates select=&quot;howManySongs&quot; mode=&apos;format&apos;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;18&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:apply-templates select=&quot;length&quot; mode=&apos;format&apos;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;10&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:apply-templates select=&quot;price&quot; mode=&apos;format&apos;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;12&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:apply-templates select=&quot;ratings&quot; mode=&apos;format&apos;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;8&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:apply-templates select=&quot;genre&quot; mode=&apos;format&apos;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;20&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:apply-templates select=&quot;student&quot; mode=&apos;format&apos;&gt;
+			&lt;xsl:with-param name=&quot;width&quot; select=&quot;24&quot;/&gt;
+		&lt;/xsl:apply-templates&gt;
+		&lt;xsl:text&gt;|&amp;#10;&lt;/xsl:text&gt;
+	&lt;/xsl:for-each&gt;
+	&lt;xsl:text&gt;+-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+&amp;#10;&lt;/xsl:text&gt;
+&lt;/xsl:template&gt;
+
+&lt;xsl:variable name=&quot;space&quot;&gt;
+	&lt;xsl:text&gt;                                      &lt;/xsl:text&gt;
+&lt;/xsl:variable&gt;
+&lt;xsl:template match=&quot;node()&quot; mode=&quot;format&quot;&gt;
+	&lt;xsl:param name=&quot;width&quot;/&gt;
+	&lt;xsl:variable name=&quot;text&quot; select=&quot;concat(&apos;| &apos;,.)&quot;/&gt;
+	&lt;xsl:value-of select=&quot;substring(concat($text, $space), 1, $width)&quot;/&gt;
+&lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;
+                </code>
+            </pre>
+        </div>
+        <button class="accordion">Wygenerowany plik TXT</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
++-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+
+| Autor             | Tytul                              | Data wydania | Liczba piosenek | Dlugosc | Cena      | Ocena | Gatunek           | Ulubiona              |
++-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+
+| TOOL              | 10.000 Days                        | 28/04/2006   | 11              | 75:45   | 62.99 PLN | 4.9   | Progessive Metal  | Peter Mountain        |
+| Snoop Dogg        | Ego Trippin'                       | 11/03/2008   | 24              | 77:43   | 72.89 PLN | 4.3   | Hip-Hop           | Adam                  |
+| Michal Aniol      | U                                  | 19/02/2021   | 10              | 34:27   | 29.99 PLN | 4.1   | Electronica       | Grzegorz Bednarek     |
+| CatchUp           | Jesieniarze - Single               | 12/10/2020   | 1               | 2:35    | 12.99 PLN | 4.7   | Alternative Rap   | Grzegorz Bednarek     |
+| Michal Aniol      | Bo to sie zwykle tak zaczyna - EP  | 08/04/2022   | 4               | 11:39   | 21.37 PLN | 4.9   | Alternative Rap   | Grzegorz Bednarek     |
+| Michal Aniol      | Blisko - Single                    | 05/08/2020   | 1               | 3:03    | 9.99 PLN  | 5.0   | Electronica       | Grzegorz Bednarek     |
+| Kacperczyk        | Kryzys Wieku Wczesnego             | 26/11/2021   | 14              | 35:56   | 44.99 PLN | 4.6   | Alternative Rap   | Matthias Long         |
+| Frank Leen        | Za dobrze by zapomniec             | 09/09/2022   | 1               | 2:32    | 7.99 PLN  | 5.0   | Electronica       | Matthias Long         |
+| Eminem            | Kamikaze                           | 31/08/2018   | 13              | 45:49   | 55.55 PLN | 4.4   | Hip-Hop           | Kanye West            |
+| Eminem            | Music To Be Murdered By            | 17/01/2020   | 20              | 64:23   | 59.99 PLN | 4.4   | Hip-Hop           | Blaise Peck           |
+| A Perfect Circle  | Eat the Elephant                   | 20/04/2018   | 12              | 57:07   | 62.99 PLN | 4.3   | Alternative Metal | Jan Nowak             |
+| A Perfect Circle  | Thirteenth Step                    | 16/09/2003   | 12              | 50:36   | 53.99 PLN | 4.2   | Alternative Metal | Kanye West            |
+| Sxmpra            | Cowbell Warrior! - Single          | 08/12/2021   | 1               | 2:29    | 6.66 PLN  | 5.0   | Phonk             | Jan Nowak             |
+| Vince Staples     | Summertime '06'                    | 30/06/2015   | 20              | 59:05   | 42.99 PLN | 4.1   | Hip-Hop           | Adam                  |
+| Szczyl            | Polska Floryda                     | 15/10/2021   | 13              | 38:57   | 38.99 PLN | 4.2   | Hip-Hop           | Adam                  |
+| Molchat Doma      | Etazhi                             | 07/09/2018   | 9               | 33:13   | 40.99 PLN | 4.5   | Post-punk         | Grzegorz Bednarek     |
+| Nurnberg          | Skryvaj                            | 05/11/2018   | 8               | 25:01   | 35.99 PLN | 4.5   | Post-punk         | Juan Pablo            |
+| ALEX              | Akuma                              | 23/06/2017   | 12              | 41:18   | 30.99 PLN | 4.7   | Synthwave         | Matthias Long         |
+| ALEX              | Akuma II                           | 10/05/2019   | 10              | 38:56   | 32.99 PLN | 4.8   | Synthwave         | Jorge Mario Bergoglio |
+| The Prodigy       | Music for the Jilted Generation    | 04/04/1994   | 13              | 78:07   | 45.99 PLN | 4.0   | Techno            | Matthew Tar           |
+| KoRn              | Follow The Leader                  | 18/08/1998   | 14              | 70:08   | 42.99 PLN | 4.2   | Nu Metal          | Blaise Peck           |
+| SAOTOMAMORE       | Fool - Single                      | 07/12/2021   | 1               | 2:06    | 12.99 PLN | 5.0   | Phonk             | Peter Mountain        |
+| Limp Bizkit       | STILL SUCKS                        | 31/10/2021   | 12              | 31:55   | 40.00 PLN | 4.8   | Nu Metal          | Juan Pablo            |
+| GREEN ORXNGE      | TYPICAL CHILL SONG - Single        | 15/10/2021   | 1               | 1:52    | 6.99 PLN  | 4.9   | Phonk             | Matthew Tar           |
+| DVRST             | A Little Story - Single            | 29/10/2021   | 1               | 2:03    | 11.99 PLN | 5.0   | Phonk             | Grzegorz Bednarek     |
+| Kordhell          | Memphis Doom - Single              | 08/10/2021   | 1               | 2:34    | 11.99 PLN | 5.0   | Phonk             | Juan Pablo            |
+| Swell             | theres still us - EP               | 19/01/2016   | 5               | 11:38   | 12.99 PLN | 4.8   | Hip-Hop           | Jorge Mario Bergoglio |
+| Low Roar          | maybe tomorrow...                  | 30/07/2021   | 12              | 63:19   | 38.99 PLN | 4.9   | Indie Rock        | Grzegorz Bednarek     |
+| Low Roar          | Once in a Long. Long While...      | 05/04/2017   | 12              | 49:00   | 40.99 PLN | 5.0   | Indie Rock        | Grzegorz Bednarek     |
+| Pearl Jam         | Ten                                | 27/08/1991   | 11              | 53:20   | 35.97 PLN | 4.5   | Grunge            | Jorge Mario Bergoglio |
+| Karnivool         | Themata                            | 07/02/2005   | 12              | 48:52   | 30.00 PLN | 4.0   | Alternative Metal | Juan Pablo            |
+| Matt Large        | As real as it gets                 | 18/05/2018   | 12              | 31:33   | 22.99 PLN | 4.5   | Hip-Hop           | Peter Mountain        |
+| Low Roar          | 0                                  | 05/08/2014   | 13              | 68:14   | 32.99 PLN | 4.2   | Indie Rock        | Blaise Peck           |
+| Nirvana           | Nevermind                          | 24/09/1991   | 12              | 42:38   | 32.00 PLN | 4.0   | Grunge            | Peter Mountain        |
+| The Prodigy       | The Day Is My Enemy                | 30/03/2015   | 15              | 56:12   | 45.87 PLN | 3.9   | Techno            | Matthew Tar           |
++-------------------+------------------------------------+--------------+-----------------+---------+-----------+-------+-------------------+-----------------------+
+
+                </code>
+            </pre>
+        </div>
+
+        <div class="heading">
+            <h3>SVG</h3>
+        </div>
+        <button class="accordion">Plik XSLT</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;
+
+&lt;xsl:stylesheet version=&quot;2.0&quot;
+xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot;&gt;
+
+&lt;xsl:output method=&quot;xml&quot; indent=&quot;yes&quot;/&gt;
+
+&lt;xsl:template match=&quot;/&quot;&gt;
+	&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+		&lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;azure&quot;/&gt;
+
+		&lt;!-- Pierwszy diagram --&gt;
+		&lt;g transform=&quot;translate(150,200)&quot; font-family=&quot;Helvetica Neue&quot;&gt;
+		&lt;line x1=&quot;-1&quot; y1=&quot;50&quot; x2=&quot;200&quot; y2=&quot;50&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;/&gt;
+		&lt;line x1=&quot;-1&quot; y1=&quot;-150&quot; x2=&quot;-1&quot; y2=&quot;50&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;/&gt;
+
+		&lt;rect x=&quot;0&quot; y=&quot;-115&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;purple&quot;&gt;
+			&lt;animate attributeName=&quot;width&quot;
+					 begin=&quot;0s&quot;
+					 dur=&quot;1.5s&quot;
+					 fill=&quot;freeze&quot;
+					 from=&quot;0&quot;
+					 to=&quot;{raport/statistics/numberOfDisks * 5}&quot;/&gt;
+		&lt;/rect&gt;
+			&lt;text text-anchor=&quot;end&quot; x=&quot;40&quot; y=&quot;-85&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Ilość płyt
+			&lt;/text&gt;
+			&lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-94&quot;&gt;
+				&lt;xsl:value-of select=&quot;raport/statistics/numberOfDisks&quot;/&gt;
+				&lt;animate attributeName=&quot;x&quot;
+						 begin=&quot;0s&quot;
+						 dur=&quot;1.5s&quot;
+						 fill=&quot;freeze&quot;
+						 from=&quot;10&quot;
+						 to=&quot;{(raport/statistics/numberOfDisks * 5) + 10}&quot;/&gt;
+			 &lt;/text&gt;
+		&lt;rect x=&quot;0&quot; y=&quot;-55&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;yellow&quot;&gt;
+			&lt;animate attributeName=&quot;width&quot;
+					 begin=&quot;0.2s&quot;
+					 dur=&quot;1.5s&quot;
+					 fill=&quot;freeze&quot;
+					 from=&quot;0&quot;
+					 to=&quot;{raport/statistics/numberOfGenres * 5}&quot;/&gt;
+		&lt;/rect&gt;
+			&lt;text text-anchor=&quot;end&quot; x=&quot;10&quot; y=&quot;-35&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Ilość gatunków
+			&lt;/text&gt;
+			&lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-29&quot;&gt;
+				&lt;xsl:value-of select=&quot;raport/statistics/numberOfGenres&quot;/&gt;
+				&lt;animate attributeName=&quot;x&quot;
+						 begin=&quot;0.2s&quot;
+						 dur=&quot;1.5s&quot;
+						 fill=&quot;freeze&quot;
+						 from=&quot;10&quot;
+						 to=&quot;{(raport/statistics/numberOfGenres * 5) + 10}&quot;/&gt;
+			&lt;/text&gt;
+		&lt;rect x=&quot;0&quot; y=&quot;5&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;red&quot;&gt;
+			&lt;animate attributeName=&quot;width&quot;
+					 begin=&quot;0.4s&quot;
+					 dur=&quot;1.5s&quot;
+					 fill=&quot;freeze&quot;
+					 from=&quot;0&quot;
+					 to=&quot;{raport/statistics/numberOfStudents * 5}&quot;/&gt;
+		&lt;/rect&gt;
+			&lt;text text-anchor=&quot;end&quot; x=&quot;-20&quot; y=&quot;20&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Ilość studentów
+			&lt;/text&gt;
+			&lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;31&quot;&gt;
+				&lt;xsl:value-of select=&quot;raport/statistics/numberOfStudents&quot;/&gt;
+				&lt;animate attributeName=&quot;x&quot;
+						 begin=&quot;0.4s&quot;
+						 dur=&quot;1.5s&quot;
+						 fill=&quot;freeze&quot;
+						 from=&quot;10&quot;
+						 to=&quot;{(raport/statistics/numberOfStudents * 5) + 10}&quot;/&gt;
+			&lt;/text&gt;
+			&lt;text x=&quot;-35&quot; y=&quot;-160&quot; font-weight=&quot;bold&quot;&gt;
+				Porównanie liczb płyt, gatunków i studentów.
+			&lt;/text&gt;
+		&lt;/g&gt;
+
+		&lt;!-- Drugi diagram --&gt;
+		&lt;g transform=&quot;translate(150,500)&quot; font-family=&quot;Helvetica Neue&quot;&gt;
+		&lt;line x1=&quot;-1&quot; y1=&quot;50&quot; x2=&quot;200&quot; y2=&quot;50&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;/&gt;
+		&lt;line x1=&quot;-1&quot; y1=&quot;-150&quot; x2=&quot;-1&quot; y2=&quot;50&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;/&gt;
+
+		&lt;rect x=&quot;0&quot; y=&quot;-115&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;blue&quot;&gt;
+			&lt;animate attributeName=&quot;width&quot;
+					 begin=&quot;0.6s&quot;
+					 dur=&quot;1.5s&quot;
+					 fill=&quot;freeze&quot;
+					 from=&quot;0&quot;
+					 to=&quot;{raport/statistics/averageRating * 30}&quot;/&gt;
+		&lt;/rect&gt;
+			&lt;text text-anchor=&quot;end&quot; x=&quot;40&quot; y=&quot;-85&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Średnia ocen
+			&lt;/text&gt;
+			&lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-94&quot;&gt;
+				&lt;xsl:value-of select=&quot;raport/statistics/averageRating&quot;/&gt;
+				&lt;animate attributeName=&quot;x&quot;
+						 begin=&quot;0.6s&quot;
+						 dur=&quot;1.5s&quot;
+						 fill=&quot;freeze&quot;
+						 from=&quot;10&quot;
+						 to=&quot;{(raport/statistics/averageRating * 30) + 10}&quot;/&gt;
+			&lt;/text&gt;
+		&lt;rect x=&quot;0&quot; y=&quot;-55&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;green&quot;&gt;
+			&lt;animate attributeName=&quot;width&quot;
+					 begin=&quot;0.8s&quot;
+					 dur=&quot;1.5s&quot;
+					 fill=&quot;freeze&quot;
+					 from=&quot;0&quot;
+					 to=&quot;{raport/statistics/bestRating/rating * 30}&quot;/&gt;
+		&lt;/rect&gt;
+			&lt;text text-anchor=&quot;end&quot; x=&quot;10&quot; y=&quot;-35&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Najlepsza ocena
+			&lt;/text&gt;
+			&lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-29&quot;&gt;
+				&lt;xsl:value-of select=&quot;raport/statistics/bestRating/rating&quot;/&gt;
+				&lt;animate attributeName=&quot;x&quot;
+						 begin=&quot;0.8s&quot;
+						 dur=&quot;1.5s&quot;
+						 fill=&quot;freeze&quot;
+						 from=&quot;10&quot;
+						 to=&quot;{(raport/statistics/bestRating/rating * 30) + 10}&quot;/&gt;
+			&lt;/text&gt;
+		&lt;rect x=&quot;0&quot; y=&quot;5&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;red&quot;&gt;
+			&lt;animate attributeName=&quot;width&quot;
+					 begin=&quot;1.0s&quot;
+					 dur=&quot;1.5s&quot;
+					 fill=&quot;freeze&quot;
+					 from=&quot;0&quot;
+					 to=&quot;{raport/statistics/worstRating/rating * 30}&quot;/&gt;
+		&lt;/rect&gt;
+			&lt;text text-anchor=&quot;end&quot; x=&quot;-20&quot; y=&quot;20&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Najgorsza ocena
+			&lt;/text&gt;
+			&lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;31&quot;&gt;
+				&lt;xsl:value-of select=&quot;raport/statistics/worstRating/rating&quot;/&gt;
+				&lt;animate attributeName=&quot;x&quot;
+						 begin=&quot;1.0s&quot;
+						 dur=&quot;1.5s&quot;
+						 fill=&quot;freeze&quot;
+						 from=&quot;10&quot;
+						 to=&quot;{(raport/statistics/worstRating/rating * 30) + 10}&quot;/&gt;
+			&lt;/text&gt;
+
+			&lt;text x=&quot;-120&quot; y=&quot;-160&quot; font-weight=&quot;bold&quot;&gt;
+				Porównanie średniej ocen z najlepiej i najgorzej ocenianą płytą
+			&lt;/text&gt;
+		&lt;/g&gt;
+
+		&lt;!-- Trzeci diagram --&gt;
+		&lt;g transform=&quot;translate(150,800)&quot; font-family=&quot;Helvetica Neue&quot;&gt;
+		&lt;line x1=&quot;-1&quot; y1=&quot;50&quot; x2=&quot;250&quot; y2=&quot;50&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;/&gt;
+		&lt;line x1=&quot;-1&quot; y1=&quot;-150&quot; x2=&quot;-1&quot; y2=&quot;50&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;/&gt;
+
+		&lt;rect x=&quot;0&quot; y=&quot;-115&quot; height=&quot;60&quot; width=&quot;0&quot; fill=&quot;orange&quot;&gt;
+			&lt;animate attributeName=&quot;width&quot;
+					 begin=&quot;1.2s&quot;
+					 dur=&quot;1.5s&quot;
+					 fill=&quot;freeze&quot;
+					 from=&quot;0&quot;
+					 to=&quot;{raport/statistics/averagePrice * 2}&quot;/&gt;
+		&lt;/rect&gt;
+			&lt;text text-anchor=&quot;end&quot; x=&quot;35&quot; y=&quot;-75&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Średnia kwót
+			&lt;/text&gt;
+			&lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-79&quot;&gt;
+				&lt;xsl:value-of select=&quot;raport/statistics/averagePrice&quot;/&gt;
+				&lt;animate attributeName=&quot;x&quot;
+						 begin=&quot;1.2s&quot;
+						 dur=&quot;1.5s&quot;
+						 fill=&quot;freeze&quot;
+						 from=&quot;10&quot;
+						 to=&quot;{(raport/statistics/averagePrice * 2) + 10}&quot;/&gt;
+			&lt;/text&gt;
+		&lt;rect x=&quot;0&quot; y=&quot;-30&quot; height=&quot;60&quot; width=&quot;0&quot; fill=&quot;#c06eff&quot;&gt;
+			&lt;animate attributeName=&quot;width&quot;
+					 begin=&quot;1.4s&quot;
+					 dur=&quot;1.5s&quot;
+					 fill=&quot;freeze&quot;
+					 from=&quot;0&quot;
+					 to=&quot;{raport/statistics/sumOfPrices * 0.2}&quot;/&gt;
+		&lt;/rect&gt;
+			&lt;text text-anchor=&quot;end&quot; x=&quot;-10&quot; y=&quot;5&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Suma kwót
+			&lt;/text&gt;
+			&lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;11&quot;&gt;
+				&lt;xsl:value-of select=&quot;raport/statistics/sumOfPrices&quot;/&gt;
+				&lt;animate attributeName=&quot;x&quot;
+						 begin=&quot;1.4s&quot;
+						 dur=&quot;1.5s&quot;
+						 fill=&quot;freeze&quot;
+						 from=&quot;10&quot;
+						 to=&quot;{(raport/statistics/sumOfPrices * 0.2) + 10}&quot;/&gt;
+			&lt;/text&gt;
+
+			&lt;text x=&quot;-30&quot; y=&quot;-160&quot; font-weight=&quot;bold&quot;&gt;
+				Porównanie średniej kwót z sumą kwót
+			&lt;/text&gt;
+		&lt;/g&gt;
+	&lt;/svg&gt;
+&lt;/xsl:template&gt;
+
+&lt;/xsl:stylesheet&gt;
+                </code>
+            </pre>
+        </div>
+        <button class="accordion">Wygenerowany plik SVG</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;100%&quot; height=&quot;100%&quot;&gt;
+   &lt;rect width=&quot;100%&quot; height=&quot;100%&quot; fill=&quot;azure&quot;/&gt;
+   &lt;g transform=&quot;translate(150,200)&quot; font-family=&quot;Helvetica Neue&quot;&gt;
+	  &lt;line x1=&quot;-1&quot;
+			y1=&quot;50&quot;
+			x2=&quot;200&quot;
+			y2=&quot;50&quot;
+			stroke=&quot;black&quot;
+			stroke-width=&quot;2&quot;/&gt;
+	  &lt;line x1=&quot;-1&quot;
+			y1=&quot;-150&quot;
+			x2=&quot;-1&quot;
+			y2=&quot;50&quot;
+			stroke=&quot;black&quot;
+			stroke-width=&quot;2&quot;/&gt;
+	  &lt;rect x=&quot;0&quot; y=&quot;-115&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;purple&quot;&gt;
+		 &lt;animate attributeName=&quot;width&quot;
+				  begin=&quot;0s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;0&quot;
+				  to=&quot;175&quot;/&gt;
+	  &lt;/rect&gt;
+	  &lt;text text-anchor=&quot;end&quot; x=&quot;40&quot; y=&quot;-85&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Ilość płyt
+			&lt;/text&gt;
+	  &lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-94&quot;&gt;35&lt;animate attributeName=&quot;x&quot;
+				  begin=&quot;0s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;10&quot;
+				  to=&quot;185&quot;/&gt;
+	  &lt;/text&gt;
+	  &lt;rect x=&quot;0&quot; y=&quot;-55&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;yellow&quot;&gt;
+		 &lt;animate attributeName=&quot;width&quot;
+				  begin=&quot;0.2s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;0&quot;
+				  to=&quot;60&quot;/&gt;
+	  &lt;/rect&gt;
+	  &lt;text text-anchor=&quot;end&quot; x=&quot;10&quot; y=&quot;-35&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Ilość gatunków
+			&lt;/text&gt;
+	  &lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-29&quot;&gt;12&lt;animate attributeName=&quot;x&quot;
+				  begin=&quot;0.2s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;10&quot;
+				  to=&quot;70&quot;/&gt;
+	  &lt;/text&gt;
+	  &lt;rect x=&quot;0&quot; y=&quot;5&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;red&quot;&gt;
+		 &lt;animate attributeName=&quot;width&quot;
+				  begin=&quot;0.4s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;0&quot;
+				  to=&quot;50&quot;/&gt;
+	  &lt;/rect&gt;
+	  &lt;text text-anchor=&quot;end&quot; x=&quot;-20&quot; y=&quot;20&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Ilość studentów
+			&lt;/text&gt;
+	  &lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;31&quot;&gt;10&lt;animate attributeName=&quot;x&quot;
+				  begin=&quot;0.4s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;10&quot;
+				  to=&quot;60&quot;/&gt;
+	  &lt;/text&gt;
+	  &lt;text x=&quot;-35&quot; y=&quot;-160&quot; font-weight=&quot;bold&quot;&gt;
+				Porównanie liczb płyt, gatunków i studentów.
+			&lt;/text&gt;
+   &lt;/g&gt;
+   &lt;g transform=&quot;translate(150,500)&quot; font-family=&quot;Helvetica Neue&quot;&gt;
+	  &lt;line x1=&quot;-1&quot;
+			y1=&quot;50&quot;
+			x2=&quot;200&quot;
+			y2=&quot;50&quot;
+			stroke=&quot;black&quot;
+			stroke-width=&quot;2&quot;/&gt;
+	  &lt;line x1=&quot;-1&quot;
+			y1=&quot;-150&quot;
+			x2=&quot;-1&quot;
+			y2=&quot;50&quot;
+			stroke=&quot;black&quot;
+			stroke-width=&quot;2&quot;/&gt;
+	  &lt;rect x=&quot;0&quot; y=&quot;-115&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;blue&quot;&gt;
+		 &lt;animate attributeName=&quot;width&quot;
+				  begin=&quot;0.6s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;0&quot;
+				  to=&quot;136.5&quot;/&gt;
+	  &lt;/rect&gt;
+	  &lt;text text-anchor=&quot;end&quot; x=&quot;40&quot; y=&quot;-85&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Średnia ocen
+			&lt;/text&gt;
+	  &lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-94&quot;&gt;4.55&lt;animate attributeName=&quot;x&quot;
+				  begin=&quot;0.6s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;10&quot;
+				  to=&quot;146.5&quot;/&gt;
+	  &lt;/text&gt;
+	  &lt;rect x=&quot;0&quot; y=&quot;-55&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;green&quot;&gt;
+		 &lt;animate attributeName=&quot;width&quot;
+				  begin=&quot;0.8s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;0&quot;
+				  to=&quot;150&quot;/&gt;
+	  &lt;/rect&gt;
+	  &lt;text text-anchor=&quot;end&quot; x=&quot;10&quot; y=&quot;-35&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Najlepsza ocena
+			&lt;/text&gt;
+	  &lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-29&quot;&gt;5.0&lt;animate attributeName=&quot;x&quot;
+				  begin=&quot;0.8s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;10&quot;
+				  to=&quot;160&quot;/&gt;
+	  &lt;/text&gt;
+	  &lt;rect x=&quot;0&quot; y=&quot;5&quot; height=&quot;35&quot; width=&quot;0&quot; fill=&quot;red&quot;&gt;
+		 &lt;animate attributeName=&quot;width&quot;
+				  begin=&quot;1.0s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;0&quot;
+				  to=&quot;117&quot;/&gt;
+	  &lt;/rect&gt;
+	  &lt;text text-anchor=&quot;end&quot; x=&quot;-20&quot; y=&quot;20&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Najgorsza ocena
+			&lt;/text&gt;
+	  &lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;31&quot;&gt;3.9&lt;animate attributeName=&quot;x&quot;
+				  begin=&quot;1.0s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;10&quot;
+				  to=&quot;127&quot;/&gt;
+	  &lt;/text&gt;
+	  &lt;text x=&quot;-120&quot; y=&quot;-160&quot; font-weight=&quot;bold&quot;&gt;
+				Porównanie średniej ocen z najlepiej i najgorzej ocenianą płytą
+			&lt;/text&gt;
+   &lt;/g&gt;
+   &lt;g transform=&quot;translate(150,800)&quot; font-family=&quot;Helvetica Neue&quot;&gt;
+	  &lt;line x1=&quot;-1&quot;
+			y1=&quot;50&quot;
+			x2=&quot;250&quot;
+			y2=&quot;50&quot;
+			stroke=&quot;black&quot;
+			stroke-width=&quot;2&quot;/&gt;
+	  &lt;line x1=&quot;-1&quot;
+			y1=&quot;-150&quot;
+			x2=&quot;-1&quot;
+			y2=&quot;50&quot;
+			stroke=&quot;black&quot;
+			stroke-width=&quot;2&quot;/&gt;
+	  &lt;rect x=&quot;0&quot; y=&quot;-115&quot; height=&quot;60&quot; width=&quot;0&quot; fill=&quot;orange&quot;&gt;
+		 &lt;animate attributeName=&quot;width&quot;
+				  begin=&quot;1.2s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;0&quot;
+				  to=&quot;68.06&quot;/&gt;
+	  &lt;/rect&gt;
+	  &lt;text text-anchor=&quot;end&quot; x=&quot;35&quot; y=&quot;-75&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Średnia kwót
+			&lt;/text&gt;
+	  &lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;-79&quot;&gt;34.03&lt;animate attributeName=&quot;x&quot;
+				  begin=&quot;1.2s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;10&quot;
+				  to=&quot;78.06&quot;/&gt;
+	  &lt;/text&gt;
+	  &lt;rect x=&quot;0&quot; y=&quot;-30&quot; height=&quot;60&quot; width=&quot;0&quot; fill=&quot;#c06eff&quot;&gt;
+		 &lt;animate attributeName=&quot;width&quot;
+				  begin=&quot;1.4s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;0&quot;
+				  to=&quot;238.21&quot;/&gt;
+	  &lt;/rect&gt;
+	  &lt;text text-anchor=&quot;end&quot; x=&quot;-10&quot; y=&quot;5&quot; transform=&quot;rotate(-30)&quot;&gt;
+				Suma kwót
+			&lt;/text&gt;
+	  &lt;text text-anchor=&quot;start&quot; x=&quot;0&quot; y=&quot;11&quot;&gt;1191.05&lt;animate attributeName=&quot;x&quot;
+				  begin=&quot;1.4s&quot;
+				  dur=&quot;1.5s&quot;
+				  fill=&quot;freeze&quot;
+				  from=&quot;10&quot;
+				  to=&quot;248.21&quot;/&gt;
+	  &lt;/text&gt;
+	  &lt;text x=&quot;-30&quot; y=&quot;-160&quot; font-weight=&quot;bold&quot;&gt;
+				Porównanie średniej kwót z sumą kwót
+			&lt;/text&gt;
+   &lt;/g&gt;
+&lt;/svg&gt;
+                </code>
+            </pre>
+        </div>
+        <button class="exerciseLink">
+            <a class="exerciseLink" href="../exercisesFiles/exercise3/output/outputSVG.svg" target="download">Sprawdź zadanie!</a>
+        </button>
+        <script>
+            let accordion = document.getElementsByClassName("accordion");
+            let i;
+
+            for (i = 0; i < accordion.length; ++i) {
+                accordion[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    let panel = this.nextElementSibling;
+
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    }
+                    else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
     </main>
 </body>
 </html>
