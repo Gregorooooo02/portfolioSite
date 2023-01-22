@@ -17,6 +17,7 @@ body {
 
 body::-webkit-scrollbar {
     width: 0.25rem;
+    height: 0.25rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -169,13 +170,20 @@ hr.rounded {
     margin-bottom: 10px;
 }
 
+.accordion:after {
+    content: "\02795";
+    font-size: 16px;
+    font-weight: bold;
+    float: right;
+}
+
 .active, .accordion:hover {
     background-color: blueviolet;
     color: white;
 }
 
 .active:after {
-    content: "\2212";
+    content: "\2796";
     font-size: 16px;
     font-weight: bold;
     float: right;
@@ -198,8 +206,8 @@ hr.rounded {
     border: none;
     text-align: left;
     font-size: 24px;
-    transition: 0.4s;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 
 /* Small screens */
