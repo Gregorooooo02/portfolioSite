@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 5</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Technologie XML</h1>
+        <h2>Zadanie 5</h2>
+    </div>
+    <div id="chooseFileSchema">
+        <label for="fileSchema">Wybierz plik XML Schema</label>
+        <input type="file" accept=".xsd" id="fileSchemaInput" name="fileSchema">
+        <button id="fileSchemaSubmit">Wczytaj</button>
+        <p id="currentSchema"></p>
+    </div>
+
+    <div hidden="" id="chooseFileXML">
+        <label for="fileXML">Wybierz plik XML</label>
+        <input type="file" accept="text/xml" id="fileXMLInput" name="fileXML">
+        <button id="fileXMLSubmit">Wczytaj</button>
+        <p id="currentXML"></p>
+    </div>
+
+    <a id="downloadFile" href="" download="plytoteka.xml">Pobierz plik</a>
+    <div id="fileContents"></div>
+
+    <h2>Płyty</h2>
+    <div id="disks">
+
+    </div>
+
+    <h2>Gatunki</h2>
+    <table id="genreTable" hidden="">
+        <tr>
+            <th>Nazwa gatunku</th>
+        </tr>
+    </table>
+
+    <h2>Studenci</h2>
+    <table id="studentTable" hidden="">
+        <tr>
+            <th>ID studenta</th>
+            <th>Imię i nazwisko</th>
+        </tr>
+    </table>
+</body>
+<script src="script.js"></script>
+<script src="xmllint.js"></script>
+</html>

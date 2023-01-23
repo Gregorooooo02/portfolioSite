@@ -1,0 +1,36 @@
+body {
+    font-family: Helvetica, monospace;
+    color: white;
+    background-color: blueviolet;
+}
+
+.heading {
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+
+#chooseFileSchema {
+    text-align: center;
+}
+
+#chooseFileXML {
+    text-align: center;
+}
+
+#downloadFile {
+    text-align: center;
+    margin-left: 38em;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
