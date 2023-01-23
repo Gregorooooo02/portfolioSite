@@ -85,7 +85,596 @@
     </nav>
 
     <main class="exFive">
+        <div class="heading">
+            <h1>Zadanie 5</h1>
+        </div>
+        <p>
+            Należy stworzyć stronę internetową z wykorzystaniem JavaScript (DOM) umożliwiającą dostęp do danych z pliku XML,
+            modyfikowanie danych z pliku XML, sprawdzanie poprawności modyfikowanych danych.
+        </p>
+        <p>
+            Program ma być interaktywny i umożliwiać otwarcie pliku XML o z góry założonej strukturze,
+            dodawanie do niego nowych wpisów, usuwanie i edycję istniejących.
+        </p>
+        <hr class="rounded"/>
+        <div class="heading">
+            <h2>Rozwiązanie</h2>
+        </div>
+        <button class="accordion">Plik HTML</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Zadanie 5&lt;/title&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;stylesheet.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;heading&quot;&gt;
+        &lt;h1&gt;Technologie XML&lt;/h1&gt;
+        &lt;h2&gt;Zadanie 5&lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div id=&quot;chooseFileSchema&quot;&gt;
+        &lt;label for=&quot;fileSchema&quot;&gt;Wybierz plik XML Schema&lt;/label&gt;
+        &lt;input type=&quot;file&quot; accept=&quot;.xsd&quot; id=&quot;fileSchemaInput&quot; name=&quot;fileSchema&quot;&gt;
+        &lt;button id=&quot;fileSchemaSubmit&quot;&gt;Wczytaj&lt;/button&gt;
+        &lt;p id=&quot;currentSchema&quot;&gt;&lt;/p&gt;
+    &lt;/div&gt;
 
+    &lt;div hidden=&quot;&quot; id=&quot;chooseFileXML&quot;&gt;
+        &lt;label for=&quot;fileXML&quot;&gt;Wybierz plik XML&lt;/label&gt;
+        &lt;input type=&quot;file&quot; accept=&quot;text/xml&quot; id=&quot;fileXMLInput&quot; name=&quot;fileXML&quot;&gt;
+        &lt;button id=&quot;fileXMLSubmit&quot;&gt;Wczytaj&lt;/button&gt;
+        &lt;p id=&quot;currentXML&quot;&gt;&lt;/p&gt;
+    &lt;/div&gt;
+
+    &lt;a id=&quot;downloadFile&quot; href=&quot;&quot; download=&quot;plytoteka.xml&quot;&gt;Pobierz plik&lt;/a&gt;
+    &lt;div id=&quot;fileContents&quot;&gt;&lt;/div&gt;
+
+    &lt;h2&gt;Płyty&lt;/h2&gt;
+    &lt;div id=&quot;disks&quot;&gt;
+
+    &lt;/div&gt;
+
+    &lt;h2&gt;Gatunki&lt;/h2&gt;
+    &lt;table id=&quot;genreTable&quot; hidden=&quot;&quot;&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Nazwa gatunku&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+
+    &lt;h2&gt;Studenci&lt;/h2&gt;
+    &lt;table id=&quot;studentTable&quot; hidden=&quot;&quot;&gt;
+        &lt;tr&gt;
+            &lt;th&gt;ID studenta&lt;/th&gt;
+            &lt;th&gt;Imię i nazwisko&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+&lt;/body&gt;
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;xmllint.js&quot;&gt;&lt;/script&gt;
+&lt;/html&gt;
+                </code>
+            </pre>
+        </div>
+        <button class="accordion">Plik JavaScript</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+const chooseXML = document.getElementById(&quot;chooseFileXML&quot;);
+const fileXML = document.getElementById(&quot;fileXMLInput&quot;);
+const currentXML = document.getElementById(&quot;currentXML&quot;);
+const fileXMLSubmitButton = document.getElementById(&quot;fileXMLSubmit&quot;);
+
+const fileSchema = document.getElementById(&quot;fileSchemaInput&quot;);
+const currentSchema = document.getElementById(&quot;currentSchema&quot;);
+const fileSchemaSubmitButton = document.getElementById(&quot;fileSchemaSubmit&quot;);
+
+const fileDownload = document.getElementById(&quot;downloadFile&quot;);
+const serializerXML = new XMLSerializer();
+
+let submittedXML = &quot;&quot;;
+
+var xmlDoc;
+var schemaContent = &quot;&quot;;
+var emptyDisk = null;
+var emptyGenre = null;
+var emptyStudent = null;
+
+currentXML.textContent = &quot;Wczytany plik: Brak&quot;;
+currentSchema.textContent = &quot;Wczytany plik: Brak&quot;;
+
+fileXMLSubmitButton.onclick = function () {
+    console.log(&quot;Starting XML file loader.&quot;);
+    const file = fileXML.files[0];
+
+    if (!file)
+        return;
+
+    let reader = new FileReader();
+    reader.readAsText(file, &quot;UTF-8&quot;);
+
+    reader.onload = function (evt) {
+        let xmlContent = evt.target.result;
+        fileDownload.href = makeTextFile(xmlContent);
+
+        let parser = new DOMParser();
+        xmlDoc = parser.parseFromString(xmlContent, &quot;text/xml&quot;);
+        currentXML.textContent = &quot;Wczytany plik: &quot; + fileXML.files[0].name;
+        onFileLoaded();
+    }
+
+    reader.onerror = function (evt) {
+        console.log(&quot;Error - cannot read file.&quot;)
+    }
+
+    console.log(&quot;XML file loaded!&quot;);
+}
+
+fileSchemaSubmitButton.onclick = function () {
+    console.log(&quot;Starting Schema file loader.&quot;);
+    const file = fileSchema.files[0];
+
+    if (!file)
+        return;
+
+    let reader = new FileReader();
+    reader.readAsText(file, &quot;UTF-8&quot;);
+
+    reader.onload = function (evt) {
+        schemaContent = evt.target.result;
+        chooseXML.removeAttribute(&quot;hidden&quot;);
+        currentSchema.textContent = &quot;Wczytany plik: &quot; + fileSchema.files[0].name;
+    }
+
+    console.log(&quot;Schema file loaded!&quot;);
+}
+
+// Methods section
+
+function onFileLoaded() {
+    // Checks whether there are any disks, genres or students in file.
+    if (xmlDoc.getElementsByTagName(&quot;disk&quot;).length != 0)
+        emptyDisk = createEmptyDisk(xmlDoc.getElementsByTagName(&quot;disk&quot;)[0]);
+
+    updateLastDiskID(emptyDisk);
+
+    const disksDiv = document.getElementById(&quot;disks&quot;);
+    let disksGenerated = document.getElementById(&quot;disksGenerated&quot;);
+
+    if (disksGenerated != null) {
+        disksGenerated.remove();
+    }
+
+    disksGenerated = document.createElement(&quot;disksGenerated&quot;);
+    disksGenerated.setAttribute(&quot;id&quot;, &quot;disksGenerated&quot;);
+
+    disksDiv.append(disksGenerated);
+
+    let allGenresIDs = [];
+    for (let element of xmlDoc.getElementsByTagName(&quot;genre&quot;)) {
+        allGenresIDs.push(element.getAttribute(&quot;genreId&quot;));
+    }
+
+    let allStudentsIDs = [];
+    for (let element of xmlDoc.getElementsByTagName(&quot;student&quot;)) {
+        allStudentsIDs.push(element.getAttribute(&quot;studentId&quot;));
+    }
+
+    let allDisks = [];
+    for (let element of xmlDoc.getElementsByTagName(&quot;disk&quot;)) {
+        allDisks.push(element);
+    }
+
+    for (let element of xmlDoc.getElementsByTagName(&quot;disk&quot;)) {
+        const newRowLabels = document.createElement(&quot;tr&quot;);
+        const newRow = document.createElement(&quot;tr&quot;);
+        let childIndex = 0;
+
+        createLabelColumn(newRowLabels, &quot;ID płyty&quot;);
+        const diskIDAttr = element.getAttributeNode(&quot;id&quot;);
+        const diskID = createTextInputFromAttribute(diskIDAttr);
+        createContentColumn(newRow, diskID);
+
+        createLabelColumn(newRowLabels, &quot;Gatunek&quot;);
+        const diskGenreIDAttr = element.getAttributeNode(&quot;genreId&quot;);
+        const diskGenreID = createSelectFromAttribute(diskGenreIDAttr, allGenresIDs, diskGenreIDAttr.value);
+        createContentColumn(newRow, diskGenreID);
+
+        createLabelColumn(newRowLabels, &quot;Ulubiona&quot;);
+        const diskStudentIDAttr = element.getAttributeNode(&quot;favorite&quot;);
+        const diskStudentID = createSelectFromAttribute(diskStudentIDAttr, allStudentsIDs, diskStudentIDAttr.value);
+        createContentColumn(newRow, diskStudentID);
+
+        createLabelColumn(newRowLabels, &quot;Autor&quot;);
+        const diskAuthor = createTextInputFromElement(element.children[childIndex]);
+        createContentColumn(newRow, diskAuthor);
+        childIndex++;
+
+        createLabelColumn(newRowLabels, &quot;Tytuł&quot;);
+        const diskTitle = createTextInputFromElement(element.children[childIndex]);
+        createContentColumn(newRow, diskTitle);
+        childIndex++;
+
+        createLabelColumn(newRowLabels, &quot;Data wydania&quot;);
+        const diskReleased = createTextInputFromElement(element.children[childIndex]);
+        createContentColumn(newRow, diskReleased);
+        childIndex++;
+
+        createLabelColumn(newRowLabels, &quot;Ilość piosenek&quot;);
+        const diskSongs = createTextInputFromElement(element.children[childIndex]);
+        createContentColumn(newRow, diskSongs);
+        childIndex++;
+
+        createLabelColumn(newRowLabels, &quot;Długość&quot;);
+        const diskLength = createTextInputFromElement(element.children[childIndex]);
+        createContentColumn(newRow, diskLength);
+        childIndex++;
+
+        createLabelColumn(newRowLabels, &quot;Cena&quot;);
+        const diskPrice = createTextInputFromElement(element.children[childIndex]);
+        createContentColumn(newRow, diskPrice);
+        childIndex++;
+
+        createLabelColumn(newRowLabels, &quot;Ocena&quot;);
+        const diskRating = createTextInputFromElement(element.children[childIndex]);
+        createContentColumn(newRow, diskRating);
+        childIndex++;
+
+        createLabelColumn(newRowLabels, &quot;Usuń płytę&quot;);
+        const deleteButton = createDeleteButton([newRow, element], null);
+        createContentColumn(newRow, deleteButton);
+
+        disksGenerated.append(newRowLabels);
+        disksGenerated.append(newRow);
+        disksGenerated.append(document.createElement(&quot;br&quot;));
+        disksGenerated.append(document.createElement(&quot;hr&quot;));
+        disksGenerated.append(document.createElement(&quot;br&quot;));
+    }
+
+    {
+        const newRowLabels = document.createElement(&quot;tr&quot;);
+        const newRow = document.createElement(&quot;tr&quot;);
+
+        createLabelColumn(newRowLabels, &quot;Dodaj płytę&quot;);
+        const addButton = createAddButton(emptyDisk, xmlDoc.getElementsByTagName(&quot;disks&quot;)[0], &quot;&quot;);
+        createContentColumn(newRow, addButton);
+
+        disksGenerated.append(newRowLabels);
+        disksGenerated.append(newRow);
+        disksGenerated.append(document.createElement(&quot;br&quot;));
+        disksGenerated.append(document.createElement(&quot;hr&quot;));
+        disksGenerated.append(document.createElement(&quot;br&quot;));
+    }
+
+    const genreTable = document.getElementById(&quot;genreTable&quot;);
+    const genreElements = xmlDoc.getElementsByTagName(&quot;genre&quot;);
+    genreTable.removeAttribute(&quot;hidden&quot;);
+
+    for (let element of genreElements) {
+        let genreName = element.textContent;
+        let newRow = document.createElement(&quot;tr&quot;);
+
+        newRow.innerHTML = &quot;&lt;td&gt;&quot; + genreName + &quot;&lt;/td&gt;&quot;;
+        genreTable.appendChild(newRow);
+    }
+
+    const studentTable = document.getElementById(&quot;studentTable&quot;);
+    const studentElements = xmlDoc.getElementsByTagName(&quot;student&quot;);
+    studentTable.removeAttribute(&quot;hidden&quot;);
+
+    for (let element of studentElements) {
+        let studentID = element.getAttribute(&quot;studentId&quot;);
+        let studentName = element.textContent;
+        let newRow = document.createElement(&quot;tr&quot;);
+
+        newRow.innerHTML = &quot;&lt;td&gt;&quot; + studentID + &quot;&lt;/td&gt;&quot; +
+            &quot;&lt;td&gt;&quot; + studentName + &quot;&lt;/td&gt;&quot;;
+        studentTable.appendChild(newRow);
+    }
+}
+
+function createLabelColumn(labelParent, label) {
+    const labelElement = document.createElement(&quot;label&quot;);
+    labelElement.textContent = label;
+
+    let labelTh = document.createElement(&quot;th&quot;);
+    labelTh.appendChild(labelElement);
+    labelParent.appendChild(labelTh);
+}
+
+function createContentColumn(contentParent, content) {
+    let contentTh = document.createElement(&quot;th&quot;);
+    contentTh.append(content);
+    contentParent.appendChild(contentTh);
+}
+
+function createTextInputFromElement(element) {
+    let input = document.createElement(&quot;input&quot;);
+    input.type = &quot;text&quot;;
+    input.value = element.textContent;
+
+    let oldValue = { str: element.textContent };
+    input.onchange = function () {
+        validateAndAssignXMLElement(element, input, oldValue);
+    };
+
+    return input;
+}
+
+function createTextInputFromAttribute(attribute) {
+    let input = document.createElement(&quot;input&quot;);
+    input.type = &quot;text&quot;;
+    input.value = attribute.value;
+
+    let oldValue = { str: attribute.value };
+    input.onchange = function () {
+        validateAndAssignXMLAttribute(attribute, input, oldValue);
+    };
+
+    return input;
+}
+
+function createSelectFromAttribute(attribute, optionList, defaultValue) {
+    const select = document.createElement(&quot;select&quot;);
+
+    for (option of optionList) {
+        let optionElement = document.createElement(&quot;option&quot;);
+        if (option == defaultValue) {
+            optionElement.setAttribute(&quot;selected&quot;, &quot;&quot;);
+        }
+        optionElement.value = option;
+        optionElement.textContent = option;
+        select.appendChild(optionElement);
+    }
+
+    select.onchange = function () {
+        attribute.value = select.value;
+        onXMLChanged();
+    };
+
+    return select;
+}
+
+function createDeleteButton(elementToDelete, optionalElementsToDelete) {
+    const deleteButton = document.createElement(&quot;button&quot;);
+    deleteButton.type = &quot;button&quot;;
+    deleteButton.textContent = &quot;Usuń &quot;;
+
+    const deleteIcon = document.createElement(&quot;img&quot;);
+    deleteIcon.src = &quot;./icons/trash.png&quot;;
+    deleteIcon.width = 10;
+    deleteIcon.height = 10;
+    deleteButton.appendChild(deleteIcon);
+
+    deleteButton.onclick = function () {
+        elementToDelete.forEach(element =&gt; {
+            element.remove();
+        });
+
+        console.log(optionalElementsToDelete);
+        if (optionalElementsToDelete != null) {
+            const response = confirm(&quot;Czy usunąć też powiązane elementy?&quot;);
+            if (response) {
+                optionalElementsToDelete.forEach(element =&gt; {
+                    element.remove();
+                })
+            }
+        }
+
+        onXMLChanged();
+    }
+
+    return deleteButton;
+}
+
+function createAddButton(elementToAdd, xmlParentElement, insertBefore) {
+    const addButton = document.createElement(&quot;button&quot;);
+    addButton.type = &quot;button&quot;;
+    addButton.textContent = &quot;Dodaj &quot;;
+
+    const plusIcon = document.createElement(&quot;img&quot;);
+    plusIcon.src = &quot;./icons/plus.png&quot;;
+    plusIcon.width = 10;
+    plusIcon.height = 10;
+    addButton.appendChild(plusIcon);
+
+    addButton.onclick = function () {
+        if (insertBefore == &quot;&quot;) {
+            xmlParentElement.append(elementToAdd.cloneNode(true));
+        }
+        else {
+            let objectToPutBeforeFound = false;
+            for (obj of xmlParentElement.children) {
+                if (obj.localName == insertBefore) {
+                    objectToPutBeforeFound = true;
+                }
+                else if (objectToPutBeforeFound) {
+                    xmlParentElement.insertBefore(elementToAdd.cloneNode(true), obj);
+                    xmlParentElement.insertBefore(xmlDoc.createTextNode(&quot; &quot;), obj);
+                    break;
+                }
+            }
+        }
+
+        onXMLChanged();
+    }
+
+    return addButton;
+}
+
+function createEmptyDisk(disk) {
+    let diskClone = disk.cloneNode(true);
+
+    diskClone.getElementsByTagName(&quot;author&quot;)[0].textContent = &quot;Autor&quot;;
+    diskClone.getElementsByTagName(&quot;title&quot;)[0].textContent = &quot;Tytuł&quot;;
+    diskClone.getElementsByTagName(&quot;released&quot;)[0].textContent = &quot;00/00/0000&quot;;
+    diskClone.getElementsByTagName(&quot;howManySongs&quot;)[0].textContent = &quot;1&quot;;
+    diskClone.getElementsByTagName(&quot;length&quot;)[0].textContent = &quot;0:00&quot;;
+    diskClone.getElementsByTagName(&quot;price&quot;)[0].textContent = &quot;1.00&quot;;
+    diskClone.getElementsByTagName(&quot;ratings&quot;)[0].textContent = &quot;1.0&quot;;
+
+    return diskClone;
+}
+
+function updateLastDiskID(disk) {
+    disk.setAttribute(&quot;id&quot;, calculateLastID(&quot;disk&quot;, &quot;id&quot;, &quot;D&quot;, 2));
+    if (xmlDoc.getElementsByTagName(&quot;student&quot;).length == 0)
+        disk.setAttribute(&quot;favorite&quot;, &quot;&quot;);
+    else
+        disk.setAttribute(&quot;favorite&quot;, xmlDoc.getElementsByTagName(&quot;student&quot;)[0].getAttribute(&quot;studentId&quot;));
+}
+
+function updateLastGenreID(genre) {
+    genre.setAttribute(&quot;genreId&quot;, genre.getElementsByTagName(&quot;genre&quot;)[0].value);
+}
+
+function updateLastStudentID(student) {
+    student.setAttribute(&quot;studentId&quot;, calculateLastID(&quot;student&quot;, &quot;studentId&quot;, &quot;S&quot;, 2));
+}
+
+function calculateLastID(elementTag, idName, charsBeforeNumbers, numberOfChars) {
+    let newIDNumber = 1;
+    let idFound = false;
+    let newID = &quot;&quot;;
+    const allElements = xmlDoc.getElementsByTagName(elementTag);
+
+    while(!idFound) {
+        let potentialID = charsBeforeNumbers;
+
+        for (let i = 0; i &lt; (numberOfChars - charsBeforeNumbers.length - newIDNumber.toString().length); i++) {
+            potentialID += &quot;0&quot;;
+        }
+        potentialID += newIDNumber.toString();
+
+        idFound = true;
+
+        for(let i = 0; i &lt; allElements.length; i++) {
+            if (potentialID == allElements[i].getAttribute(idName)) {
+                idFound = false;
+                break;
+            }
+        }
+
+        newID = potentialID;
+        newIDNumber++;
+    }
+
+    return newID;
+}
+
+function validateAndAssignXMLElement(XMLElement, input, oldValue) {
+    XMLElement.textContent = input.value;
+
+    if (xmllint.validateXML({xml: serializerXML.serializeToString(xmlDoc), schema: schemaContent}).errors) {
+        console.log(xmllint.validateXML({xml: serializerXML.serializeToString(xmlDoc), schema: schemaContent}));
+
+        XMLElement.textContent = oldValue.str;
+        input.value = oldValue.str;
+
+        return;
+    }
+
+    oldValue.str = input.value;
+    onXMLChanged();
+}
+
+function validateAndAssignXMLAttribute(XMLAttribute, input, oldValue) {
+    XMLAttribute.textContent = input.value;
+
+    if (xmllint.validateXML({xml: serializerXML.serializeToString(xmlDoc), schema: schemaContent}).errors) {
+        console.log(xmllint.validateXML({xml: serializerXML.serializeToString(xmlDoc), schema: schemaContent}));
+
+        XMLAttribute.textContent = oldValue.str;
+        input.value = oldValue.str;
+
+        return;
+    }
+
+    oldValue.str = input.value;
+    onXMLChanged();
+}
+
+function makeTextFile(text) {
+    let data = new Blob([text], {type: &apos;text/xml&apos;});
+    return window.URL.createObjectURL(data);
+}
+
+function onXMLChanged() {
+    let XML = serializerXML.serializeToString(xmlDoc);
+    fileDownload.href = makeTextFile(XML);
+    onFileLoaded();
+}
+                </code>
+            </pre>
+        </div>
+        <button class="accordion">Plik stylów CSS</button>
+        <div class="accordionPanel codeBox">
+            <pre>
+                <code>
+body {
+    font-family: Helvetica, monospace;
+    color: white;
+    background-color: blueviolet;
+}
+
+.heading {
+    text-align: center;
+}
+
+label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+
+#chooseFileSchema {
+    text-align: center;
+}
+
+#chooseFileXML {
+    text-align: center;
+}
+
+#downloadFile {
+    text-align: center;
+    margin-left: 38em;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+}
+                </code>
+            </pre>
+        </div>
+        <script>
+            let accordion = document.getElementsByClassName("accordion");
+            let i;
+
+            for (i = 0; i < accordion.length; ++i) {
+                accordion[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    let panel = this.nextElementSibling;
+
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                    }
+                    else {
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+        <br/>
+        <button class="exerciseLink">
+            <a class="exerciseLink" href="../exercisesFiles/exercise5/index.html" target="download">Sprawdź zadanie!</a>
+        </button>
     </main>
 </body>
 </html>
