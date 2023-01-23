@@ -210,6 +210,26 @@ hr.rounded {
     margin-bottom: 10px;
 }
 
+.myPhoto {
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+.myInfo {
+    display: inline-block;
+    float: right;
+    margin-top: 4rem;
+    margin-right: 20rem;
+    font-size: 24px;
+    padding: 2rem;
+}
+
+.thankYou {
+    font-size: 32px;
+    font-weight: bold;
+    color: blueviolet;
+}
+
 /* Small screens */
 @media only screen and (max-width: 600px) {
     .navbar {
