@@ -8,7 +8,7 @@ Na stronie zostały uwzględnione następujące zadania:
 - Zadanie 2 - utworzenie pliku DTD/XML Schema na potrzeby walidacji pliku XML oraz dodanie do niego pliku stylów CSS ✅
 - Zadanie 3 - transformacje przy użyciu XSLT do XHTML, TXT, SVG oraz skrócony raport XML ✅
 - Zadanie 4 - dowolna gra przy użyciu SVG i JavaScript ✅
-- Zadanie 5 - XML Parser z wykorzystaniem JavaScript ❌
+- Zadanie 5 - XML Parser z wykorzystaniem JavaScript ✅
 
 ❌ - nie dodane
 
