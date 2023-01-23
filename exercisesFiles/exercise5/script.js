@@ -174,7 +174,7 @@ function onFileLoaded() {
         const newRow = document.createElement("tr");
 
         createLabelColumn(newRowLabels, "Dodaj płytę");
-        const addButton = createAddButton(emptyDisk, xmlDoc.getElementsByTagName("disks")[0], "");
+        const addButton = createAddButton(emptyDisk, xmlDoc.getElementsByTagName("library")[0], "");
         createContentColumn(newRow, addButton);
 
         disksGenerated.append(newRowLabels);
@@ -355,7 +355,7 @@ function createEmptyDisk(disk) {
 }
 
 function updateLastDiskID(disk) {
-    disk.setAttribute("id", calculateLastID("disk", "id", "D", 2));
+    disk.setAttribute("id", calculateLastID("disk", "id", "D", 3));
     if (xmlDoc.getElementsByTagName("student").length == 0)
         disk.setAttribute("favorite", "");
     else
